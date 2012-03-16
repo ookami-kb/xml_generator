@@ -40,5 +40,5 @@ class ProductResource(ModelResource):
         authorization = Authorization()
 
     def hydrate(self, bundle):
-        bundle.obj['white_brand'] = WhiteBrand.objects.get(pk=bundle.data['white_brand'])
+        bundle.obj.white_brand = WhiteBrand.objects.get(pk=bundle.data['white_brand'])
         return bundle
