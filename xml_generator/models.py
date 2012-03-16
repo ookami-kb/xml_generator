@@ -31,20 +31,6 @@ class Product(models.Model):
                                   source_type=self.source_type).exclude(pk=self.pk).count():
             raise ValidationError('Продукт с такими source_type/source_code уже существует')
 
-    def logic(self):
-        try:
-            pr = Product.objects.get(sourced_code=self.source_code, source_type = self.source_type)
-            pr.title = self.title
-            pr.title_extra=self.title_extra
-            pr.manufacturer = self.manufacturer
-            pr.source_code = self.source_code
-            pr.source_type=self.source_type
-            pr.white_brand_id=self.white_brand_id
-            return pr
-        except ObjectDoesNotExist:
-            pr = Product(title = self.title, title_extra=self.title_extra, manufacturer = self.manufacturer,
-        source_code = self.source_code, source_type=self.source_type, white_brand_id=self.white_brand_id)
-            return pr
 
     def save(self, *args, **kwargs):
         try:

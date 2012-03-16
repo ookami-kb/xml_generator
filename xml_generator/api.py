@@ -30,6 +30,10 @@ class OfferResource(ModelResource):
         bundle.data['source_type'] = bundle.obj.product.source_type
         return bundle
 
+    def hydrate(self, bundle):
+        bundle.obj['salepoint'] = Salepoint.objects.get(pk=bundle.data['salepoint'])
+        bundle.obj['product'] = Product.objects.get(pk=bundle.data['product'])
+        return bundle
 
 
 
