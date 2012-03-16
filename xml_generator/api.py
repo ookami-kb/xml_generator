@@ -31,8 +31,8 @@ class OfferResource(ModelResource):
         return bundle
 
     def hydrate(self, bundle):
-        bundle.obj['salepoint'] = Salepoint.objects.get(pk=bundle.data['salepoint'])
-        bundle.obj['product'] = Product.objects.get(pk=bundle.data['product'])
+        bundle.obj['salepoint'] = Salepoint.objects.get(pk=bundle.data['salepoint_id'])
+        bundle.obj['product'] = Product.objects.get(pk=bundle.data['product_id'])
         return bundle
 
 
@@ -44,5 +44,5 @@ class ProductResource(ModelResource):
         authorization = Authorization()
 
     def hydrate(self, bundle):
-        bundle.obj['white_brand'] = WhiteBrand.objects.get(pk=bundle.data['white_brand'])
+        bundle.obj['white_brand'] = WhiteBrand.objects.get(pk=bundle.data['white_brand_id'])
         return bundle
