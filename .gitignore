@@ -1,0 +1,4 @@
+.project
+.pydevproject
+xml_generator/settings/personal.py
+db
