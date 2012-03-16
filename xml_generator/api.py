@@ -24,5 +24,7 @@ class OfferResource(ModelResource):
 
     def dehydrate(self, bundle):
         bundle.data['salepoint_id'] = bundle.obj.salepoint.id
+        bundle.data['source_code'] = bundle.obj.product.source_code
+        bundle.data['source_type'] = bundle.obj.product.source_type
         return bundle
 
