@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*
 from django.db import models
 from django.core.exceptions import ValidationError
+from django.contrib.auth.models import User
 
 class WhiteBrand(models.Model):
     name = models.CharField(verbose_name=u'Название', max_length=30)
@@ -33,6 +34,7 @@ class Product(models.Model):
 class Salepoint(models.Model):
     name = models.CharField(u'Название', max_length=255)
     address = models.CharField(u'Адрес', max_length=255)
+    user = models.ForeignKey(User)
     
     def __unicode__(self):
         return u'%s, %s' % (self.name, self.address)
