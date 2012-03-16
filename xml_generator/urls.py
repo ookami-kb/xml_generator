@@ -1,6 +1,17 @@
-from django.conf.urls import patterns, include, url
+
 
 from django.contrib import admin
+from django.conf.urls import *
+from tastypie.api import Api
+from models import *
+from api import *
+
+v1_api = Api(api_name = 'v1')
+v1_api.register(SalepointResource())
+v1_api.register(OfferResource())
+
+
+
 admin.autodiscover()
 
 urlpatterns = patterns('',
@@ -12,4 +23,5 @@ urlpatterns = patterns('',
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^api/', include(v1_api.urls)),
 )
