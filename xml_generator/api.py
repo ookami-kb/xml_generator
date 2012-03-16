@@ -34,3 +34,12 @@ class OfferResource(ModelResource):
         pass
 
 
+class ProductResource(ModelResource):
+    class Meta:
+        queryset = Product.objects.all()
+        resource_name = 'product'
+        authorization = Authorization()
+
+    def hydrate(self, bundle):
+        bundle.obj['white_brand'] = WhiteBrand.objects.get(pk=bundle.data['white_brand'])
+        return bundle

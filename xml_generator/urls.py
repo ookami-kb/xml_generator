@@ -9,7 +9,7 @@ from api import *
 v1_api = Api(api_name = 'v1')
 v1_api.register(SalepointResource())
 v1_api.register(OfferResource())
-
+v1_api.register(ProductResource())
 
 
 admin.autodiscover()

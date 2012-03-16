@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*
 from django.db import models
-from django.core.exceptions import ValidationError
+from django.core.exceptions import ValidationError, ObjectDoesNotExist
 from django.contrib.auth.models import User
 
 class WhiteBrand(models.Model):
@@ -31,13 +31,28 @@ class Product(models.Model):
                                   source_type=self.source_type).exclude(pk=self.pk).count():
             raise ValidationError('Продукт с такими source_type/source_code уже существует')
 
-    def save(self):
+    def logic(self):
         try:
-            self.clean()
-            return super(Product, self).save(*args, **kwargs)
-        except ValidationError:
+            pr = Product.objects.get(sourced_code=self.source_code, source_type = self.source_type)
+            pr.title = self.title
+            pr.title_extra=self.title_extra
+            pr.manufacturer = self.manufacturer
+            pr.source_code = self.source_code
+            pr.source_type=self.source_type
+            pr.white_brand_id=self.white_brand_id
+            return pr
+        except ObjectDoesNotExist:
+            pr = Product(title = self.title, title_extra=self.title_extra, manufacturer = self.manufacturer,
+        source_code = self.source_code, source_type=self.source_type, white_brand_id=self.white_brand_id)
+            return pr
 
-        pr = Product.objects.get()
+    def save(self, *args, **kwargs):
+        try:
+            self.pk = Product.objects.get(source_code=self.source_code, source_type=self.source_type).pk
+        except:
+            self.pk = None
+        #pr =  self.logic()
+        return super(Product, self).save(*args, **kwargs)
     
 class Salepoint(models.Model):
     name = models.CharField(u'Название', max_length=255)
