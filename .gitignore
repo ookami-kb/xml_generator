@@ -2,5 +2,8 @@
 .pydevproject
 xml_generator/settings/personal.py
 db
+.idea/*
 *.pyc
+./idea
+.idea/dictionaries/eugene.xml
 
