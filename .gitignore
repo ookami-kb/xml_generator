@@ -4,3 +4,4 @@ xml_generator/settings/personal.py
 db
 *.pyc
 .settings
+.idea
