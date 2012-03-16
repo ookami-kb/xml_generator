@@ -1,4 +1,3 @@
-__author__ = 'eugene'
 # -*- coding: utf-8 -*-
 from tastypie import fields
 from tastypie.resources import ModelResource
