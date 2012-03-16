@@ -29,6 +29,14 @@ class Product(models.Model):
         if Product.objects.filter(source_code=self.source_code, 
                                   source_type=self.source_type).exclude(pk=self.pk).count():
             raise ValidationError('Продукт с такими source_type/source_code уже существует')
+
+    def save(self):
+        try:
+            self.clean()
+            return super(Product, self).save(*args, **kwargs)
+        except ValidationError:
+
+        pr = Product.objects.get()
     
 class Salepoint(models.Model):
     name = models.CharField(u'Название', max_length=255)

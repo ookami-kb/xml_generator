@@ -3,6 +3,7 @@ __author__ = 'eugene'
 from tastypie import fields
 from tastypie.resources import ModelResource
 from models import *
+from tastypie.authorization import Authorization, DjangoAuthorization
 
 from django.contrib.auth.models import User
 
@@ -21,10 +22,15 @@ class OfferResource(ModelResource):
     class Meta:
         queryset = Offer.objects.all()
         resource_name = 'offer'
+        authorization = Authorization()
 
     def dehydrate(self, bundle):
         bundle.data['salepoint_id'] = bundle.obj.salepoint.id
         bundle.data['source_code'] = bundle.obj.product.source_code
         bundle.data['source_type'] = bundle.obj.product.source_type
         return bundle
+
+    def hydrate(self, bundle):
+        pass
+
 
