@@ -30,8 +30,7 @@ class OfferResource(ModelResource):
         bundle.data['source_type'] = bundle.obj.product.source_type
         return bundle
 
-    def hydrate(self, bundle):
-        pass
+
 
 
 class ProductResource(ModelResource):
