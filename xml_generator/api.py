@@ -6,7 +6,7 @@ from tastypie.authorization import Authorization, DjangoAuthorization
 from tastypie.authentication import BasicAuthentication
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.models import User
-
+from tastypie.resources import ModelResource, ALL, ALL_WITH_RELATIONS
 
 class MyAuthentication(BasicAuthentication):
     def is_authenticated(self, request, **kwargs):
@@ -23,11 +23,20 @@ class MyAuthentication(BasicAuthentication):
         return True
 
 
+class UserResource(ModelResource):
+    class Meta:
+        queryset = User.objects.all()
+        resource_name = 'user'
+        excludes = ['email', 'password', 'is_active', 'is_staff', 'is_superuser']
+        filtering = {
+                'username': ALL,
+                }
+
 class SalepointResource(ModelResource):
     #related_name  : helps to populate reverse relations; must be a field on the other Resource
     #full=True чтобы видеть начинку offers, а не просто их resource_uri
     #offers = fields.ToManyField('xml_generator.api.OfferResource','offer_set', related_name='salepoint', full=True)
-
+    #user = fields.ForeignKey(UserResource, 'user')
     def hydrate(self, bundle):
         bundle.obj.user = bundle.request.user
 
@@ -49,20 +58,29 @@ class SalepointResource(ModelResource):
             bundle.data['coords'] = unicode(bundle.obj.latitude) + u',' + unicode(bundle.obj.longitude)
         return bundle
 
+    def get_object_list(self, request, *args, **kwargs):
+        return Salepoint.objects.filter(user=request.user)
+
     class Meta:
         queryset = Salepoint.objects.all()
         resource_name = 'salepoint'
         authentication = MyAuthentication()
+        #filtering = {
+        #    'user': ALL_WITH_RELATIONS,
+        #    }
 
 
 
 class OfferResource(ModelResource):
-    #salepoint = fields.ToOneField(SalepointResource, 'salepoint')
+    #salepoint = fields.ForeignKey(SalepointResource, 'salepoint')
     class Meta:
         queryset = Offer.objects.all()
         resource_name = 'offer'
         #authorization = Authorization()
         authentication = MyAuthentication()
+        #filtering = {
+        #    'salepoint': ALL_WITH_RELATIONS,
+        #    }
 
     def dehydrate(self, bundle):
         bundle.data['salepoint_id'] = bundle.obj.salepoint.id
@@ -75,7 +93,8 @@ class OfferResource(ModelResource):
         bundle.obj.product = Product.objects.get(pk=bundle.data['product_id'])
         return bundle
 
-
+    def get_object_list(self, request, *args, **kwargs):
+        return Offer.objects.filter(salepoint__user=request.user)
 
 class ProductResource(ModelResource):
     class Meta:
