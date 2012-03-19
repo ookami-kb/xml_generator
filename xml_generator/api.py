@@ -38,15 +38,15 @@ class SalepointResource(ModelResource):
 
         try:
             _coords = bundle.data['coords']
-            bundle.obj.longitude = float(_coords.split(',')[0])
-            bundle.obj.latitude = float(_coords.split(',')[1])
+            bundle.obj.longitude = float(_coords.split(',')[1])
+            bundle.obj.latitude = float(_coords.split(',')[0])
         except:
             pass
         return bundle
 
     def dehydrate(self, bundle):
         if bundle.obj.longitude is not None  and bundle.obj.latitude is not None:
-            bundle.data['coords'] = unicode(bundle.obj.longitude) + u',' + unicode(bundle.obj.latitude)
+            bundle.data['coords'] = unicode(bundle.obj.latitude) + u',' + unicode(bundle.obj.longitude)
         return bundle
 
     class Meta:
