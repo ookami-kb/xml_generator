@@ -45,7 +45,8 @@ class SalepointResource(ModelResource):
         return bundle
 
     def dehydrate(self, bundle):
-        bundle.data['coords'] = unicode(bundle.obj.longitude) + u',' + unicode(bundle.obj.latitude)
+        if bundle.obj.longitude is not None  and bundle.obj.latitude is not None:
+            bundle.data['coords'] = unicode(bundle.obj.longitude) + u',' + unicode(bundle.obj.latitude)
         return bundle
 
     class Meta:
