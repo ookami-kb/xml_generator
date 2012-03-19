@@ -39,15 +39,27 @@ class Product(models.Model):
             self.pk = None
         #pr =  self.logic()
         return super(Product, self).save(*args, **kwargs)
-    
+
+
+class Organization(models.Model):
+    name = models.CharField(verbose_name=u'Название', max_length=300)
+    ext_id = models.IntegerField(verbose_name=u'Ключ Neiron',
+        help_text=u'PK организации в системе Neiron',
+        primary_key=True)
+
+    def __unicode__(self):
+        return self.name
+
+
 class Salepoint(models.Model):
     name = models.CharField(u'Название', max_length=255)
     address = models.CharField(u'Адрес', max_length=255)
     latitude = models.FloatField(u'Широта', null=True, blank=True)
     longitude = models.FloatField(u'Долгота', null=True, blank=True)
-    user = models.ForeignKey(User)
+    organ     = models.ForeignKey(Organization)
+    user = models.ForeignKey(User, null=True, blank=True)
 
-    
+
     def __unicode__(self):
         return u'%s, %s' % (self.name, self.address)
     

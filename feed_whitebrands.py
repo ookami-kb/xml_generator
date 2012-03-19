@@ -6,3 +6,59 @@ goods = { 1: u'Говядина', 2 : u'Масло подсолнечное', 6 
 for key in goods.iterkeys():
     wb = WhiteBrand(ext_id = key, name = goods[key])
     wb.save()
+
+#-----------------------Salepoints
+
+#8800 port!!
+
+from xml_generator.models import *
+import urllib2
+import simplejson
+req = urllib2.Request("http://127.0.0.1:8800/api/v1/station/?format=json&limit=15&type=station", None, {'user-agent':'syncstream/vimeo'})
+
+opener = urllib2.build_opener()
+f = opener.open(req)
+
+s = simplejson.load(f)
+
+for obj in s['objects']:
+    sp = Salepoint(name=  obj['name'], address = obj['address'] , latitude = obj['lat'], longitude = obj['lon'], organ = obj['organization_id'])
+    sp.save()
+
+
+
+#--------------------Organizations
+from xml_generator.models import *
+import urllib2
+import simplejson
+req = urllib2.Request("http://127.0.0.1:8800/api/v1/organization/?format=json&limit=15", None, {'user-agent':'syncstream/vimeo'})
+
+opener = urllib2.build_opener()
+f = opener.open(req)
+
+s = simplejson.load(f)
+
+for obj in s['objects']:
+    sp = Organization(name=  obj['name'], pk = obj['id'])
+    sp.save()
+
+
+
+#-----------------------Offers
+
+
+
+
+from xml_generator.models import *
+import urllib2
+import simplejson
+req = urllib2.Request("http://127.0.0.1:8800/api/v1/products_offers/?format=json&limit=15", None, {'user-agent':'syncstream/vimeo'})
+
+opener = urllib2.build_opener()
+f = opener.open(req)
+
+s = simplejson.load(f)
+
+for obj in s['objects']:
+    sp = Salepoint(name=  obj['name'], address = obj['address'] , latitude = obj['lat'], longitude = obj['lon'], organ = obj['organization_id'])
+    sp.save()

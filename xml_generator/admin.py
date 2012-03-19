@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*
 from django.contrib import admin
-from .models import WhiteBrand, Product, Offer, Salepoint
+from .models import *
 
 admin.site.register(WhiteBrand)
 
@@ -19,3 +19,5 @@ class SalepointAdmin(admin.ModelAdmin):
     list_display = ('name', 'address')
     
 admin.site.register(Salepoint, SalepointAdmin)
+
+admin.site.register(Organization)

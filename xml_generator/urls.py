@@ -10,7 +10,7 @@ v1_api = Api(api_name = 'v1')
 v1_api.register(SalepointResource())
 v1_api.register(OfferResource())
 v1_api.register(ProductResource())
-
+v1_api.register(UserResource())
 
 admin.autodiscover()
 
