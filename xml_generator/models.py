@@ -14,11 +14,11 @@ class WhiteBrand(models.Model):
     
 class Product(models.Model):
     title = models.CharField(verbose_name=u'Название', max_length=255)
-    title_extra = models.CharField(u'Доп. название', max_length=255)
+    title_extra = models.CharField(u'Доп. название', max_length=255, blank=True, null=True)
     source_code = models.IntegerField()
     source_type = models.CharField(max_length=255)
-    manufacturer = models.CharField(u'Производитель', max_length=255)
-    white_brand = models.ForeignKey(WhiteBrand)
+    manufacturer = models.CharField(u'Производитель', max_length=255, blank=True, null=True)
+    white_brand = models.ForeignKey(WhiteBrand, blank=True, null=True)
     is_new = models.BooleanField(u'Новый', help_text='Этот продукт был создан пользователем и еще не прошел модерацию')
     
     def __unicode__(self):

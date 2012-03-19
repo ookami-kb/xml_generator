@@ -68,6 +68,7 @@ class OfferResource(ModelResource):
         bundle.data['salepoint_id'] = bundle.obj.salepoint.id
         bundle.data['source_code'] = bundle.obj.product.source_code
         bundle.data['source_type'] = bundle.obj.product.source_type
+        bundle.data['title'] = bundle.obj.product.title
         return bundle
 
     def hydrate(self, bundle):
