@@ -43,7 +43,10 @@ class Product(models.Model):
 class Salepoint(models.Model):
     name = models.CharField(u'Название', max_length=255)
     address = models.CharField(u'Адрес', max_length=255)
+    latitude = models.FloatField(u'Широта', null=True, blank=True)
+    longitude = models.FloatField(u'Долгота', null=True, blank=True)
     user = models.ForeignKey(User)
+
     
     def __unicode__(self):
         return u'%s, %s' % (self.name, self.address)
