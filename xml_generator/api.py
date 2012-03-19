@@ -54,12 +54,14 @@ class SalepointResource(ModelResource):
         return bundle
 
     def dehydrate(self, bundle):
+        bundle.data['org'] = bundle.obj.organ.name
         if bundle.obj.longitude is not None  and bundle.obj.latitude is not None:
             bundle.data['coords'] = unicode(bundle.obj.latitude) + u',' + unicode(bundle.obj.longitude)
         return bundle
 
     def get_object_list(self, request, *args, **kwargs):
-        return Salepoint.objects.filter(user=request.user)
+        return Salepoint.objects.all()
+#        return Salepoint.objects.filter(user=request.user)
 
     class Meta:
         queryset = Salepoint.objects.all()
