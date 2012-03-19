@@ -57,7 +57,7 @@ class Salepoint(models.Model):
     latitude = models.FloatField(u'Широта', null=True, blank=True)
     longitude = models.FloatField(u'Долгота', null=True, blank=True)
     organ     = models.ForeignKey(Organization)
-    user = models.ForeignKey(User)
+    user = models.ForeignKey(User, null=True, blank=True)
 
 
     def __unicode__(self):
