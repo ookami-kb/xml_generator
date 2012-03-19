@@ -45,6 +45,7 @@ class Salepoint(models.Model):
     address = models.CharField(u'Адрес', max_length=255)
     latitude = models.FloatField(u'Широта', null=True, blank=True)
     longitude = models.FloatField(u'Долгота', null=True, blank=True)
+    organ     = models.CharField(u'Организация', max_length=255)
     user = models.ForeignKey(User)
 
     
