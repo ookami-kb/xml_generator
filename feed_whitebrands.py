@@ -48,7 +48,7 @@ for obj in s['objects']:
     org = Organization.objects.get(pk=obj['organization_id'])
     sp = Salepoint(pk=int(obj['id']), name=obj['name'], address=obj['address'],
                    latitude=obj['lat'], longitude=obj['lon'], 
-                   organ=org, pricelist_name=obj['pricelist_name'], pricelist_url=obj['pricelist_url'])
+                   organ=org, pricelist_name=obj['pricelist_name'], pricelist_url=obj['pricelist_url'], point_type=obj['point_type'])
     sp.save()
 
 

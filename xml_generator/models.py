@@ -52,6 +52,14 @@ class Organization(models.Model):
 
 
 class Salepoint(models.Model):
+    POINT_TYPE = (
+        (u"salon", u"Магазин-салон"),
+        (u"release", u"Пункт выдачи товара"),
+        (u"salon_and_release", u"Магазин-салон и пункт выдачи товара"),
+        )
+
+    point_type = models.CharField(max_length=17, choices=POINT_TYPE, verbose_name="Тип точки", default=u"salon_and_release")
+
     name = models.CharField(u'Название точки продаж', max_length=255)
     address = models.CharField(u'Адрес', max_length=255)
     latitude = models.FloatField(u'Широта', null=True, blank=True)

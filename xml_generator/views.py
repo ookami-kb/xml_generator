@@ -18,8 +18,8 @@ def generate_xml(request):
 
     organs = Organization.objects.all()
 
-    user_name = 'eugene'
-    user_path = global_path + '/' + user_name + '/pricelists/'
+
+    user_path = global_path + '/pricelists/'
     if os.path.exists(user_path):
         shutil.rmtree(user_path)
     os.makedirs(user_path)
@@ -47,12 +47,13 @@ def generate_xml(request):
             pr_url = etree.SubElement(pricelist, 'url')
             pr_url.text = sp.pricelist_url
 
-            pr_ishop = etree.SubElement(pricelist, 'ishop')
-            pr_ishop.text = u"http://seller.ru/"
+            #pr_ishop = etree.SubElement(pricelist, 'ishop')
+            #pr_ishop.text = u"http://seller.ru/"
 
             pr_shops = etree.SubElement(pricelist, 'shops')
 
             shop = etree.SubElement(pr_shops, 'shop')
+            shop.set('type', sp.point_type)
 
             sh_city = etree.SubElement(shop, 'city')
             sh_city.text = u'Челябинск'
