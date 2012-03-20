@@ -84,7 +84,7 @@ for obj in s['objects']:
 from xml_generator.models import *
 import urllib2
 import simplejson
-req = urllib2.Request("http://127.0.0.1:8800/api/v1/products_offers/?format=json&limit=20", None, {'user-agent':'syncstream/vimeo'})
+req = urllib2.Request("http://127.0.0.1:8800/api/v1/products_offers/?format=json&limit=0", None, {'user-agent':'syncstream/vimeo'})
 
 opener = urllib2.build_opener()
 f = opener.open(req)
@@ -93,9 +93,10 @@ s = simplejson.load(f)
 
 for obj in s['objects']:
     try:
-        sp = Salepoint.objects.get(pk=obj['salepoint_id'])
-        pr = Product.objects.get(source_code=obj['source_code'], source_type=obj['source_type'])
-        off = Offer(product=pr, salepoint=sp, price=obj['price'])
-        off.save()
+        for _sp in obj['salepoints']:
+            sp = Salepoint.objects.get(pk=_sp)
+            pr = Product.objects.get(source_code=obj['source_code'], source_type=obj['source_type'])
+            off = Offer(product=pr, salepoint=sp, price=obj['price'])
+            off.save()
     except Exception as e:
         print str(e)
