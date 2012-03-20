@@ -52,11 +52,13 @@ class Organization(models.Model):
 
 
 class Salepoint(models.Model):
-    name = models.CharField(u'Название', max_length=255)
+    name = models.CharField(u'Название точки продаж', max_length=255)
     address = models.CharField(u'Адрес', max_length=255)
     latitude = models.FloatField(u'Широта', null=True, blank=True)
     longitude = models.FloatField(u'Долгота', null=True, blank=True)
     organ     = models.ForeignKey(Organization)
+    pricelist_name = models.CharField(u'Название прайслиста', max_length=255)
+    pricelist_url = models.CharField(u'юрл прайслиста', max_length=255)
     user = models.ForeignKey(User, null=True, blank=True)
 
 

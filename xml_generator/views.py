@@ -34,18 +34,18 @@ def generate_xml(request):
 
 
         NOL = etree.Element('pricelists')
-        i = 0
+
         for sp in org.salepoint_set.all():
             pricelist = etree.SubElement(NOL, 'pricelist')
 
 
             pr_name = etree.SubElement(pricelist, 'name')
-            pr_name.text = u"Прайс " + str(i)
+            pr_name.text = sp.pricelist_name
 
-            i+=1
+
 
             pr_url = etree.SubElement(pricelist, 'url')
-            pr_url.text = u"http://seller.ru/files/price.xml"
+            pr_url.text = sp.pricelist_url
 
             pr_ishop = etree.SubElement(pricelist, 'ishop')
             pr_ishop.text = u"http://seller.ru/"

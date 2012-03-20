@@ -13,6 +13,23 @@ for key in goods.iterkeys():
     wb = WhiteBrand(ext_id = key, name = goods[key])
     wb.save()
 
+
+#--------------------Organizations
+from xml_generator.models import *
+import urllib2
+import simplejson
+req = urllib2.Request("http://127.0.0.1:8800/api/v1/organization/?format=json&limit=0", None, {'user-agent':'syncstream/vimeo'})
+
+opener = urllib2.build_opener()
+f = opener.open(req)
+
+s = simplejson.load(f)
+
+for obj in s['objects']:
+    sp = Organization(name=  obj['name'], pk = obj['id'])
+    sp.save()
+
+
 #-----------------------Salepoints
 
 #8800 port!!
@@ -31,25 +48,12 @@ for obj in s['objects']:
     org = Organization.objects.get(pk=obj['organization_id'])
     sp = Salepoint(pk=int(obj['id']), name=obj['name'], address=obj['address'],
                    latitude=obj['lat'], longitude=obj['lon'], 
-                   organ=org)
+                   organ=org, pricelist_name=obj['pricelist_name'], pricelist_url=obj['pricelist_url'])
     sp.save()
 
 
 
-#--------------------Organizations
-from xml_generator.models import *
-import urllib2
-import simplejson
-req = urllib2.Request("http://127.0.0.1:8800/api/v1/organization/?format=json&limit=0", None, {'user-agent':'syncstream/vimeo'})
 
-opener = urllib2.build_opener()
-f = opener.open(req)
-
-s = simplejson.load(f)
-
-for obj in s['objects']:
-    sp = Organization(name=  obj['name'], pk = obj['id'])
-    sp.save()
 
 #------------------------------------Products
 
@@ -72,7 +76,7 @@ for obj in s['objects']:
 
 
         pr = Product(title = obj['title'], title_extra = obj['title_extra'], source_code = obj['source_code'], source_type = obj['source_type'],
-            manufacturer = man, white_brand = wb, is_new = False)
+            manufacturer = obj['manufacturer'], white_brand = wb, is_new = False)
         pr.save()
         #print pr.pk
     except Exception as e:
