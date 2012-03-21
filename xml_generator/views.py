@@ -83,12 +83,12 @@ def generate_xml(request):
                 code.text = unicode(_offer.product.source_code)
 
             structureXml = open(outDir +pr_name.text +'.xml', "w")
-            structureXml.write(etree.tostring(NPL, pretty_print=True, encoding="utf8", xml_declaration=True))
+            structureXml.write(etree.tostring(NPL, pretty_print=True, encoding="utf-8", xml_declaration=True))
             structureXml.close()
 
 
         structureXml = open(outDir + 'index.xml', "w")
-        structureXml.write(etree.tostring(NOL, pretty_print=True, encoding="utf8", xml_declaration=True))
+        structureXml.write(etree.tostring(NOL, pretty_print=True, encoding="utf-8", xml_declaration=True))
         structureXml.close()
 
     '''
