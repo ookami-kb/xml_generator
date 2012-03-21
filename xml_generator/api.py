@@ -1,12 +1,13 @@
 # -*- coding: utf-8 -*-
 from tastypie import fields
-from tastypie.resources import ModelResource
+from tastypie.resources import ModelResource, ALL
 from models import *
-from tastypie.authorization import Authorization, DjangoAuthorization
+from tastypie.authorization import DjangoAuthorization
 from tastypie.authentication import BasicAuthentication
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.models import User
-from tastypie.resources import ModelResource, ALL, ALL_WITH_RELATIONS
+import datetime
+import time
 
 class MyAuthentication(BasicAuthentication):
     def is_authenticated(self, request, **kwargs):
@@ -33,18 +34,32 @@ class UserResource(ModelResource):
                 }
 
 class SalepointResource(ModelResource):
-    #related_name  : helps to populate reverse relations; must be a field on the other Resource
-    #full=True чтобы видеть начинку offers, а не просто их resource_uri
-    #offers = fields.ToManyField('xml_generator.api.OfferResource','offer_set', related_name='salepoint', full=True)
-    #user = fields.ForeignKey(UserResource, 'user')
+    def obj_create(self, bundle, request=None, **kwargs):
+        return super(SalepointResource, self).obj_create(bundle, request, user=request.user)
+    
     def hydrate(self, bundle):
-        bundle.obj.user = bundle.request.user
-
         try:
-            bundle.obj.pk = int(bundle.data['salepoint_id'])
+            bundle.obj.id = int(bundle.data['salepoint_id'])
         except:
             pass
-
+        
+        # если мы изменяем уже существующую торговую точку, то не надо
+        # менять ее организацию
+        try:
+            salepoint = Salepoint.objects.get(pk=bundle.obj.id)
+            bundle.obj.organ = salepoint.organ
+            # нахрен удаляем все офферы, относящиеся к данной торговой точке,
+            # следующим этапом мы их все равно будем вносить
+            Offer.objects.filter(salepoint=salepoint).delete()
+        except Salepoint.DoesNotExist:
+            # если мы создаем новую точку (бывает для заправок),
+            # то можем попытаться присвоить ей организацию,
+            # если юзер правильно ввел название
+            try:
+                bundle.obj.organ = Organization.objects.get(name=bundle.data['org'])
+            except:
+                bundle.obj.organ = Organization.objects.get(name='unknown')
+        
         try:
             _coords = bundle.data['coords']
             bundle.obj.longitude = float(_coords.split(',')[1])
@@ -60,40 +75,42 @@ class SalepointResource(ModelResource):
         return bundle
 
     def get_object_list(self, request, *args, **kwargs):
-        return Salepoint.objects.all()
-#        return Salepoint.objects.filter(user=request.user)
+        return Salepoint.objects.filter(user=request.user)
 
     class Meta:
         queryset = Salepoint.objects.all()
         resource_name = 'salepoint'
         authentication = MyAuthentication()
-        #filtering = {
-        #    'user': ALL_WITH_RELATIONS,
-        #    }
+        authorization = DjangoAuthorization()
 
 
 
 class OfferResource(ModelResource):
-    #salepoint = fields.ForeignKey(SalepointResource, 'salepoint')
     class Meta:
         queryset = Offer.objects.all()
         resource_name = 'offer'
-        #authorization = Authorization()
         authentication = MyAuthentication()
-        #filtering = {
-        #    'salepoint': ALL_WITH_RELATIONS,
-        #    }
+        authorization = DjangoAuthorization()
 
     def dehydrate(self, bundle):
         bundle.data['salepoint_id'] = bundle.obj.salepoint.id
         bundle.data['source_code'] = bundle.obj.product.source_code
         bundle.data['source_type'] = bundle.obj.product.source_type
         bundle.data['title'] = bundle.obj.product.title
+        try:
+            bundle.date['timestamp'] = time.mktime(bundle.obj.created.timetuple())
+        except:
+            pass
         return bundle
 
     def hydrate(self, bundle):
+        try:
+            bundle.obj.created = datetime.date.fromtimestamp(int(bundle.data['timestamp']))
+        except:
+            bundle.obj.created = datetime.datetime.now()
         bundle.obj.salepoint = Salepoint.objects.get(pk=bundle.data['salepoint_id'])
-        bundle.obj.product = Product.objects.get(pk=bundle.data['product_id'])
+        bundle.obj.product = Product.objects.get(source_code=bundle.data['source_code'],
+                                                 source_type=bundle.data['source_type'])
         return bundle
 
     def get_object_list(self, request, *args, **kwargs):
@@ -103,7 +120,7 @@ class ProductResource(ModelResource):
     class Meta:
         queryset = Product.objects.all()
         resource_name = 'product'
-        #authorization = Authorization()
+        authorization = DjangoAuthorization()
         authentication = MyAuthentication()
 
     def hydrate(self, bundle):

@@ -22,7 +22,7 @@ class Product(models.Model):
     is_new = models.BooleanField(u'Новый', help_text='Этот продукт был создан пользователем и еще не прошел модерацию')
     
     def __unicode__(self):
-        return u'%s. %s' % (self.title, self.title_extra)
+        return u'%s. %s (%s)' % (self.title, self.title_extra, self.manufacturer)
     
     def clean(self):
         # надо удостовериться, что есть только один продукт с таким

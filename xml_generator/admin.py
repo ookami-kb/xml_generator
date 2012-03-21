@@ -7,6 +7,7 @@ admin.site.register(WhiteBrand)
 class ProductAdmin(admin.ModelAdmin):
     list_display = ('title', 'title_extra', 'manufacturer', 'white_brand',
               'source_code', 'source_type', 'is_new')
+    list_filter = ('is_new',)
     
 admin.site.register(Product, ProductAdmin)
 
@@ -16,7 +17,8 @@ class OfferAdmin(admin.ModelAdmin):
 admin.site.register(Offer, OfferAdmin)
 
 class SalepointAdmin(admin.ModelAdmin):
-    list_display = ('name', 'address')
+    list_display = ('name', 'address', 'organ', 'user')
+    list_filter = ('organ', 'user')
     
 admin.site.register(Salepoint, SalepointAdmin)
 
