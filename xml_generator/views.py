@@ -45,7 +45,8 @@ def generate_xml(request):
 
 
                 pr_url = etree.SubElement(pricelist, 'url')
-                pr_url.text = sp.pricelist_url
+                #pr_url.text = sp.pricelist_url
+                pr_url.text = sp.pricelist_url.split('/')[-1] if sp.pricelist_url else 'price-' + str(sp.pk) + '.xml'
 
                 #pr_ishop = etree.SubElement(pricelist, 'ishop')
                 #pr_ishop.text = u"http://seller.ru/"
@@ -82,7 +83,7 @@ def generate_xml(request):
                     code.set('source', _offer.product.source_type)
                     code.text = unicode(_offer.product.source_code)
 
-                structureXml = open(outDir +pr_name.text +'.xml', "w")
+                structureXml = open(outDir + pr_url.text, 'w')#pr_name.text +'.xml', "w")
                 structureXml.write(etree.tostring(NPL, pretty_print=True, encoding="utf-8", xml_declaration=True))
                 structureXml.close()
 
