@@ -72,7 +72,7 @@ def generate_xml(request):
 
 
             NPL = etree.Element('offers')
-            _offers = Offer.objects.filter(salepoint=sp)
+            _offers = Offer.objects.filter(salepoint=sp, product__is_new=False)
             for _offer in _offers:
                 offer = etree.SubElement(NPL, 'offer')
                 price = etree.SubElement(offer, 'price')
@@ -83,15 +83,28 @@ def generate_xml(request):
                 code.text = unicode(_offer.product.source_code)
 
             structureXml = open(outDir +pr_name.text +'.xml', "w")
-            structureXml.write(etree.tostring(NPL, pretty_print=True, encoding="utf8"))
+            structureXml.write(etree.tostring(NPL, pretty_print=True, encoding="utf8", xml_declaration=True))
             structureXml.close()
 
 
         structureXml = open(outDir + 'index.xml', "w")
-        structureXml.write(etree.tostring(NOL, pretty_print=True, encoding="utf8"))
+        structureXml.write(etree.tostring(NOL, pretty_print=True, encoding="utf8", xml_declaration=True))
         structureXml.close()
 
-        content = simplejson.dumps({'status' : 'OK,'})
+    '''
+    data = []
+    _new_products = Product.objects.filter(is_new=True)
+    for pr in _new_products:
+        el = {'product': {'title' : pr.title, 'title_extra' : pr.title_extra, 'manufacturer' : pr.manufacturer, 'wb_id' : pr.white_brand.ext_id}}
+        offers = Offers.objects.filter(source_code=pr.source_code, source_type=pr.source_type)
+        el['offers'] = {'offers': [{'price' : off.price, 'salepoint_id': off.salepoint.id}  for off in offers]}
+        data.append(el)
+
+    new_offers_products = simplejson.dumps(data)
+    '''
+
+    content = simplejson.dumps({'status' : 'OK,'})
+
     return HttpResponse(content, mimetype='application/javascript')
 
 
