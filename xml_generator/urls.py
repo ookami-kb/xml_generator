@@ -24,4 +24,5 @@ urlpatterns = patterns('',
 
     url(r'^admin/', include(admin.site.urls)),
     url(r'^api/', include(v1_api.urls)),
+    url(r'^generate-xml/$', 'xml_generator.views.generate_xml')
 )

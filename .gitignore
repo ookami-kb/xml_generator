@@ -5,3 +5,4 @@ db
 *.pyc
 .settings
 .idea
+xml_generator/settings/data/*
