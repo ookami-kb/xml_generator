@@ -57,11 +57,14 @@ def generate_xml(request):
                 shop = etree.SubElement(pr_shops, 'shop')
                 shop.set('type', sp.point_type)
 
-                sh_city = etree.SubElement(shop, 'city')
-                sh_city.text = u'Челябинск'
-
                 sh_name = etree.SubElement(shop, 'name')
                 sh_name.text = sp.name
+
+                sh_city = etree.SubElement(shop, 'city')
+                #sh_city.text = u'Челябинск'
+                sh_city.text  = sp.city
+
+
 
                 sh_address = etree.SubElement(shop, 'address')
                 sh_address.text = sp.address
@@ -85,13 +88,13 @@ def generate_xml(request):
                     code.text = unicode(_offer.product.source_code)
                 if len(_offers) > 0:
                     structureXml = open(outDir + pr_url.text, 'w')#pr_name.text +'.xml', "w")
-                    structureXml.write(etree.tostring(NPL, pretty_print=True, encoding="utf-8", xml_declaration=True))
+                    structureXml.write(etree.tostring(NPL, pretty_print=True, encoding="cp1251", xml_declaration=True))
                     structureXml.close()
 
-
-            structureXml = open(outDir + 'index.xml', "w")
-            structureXml.write(etree.tostring(NOL, pretty_print=True, encoding="utf-8", xml_declaration=True))
-            structureXml.close()
+            if len(org.salepoint_set.all()) > 0:
+                structureXml = open(outDir + 'index.xml', "w")
+                structureXml.write(etree.tostring(NOL, pretty_print=True, encoding="cp1251", xml_declaration=True))
+                structureXml.close()
 
         content = simplejson.dumps({'status' : 'OK'})
     except Exception as e:

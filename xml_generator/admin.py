@@ -17,7 +17,7 @@ class OfferAdmin(admin.ModelAdmin):
 admin.site.register(Offer, OfferAdmin)
 
 class SalepointAdmin(admin.ModelAdmin):
-    list_display = ('name', 'address', 'organ', 'user')
+    list_display = ('name', 'address', 'organ', 'user', 'city')
     list_filter = ('organ', 'user')
     
 admin.site.register(Salepoint, SalepointAdmin)

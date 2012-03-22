@@ -69,7 +69,7 @@ class Salepoint(models.Model):
     pricelist_name = models.CharField(u'Название прайслиста', max_length=255)
     pricelist_url = models.CharField(u'юрл прайслиста', max_length=255)
     user = models.ForeignKey(User, null=True, blank=True)
-
+    city = models.CharField(u'Деревушка', max_length=255)
 
     def __unicode__(self):
         return u'%s, %s' % (self.name, self.address)
