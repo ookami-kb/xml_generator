@@ -3,6 +3,7 @@ from django.db import models
 from django.core.exceptions import ValidationError, ObjectDoesNotExist
 from django.contrib.auth.models import User
 
+
 class WhiteBrand(models.Model):
     name = models.CharField(verbose_name=u'Название', max_length=30)
     ext_id = models.IntegerField(verbose_name=u'Ключ Neiron',
@@ -78,6 +79,8 @@ class Offer(models.Model):
     salepoint = models.ForeignKey(Salepoint)
     price = models.FloatField(u'Цена')
     created = models.DateTimeField()
+
+
     
     def __unicode__(self):
         return u'%s в магазине %s' % (self.product, self.salepoint)

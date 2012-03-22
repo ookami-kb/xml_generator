@@ -6,6 +6,7 @@ from django.http import HttpResponse
 import os, shutil
 from lxml import etree
 from django.views.decorators.csrf import csrf_exempt
+from django.db.models import Max
 from django.conf import settings
 global_path = settings.GLOBAL_PATH
 from xml_generator.models import *
@@ -46,7 +47,7 @@ def generate_xml(request):
 
                 pr_url = etree.SubElement(pricelist, 'url')
                 #pr_url.text = sp.pricelist_url
-                pr_url.text = sp.pricelist_url.split('/')[-1] if sp.pricelist_url else 'price-' + str(sp.pk) + '.xml'
+                pr_url.text = (sp.pricelist_url.split('/')[-1].split('.')[0] + '.xml') if sp.pricelist_url else 'price-' + str(sp.pk) + '.xml'
 
                 #pr_ishop = etree.SubElement(pricelist, 'ishop')
                 #pr_ishop.text = u"http://seller.ru/"
@@ -73,7 +74,7 @@ def generate_xml(request):
 
 
                 NPL = etree.Element('offers')
-                _offers = Offer.objects.filter(salepoint=sp, product__is_new=False)
+                _offers = Offer.objects.filter(salepoint=sp, product__is_new=False, price__gt=0)
                 for _offer in _offers:
                     offer = etree.SubElement(NPL, 'offer')
                     price = etree.SubElement(offer, 'price')
