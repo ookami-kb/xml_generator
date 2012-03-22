@@ -50,7 +50,7 @@ class SalepointResource(ModelResource):
             bundle.obj.organ = salepoint.organ
             # нахрен удаляем все офферы, относящиеся к данной торговой точке,
             # следующим этапом мы их все равно будем вносить
-            Offer.objects.filter(salepoint=salepoint).delete()
+#            Offer.objects.filter(salepoint=salepoint).delete()
         except Salepoint.DoesNotExist:
             # если мы создаем новую точку (бывает для заправок),
             # то можем попытаться присвоить ей организацию,
@@ -98,7 +98,7 @@ class OfferResource(ModelResource):
         bundle.data['source_type'] = bundle.obj.product.source_type
         bundle.data['title'] = bundle.obj.product.title
         try:
-            bundle.date['timestamp'] = time.mktime(bundle.obj.created.timetuple())
+            bundle.data['timestamp'] = time.mktime(bundle.obj.created.timetuple())
         except:
             pass
         return bundle

@@ -18,7 +18,7 @@ for key in goods.iterkeys():
 from xml_generator.models import *
 import urllib2
 import simplejson
-req = urllib2.Request("http://127.0.0.1:8800/api/v1/organization/?format=json&limit=0", None, {'user-agent':'syncstream/vimeo'})
+req = urllib2.Request("http://192.168.139.121:8001/api/v1/organization/?format=json&limit=0", None, {'user-agent':'syncstream/vimeo'})
 
 opener = urllib2.build_opener()
 f = opener.open(req)
@@ -37,7 +37,7 @@ for obj in s['objects']:
 from xml_generator.models import *
 import urllib2
 import simplejson
-req = urllib2.Request("http://127.0.0.1:8800/api/v1/station/?format=json&limit=0", None, {'user-agent':'syncstream/vimeo'})
+req = urllib2.Request("http://192.168.139.121:8001/api/v1/station/?format=json&limit=0", None, {'user-agent':'syncstream/vimeo'})
 
 opener = urllib2.build_opener()
 f = opener.open(req)
@@ -60,7 +60,7 @@ for obj in s['objects']:
 from xml_generator.models import *
 import urllib2
 import simplejson
-req = urllib2.Request("http://127.0.0.1:8800/api/v1/products/?format=json&limit=0", None, {'user-agent':'syncstream/vimeo'})
+req = urllib2.Request("http://192.168.139.121:8001/api/v1/products/?format=json&limit=0", None, {'user-agent':'syncstream/vimeo'})
 
 opener = urllib2.build_opener()
 f = opener.open(req)

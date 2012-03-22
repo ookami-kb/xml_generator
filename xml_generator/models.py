@@ -77,6 +77,7 @@ class Offer(models.Model):
     product = models.ForeignKey(Product)
     salepoint = models.ForeignKey(Salepoint)
     price = models.FloatField(u'Цена')
+    created = models.DateTimeField()
     
     def __unicode__(self):
         return u'%s в магазине %s' % (self.product, self.salepoint)
