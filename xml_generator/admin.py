@@ -12,7 +12,7 @@ class ProductAdmin(admin.ModelAdmin):
 admin.site.register(Product, ProductAdmin)
 
 class OfferAdmin(admin.ModelAdmin):
-    list_display = ('product', 'salepoint', 'price')
+    list_display = ('product', 'salepoint', 'price', 'created')
     
 admin.site.register(Offer, OfferAdmin)
 

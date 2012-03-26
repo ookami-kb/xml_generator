@@ -91,6 +91,26 @@ class OfferResource(ModelResource):
         resource_name = 'offer'
         authentication = MyAuthentication()
         authorization = DjangoAuthorization()
+            
+    def patch_list(self, request, **kwargs):
+        username = request.GET.get('username', None)
+        if username:
+            try:
+                user = User.objects.get(username=username)
+                Offer.objects.filter(salepoint__user=user).delete()
+            except User.DoesNotExist:
+                pass
+        super(OfferResource, self).patch_list(request, **kwargs)
+        
+#    def alter_deserialized_list_data(self, request, data):
+#        print 'alter_deserialized_list_data'
+#        return data
+#        
+#    def alter_deserialized_detail_data(self, request, data):
+#        print 'alter_deserialized_detail_data'
+#        print data
+#        print request.GET.get('username', None)
+#        return data
 
     def dehydrate(self, bundle):
         bundle.data['salepoint_id'] = bundle.obj.salepoint.id
