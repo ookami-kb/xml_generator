@@ -6,6 +6,7 @@ from django.http import HttpResponse
 import os, shutil
 from lxml import etree
 from django.views.decorators.csrf import csrf_exempt
+from django.db.models import Max
 from django.conf import settings
 global_path = settings.GLOBAL_PATH
 from xml_generator.models import *
@@ -46,7 +47,7 @@ def generate_xml(request):
 
                 pr_url = etree.SubElement(pricelist, 'url')
                 #pr_url.text = sp.pricelist_url
-                pr_url.text = sp.pricelist_url.split('/')[-1] if sp.pricelist_url else 'price-' + str(sp.pk) + '.xml'
+                pr_url.text = (sp.pricelist_url.split('/')[-1].split('.')[0] + '.xml') if sp.pricelist_url else 'price-' + str(sp.pk) + '.xml'
 
                 #pr_ishop = etree.SubElement(pricelist, 'ishop')
                 #pr_ishop.text = u"http://seller.ru/"
@@ -56,11 +57,14 @@ def generate_xml(request):
                 shop = etree.SubElement(pr_shops, 'shop')
                 shop.set('type', sp.point_type)
 
-                sh_city = etree.SubElement(shop, 'city')
-                sh_city.text = u'Челябинск'
-
                 sh_name = etree.SubElement(shop, 'name')
                 sh_name.text = sp.name
+
+                sh_city = etree.SubElement(shop, 'city')
+                #sh_city.text = u'Челябинск'
+                sh_city.text  = sp.city
+
+
 
                 sh_address = etree.SubElement(shop, 'address')
                 sh_address.text = sp.address
@@ -73,7 +77,7 @@ def generate_xml(request):
 
 
                 NPL = etree.Element('offers')
-                _offers = Offer.objects.filter(salepoint=sp, product__is_new=False)
+                _offers = Offer.objects.filter(salepoint=sp, product__is_new=False, price__gt=0)
                 for _offer in _offers:
                     offer = etree.SubElement(NPL, 'offer')
                     price = etree.SubElement(offer, 'price')
@@ -82,15 +86,15 @@ def generate_xml(request):
                     code = etree.SubElement(offer, 'code')
                     code.set('source', _offer.product.source_type)
                     code.text = unicode(_offer.product.source_code)
+                if len(_offers) > 0:
+                    structureXml = open(outDir + pr_url.text, 'w')#pr_name.text +'.xml', "w")
+                    structureXml.write(etree.tostring(NPL, pretty_print=True, encoding="cp1251", xml_declaration=True))
+                    structureXml.close()
 
-                structureXml = open(outDir + pr_url.text, 'w')#pr_name.text +'.xml', "w")
-                structureXml.write(etree.tostring(NPL, pretty_print=True, encoding="utf-8", xml_declaration=True))
+            if len(org.salepoint_set.all()) > 0:
+                structureXml = open(outDir + 'index.xml', "w")
+                structureXml.write(etree.tostring(NOL, pretty_print=True, encoding="cp1251", xml_declaration=True))
                 structureXml.close()
-
-
-            structureXml = open(outDir + 'index.xml', "w")
-            structureXml.write(etree.tostring(NOL, pretty_print=True, encoding="utf-8", xml_declaration=True))
-            structureXml.close()
 
         content = simplejson.dumps({'status' : 'OK'})
     except Exception as e:
