@@ -21,7 +21,9 @@ class Product(models.Model):
     manufacturer = models.CharField(u'Производитель', max_length=255, blank=True, null=True)
     white_brand = models.ForeignKey(WhiteBrand, blank=True, null=True)
     is_new = models.BooleanField(u'Новый', help_text='Этот продукт был создан пользователем и еще не прошел модерацию')
-    
+    user = models.ForeignKey(User, null=True, blank=True, help_text='Тот, кто добавил этот продукт')
+    product_moderated = models.ForeignKey('self',null=True,blank=True)
+
     def __unicode__(self):
         return u'%s. %s (%s)' % (self.title, self.title_extra, self.manufacturer)
     
@@ -59,8 +61,23 @@ class Salepoint(models.Model):
         (u"salon_and_release", u"Магазин-салон и пункт выдачи товара"),
         )
 
+    VARIATION_TYPE = (
+        (u"fuel", u"заправка"),
+        (u"product", u"продуктовая"),
+        )
+
+    STATUS = (
+        (u"off", u"Выключен"),
+        (u"verification", u"На проверке"),
+        (u"activation", u"Включается"),
+        (u"on", u"Включен"),
+        )
+
     point_type = models.CharField(max_length=17, choices=POINT_TYPE, verbose_name="Тип точки", default=u"salon_and_release")
 
+    variation = models.CharField(max_length=17, choices=VARIATION_TYPE, verbose_name="заправка\продукты", default=u"product",null=True, blank=True)
+    is_new = models.BooleanField(u'Новая', help_text='Эта точка продаж была создана пользователем и еще не прошла модерацию')
+    status = models.CharField(max_length=12, choices=STATUS)
     name = models.CharField(u'Название точки продаж', max_length=255)
     address = models.CharField(u'Адрес', max_length=255)
     latitude = models.FloatField(u'Широта', null=True, blank=True)
@@ -70,6 +87,8 @@ class Salepoint(models.Model):
     pricelist_url = models.CharField(u'юрл прайслиста', max_length=255)
     user = models.ForeignKey(User, null=True, blank=True)
     city = models.CharField(u'Деревушка', max_length=255)
+    last_modified_time = models.DateTimeField(null=True, blank=True)
+    salepoint_moderated = models.ForeignKey('self',null=True,blank=True)
 
     def __unicode__(self):
         return u'%s, %s' % (self.name, self.address)

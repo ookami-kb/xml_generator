@@ -1,0 +1,11 @@
+{% extends "admin/base_site.html" %}
+
+{% block content %}
+<form action="" method="post">{% csrf_token %}
+    {{ form }}
+    <p>Старый продукт будет назначен из следующих:</p>
+    <ul>{{ items|unordered_list }}</ul>
+    <input type="hidden" name="action" value="moderate_product" />
+    <input type="submit" name="apply" value="Сохранить" />
+</form>
+{% endblock %}

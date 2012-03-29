@@ -49,7 +49,7 @@ s = simplejson.load(f)
 for obj in s['objects']:
     org = Organization.objects.get(pk=obj['organization_id'])
     sp = Salepoint(pk=int(obj['id']), name=obj['name'], address=obj['address'], city=obj['city'],
-                   latitude=obj['lat'], longitude=obj['lon'], 
+                   latitude=obj['lat'], longitude=obj['lon'], status = obj['status'], is_new = False,
                    organ=org, pricelist_name=obj['pricelist_name'], pricelist_url=obj['pricelist_url'], point_type=obj['point_type'])
     sp.save()
 
