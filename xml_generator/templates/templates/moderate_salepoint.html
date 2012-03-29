@@ -4,15 +4,15 @@
 <form action="" method="post">{% csrf_token %}
     <p>Выберите из 2-х альтернатив:</p>
     {{ form }}
-    <p>Эти новые продукты будут ссылаться на выбранный старый:</p>
+    <p>Эти новые точки продаж будут ссылаться на выбранную старую:</p>
     <ul>{{ items|unordered_list }}</ul>
-
+    
     <p>---------------------------------------------------------------------------------------</p>
-    <p>Создайте новый продукт, к которому будут привязаны новые продукты от сборщиков:</p>
+    <p>Создайте новую точку продаж, к которой будут привязаны новые точки продаж от сборщиков:</p>
 
     {{form_create_new.as_ul}}
 
-    <input type="hidden" name="action" value="moderate_product" />
+    <input type="hidden" name="action" value="moderate_salepoint" />
     <input type="submit" name="apply" value="Сохранить" />
 </form>
 {% endblock %}
