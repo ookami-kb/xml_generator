@@ -19,10 +19,10 @@ class Product(models.Model):
     source_code = models.IntegerField()
     source_type = models.CharField(max_length=255)
     manufacturer = models.CharField(u'Производитель', max_length=255, blank=True, null=True)
-    white_brand = models.ForeignKey(WhiteBrand, blank=True, null=True)
+    white_brand = models.ForeignKey(WhiteBrand, blank=True, null=True, verbose_name="Белый бренд: лишь для съестных продуктов")
     is_new = models.BooleanField(u'Новый', help_text='Этот продукт был создан пользователем и еще не прошел модерацию')
     user = models.ForeignKey(User, null=True, blank=True, help_text='Тот, кто добавил этот продукт')
-    product_moderated = models.ForeignKey('self',null=True,blank=True)
+    product_moderated = models.ForeignKey('self',null=True,blank=True, help_text='Ссылается на эталонный проверенный модератором продуктом, если не пусто')
 
     def __unicode__(self):
         return u'%s. %s (%s)' % (self.title, self.title_extra, self.manufacturer)
@@ -77,27 +77,27 @@ class Salepoint(models.Model):
 
     variation = models.CharField(max_length=17, choices=VARIATION_TYPE, verbose_name="заправка\продукты", default=u"product",null=True, blank=True)
     is_new = models.BooleanField(u'Новая', help_text='Эта точка продаж была создана пользователем и еще не прошла модерацию')
-    status = models.CharField(max_length=12, choices=STATUS)
+    status = models.CharField(max_length=12, choices=STATUS, verbose_name="статус")
     name = models.CharField(u'Название точки продаж', max_length=255)
     address = models.CharField(u'Адрес', max_length=255)
     latitude = models.FloatField(u'Широта', null=True, blank=True)
     longitude = models.FloatField(u'Долгота', null=True, blank=True)
-    organ     = models.ForeignKey(Organization)
+    organ     = models.ForeignKey(Organization, verbose_name="организация")
     pricelist_name = models.CharField(u'Название прайслиста', max_length=255)
     pricelist_url = models.CharField(u'юрл прайслиста', max_length=255)
-    user = models.ForeignKey(User, null=True, blank=True)
-    city = models.CharField(u'Деревушка', max_length=255)
-    last_modified_time = models.DateTimeField(null=True, blank=True)
-    salepoint_moderated = models.ForeignKey('self',null=True,blank=True)
+    user = models.ForeignKey(User, null=True, blank=True, verbose_name="сборщик предложений")
+    city = models.CharField(u'Город', max_length=255)
+    last_modified_time = models.DateTimeField(null=True, blank=True, verbose_name="время последнего обновления предложений")
+    salepoint_moderated = models.ForeignKey('self',null=True,blank=True, verbose_name="отмодерированная точка продаж", help_text='Ссылается на эталонную проверенную модератором точку продаж, если не пусто')
 
     def __unicode__(self):
         return u'%s, %s' % (self.name, self.address)
     
 class Offer(models.Model):
-    product = models.ForeignKey(Product)
-    salepoint = models.ForeignKey(Salepoint)
+    product = models.ForeignKey(Product, verbose_name="Продукт")
+    salepoint = models.ForeignKey(Salepoint, verbose_name="Точка продаж")
     price = models.FloatField(u'Цена')
-    created = models.DateTimeField()
+    created = models.DateTimeField(verbose_name="время создания")
 
 
     
