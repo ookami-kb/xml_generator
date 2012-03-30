@@ -9,20 +9,60 @@ class WhiteBrand(models.Model):
     ext_id = models.IntegerField(verbose_name=u'Ключ Neiron',
                                  help_text=u'PK бренда в системе Neiron',
                                  primary_key=True)
-    
+    factor_specific_key = models.CharField(max_length=1024, null=True, blank=True)
+    factor_specific_unit = models.CharField(max_length=30, null=True, blank=True)
+    factor_specific_value = models.FloatField(null=True, blank=True)
     def __unicode__(self):
         return self.name
+
+class Manufacturer(models.Model):
+    name = models.CharField(u'Производитель', max_length=255, blank=True, null=True)
+    def __unicode__(self):
+        return u'%s' % self.name
+
+
+    def save(self, *args, **kwargs):
+        try:
+            self.pk = Manufacturer.objects.get(name=self.name).pk
+        except:
+            self.pk = None
+            #pr =  self.logic()
+        return super(Manufacturer, self).save(*args, **kwargs)
+    #ext_id = models.IntegerField(verbose_name=u'Ключ Neiron',
+    #    help_text=u'PK производителя в системе Neiron',
+    #    primary_key=True)
+
+class Country(models.Model):
+    name = models.CharField(u'Страна', max_length=255, blank=True, null=True)
+
+    def save(self, *args, **kwargs):
+        try:
+            self.pk = Country.objects.get(name=self.name).pk
+        except:
+            self.pk = None
+        #pr =  self.logic()
+        return super(Country, self).save(*args, **kwargs)
+
+    def __unicode__(self):
+        return u'%s' % self.name
+
+    #ext_id = models.IntegerField(verbose_name=u'Ключ Neiron',
+    #    help_text=u'PK страны в системе Neiron',
+    #    primary_key=True)
     
 class Product(models.Model):
     title = models.CharField(verbose_name=u'Название', max_length=255)
     title_extra = models.CharField(u'Доп. название', max_length=255, blank=True, null=True)
     source_code = models.IntegerField()
     source_type = models.CharField(max_length=255)
-    manufacturer = models.CharField(u'Производитель', max_length=255, blank=True, null=True)
+    manufacturer = models.ForeignKey(Manufacturer, verbose_name=u'Производитель',blank=True, null=True)
+    country = models.ForeignKey(Country, verbose_name=u'Страна',blank=True, null=True)
     white_brand = models.ForeignKey(WhiteBrand, blank=True, null=True, verbose_name="Белый бренд: лишь для съестных продуктов")
     is_new = models.BooleanField(u'Новый', help_text='Этот продукт был создан пользователем и еще не прошел модерацию')
     user = models.ForeignKey(User, null=True, blank=True, help_text='Тот, кто добавил этот продукт')
     product_moderated = models.ForeignKey('self',null=True,blank=True, help_text='Ссылается на эталонный проверенный модератором продуктом, если не пусто')
+    type = models.CharField(u'тип продукта', max_length=255, blank=True, null=True)
+    is_redundant = models.BooleanField(u'не нужный', help_text='Этот продукт не нужен?', default=False)
 
     def __unicode__(self):
         return u'%s. %s (%s)' % (self.title, self.title_extra, self.manufacturer)
@@ -46,9 +86,9 @@ class Product(models.Model):
 
 class Organization(models.Model):
     name = models.CharField(verbose_name=u'Название', max_length=300)
-    ext_id = models.IntegerField(verbose_name=u'Ключ Neiron',
-        help_text=u'PK организации в системе Neiron',
-        primary_key=True)
+    #ext_id = models.IntegerField(verbose_name=u'Ключ Neiron',
+    #    help_text=u'PK организации в системе Neiron',
+    #    primary_key=True)
 
     def __unicode__(self):
         return self.name
@@ -89,7 +129,7 @@ class Salepoint(models.Model):
     city = models.CharField(u'Город', max_length=255)
     last_modified_time = models.DateTimeField(null=True, blank=True, verbose_name="время последнего обновления предложений")
     salepoint_moderated = models.ForeignKey('self',null=True,blank=True, verbose_name="отмодерированная точка продаж", help_text='Ссылается на эталонную проверенную модератором точку продаж, если не пусто')
-
+    is_redundant = models.BooleanField(u'Не нужная', help_text='Эта точка продаж нужна', default=False)
     def __unicode__(self):
         return u'%s, %s' % (self.name, self.address)
     
