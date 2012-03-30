@@ -66,6 +66,7 @@ class SalepointResource(ModelResource):
             bundle.obj.latitude = float(_coords.split(',')[0])
         except:
             pass
+        bundle.obj.is_new = True
         return bundle
 
     def dehydrate(self, bundle):
@@ -129,8 +130,16 @@ class OfferResource(ModelResource):
         except:
             bundle.obj.created = datetime.datetime.now()
         bundle.obj.salepoint = Salepoint.objects.get(pk=bundle.data['salepoint_id'])
-        bundle.obj.product = Product.objects.get(source_code=bundle.data['source_code'],
-                                                 source_type=bundle.data['source_type'])
+
+        #если продукт отмодерирован и есть эталонный(дрйгой), то предложение переназначается на него
+        _pr = Product.objects.get(source_code=bundle.data['source_code'],
+            source_type=bundle.data['source_type'])
+        if not _pr.is_new:
+            if _pr.product_moderated:
+                bundle.obj.product = _pr.product_moderated
+            else:
+                bundle.obj.product = _pr
+
         return bundle
 
     def get_object_list(self, request, *args, **kwargs):
@@ -145,4 +154,5 @@ class ProductResource(ModelResource):
 
     def hydrate(self, bundle):
         bundle.obj.white_brand = WhiteBrand.objects.get(pk=bundle.data['white_brand'])
+        bundle.obj.is_new = True
         return bundle

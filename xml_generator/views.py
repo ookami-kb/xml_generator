@@ -68,40 +68,41 @@ def generate_xml(request):
                     code = etree.SubElement(offer, 'code')
                     code.set('source', _offer.product.source_type)
                     code.text = unicode(_offer.product.source_code)
-                if len(_offers) > 0:
-                    structureXml = open(outDir + pr_url.text, 'w')#pr_name.text +'.xml', "w")
-                    structureXml.write(etree.tostring(NPL, pretty_print=True, encoding="cp1251", xml_declaration=True))
-                    structureXml.close()
-
-
-
-            if len(org.salepoint_set.all()) > 0:
-                structureXml = open(outDir + 'index.xml', "w")
-                structureXml.write(etree.tostring(NOL, pretty_print=True, encoding="cp1251", xml_declaration=True))
+                #if len(_offers) > 0:
+                structureXml = open(outDir + pr_url.text, 'w')#pr_name.text +'.xml', "w")
+                structureXml.write(etree.tostring(NPL, pretty_print=True, encoding="cp1251", xml_declaration=True))
                 structureXml.close()
+
+
+
+            #if len(org.salepoint_set.all()) > 0:
+            structureXml = open(outDir + 'index.xml', "w")
+            structureXml.write(etree.tostring(NOL, pretty_print=True, encoding="cp1251", xml_declaration=True))
+            structureXml.close()
                 #NNPL: notation new product language
         NNPL =  etree.Element('source')
         NNPL.set('data_source_name', 'new')
-        prs = Product.objects.filter(is_new=True, is_redundant=False)
+        prs = Product.objects.filter(is_new=False, is_redundant=False)
         for product in prs:
             _pr = etree.SubElement(NNPL, 'product')
             _pr.set('name', product.title)
             _pr.set('id', str(product.pk))
 
 
-        for country in Country.objects.filter(product__is_new = True, product__is_redundant = False).distinct():
+        for country in Country.objects.filter(product__is_new=False, product__is_redundant=False).distinct():
             _cunt = etree.SubElement(NNPL, 'country')
             _cunt.set('name', country.name)
             _cunt.set('id', str(country.pk))
 
-        for _mf in Manufacturer.objects.filter(product__is_new=True, product__is_redundant=False).exclude(name=None).distinct():
+        for _mf in Manufacturer.objects.filter(product__is_new=False, product__is_redundant=False).exclude(name=None).distinct():
             _mfuck  = etree.SubElement(NNPL, 'manufacturer')
             _mfuck.set('name', _mf.name)
             _mfuck.set('id', str(_mf.pk))
 
-        prs = Product.objects.filter(is_new=True, is_redundant=False)
+        prs = Product.objects.filter(is_new=False, is_redundant=False)
         for product in prs:
             _modif = etree.SubElement(NNPL, 'modification')
+            _modif.set('id', str(product.pk))
             _modif.set('title', product.title)
             _modif.set('title_extra', product.title_extra)
             _modif.set('product_id', str(product.pk))
@@ -111,7 +112,7 @@ def generate_xml(request):
             if product.white_brand:
                 _modif.set('wb_id', str(product.white_brand.pk))
                 _modif.set('wb_key', product.white_brand.factor_specific_key)
-                _modif.set('wb_unit',product.white_brand.factor_specific_unit)
+                #_modif.set('wb_unit',product.white_brand.factor_specific_unit)
                 _modif.set('wb_value', str(product.white_brand.factor_specific_value))
 
 
