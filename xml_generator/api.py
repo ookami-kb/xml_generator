@@ -2,10 +2,11 @@
 from tastypie import fields
 from tastypie.resources import ModelResource, ALL
 from models import *
-from tastypie.authorization import DjangoAuthorization
+from tastypie.authorization import DjangoAuthorization, Authorization
 from tastypie.authentication import BasicAuthentication
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.models import User
+from django.db.models import Q
 import datetime
 import time
 
@@ -32,6 +33,14 @@ class UserResource(ModelResource):
         filtering = {
                 'username': ALL,
                 }
+
+
+class WhiteBrandResource(ModelResource):
+    class Meta:
+        queryset = WhiteBrand.objects.all()
+        authentication = MyAuthentication()
+        authorization = DjangoAuthorization()
+        resource_name = 'whitebrand'
 
 class SalepointResource(ModelResource):
     def obj_create(self, bundle, request=None, **kwargs):
@@ -67,6 +76,7 @@ class SalepointResource(ModelResource):
         except:
             pass
         bundle.obj.is_new = True
+        bundle.obj.is_redundant=False
         return bundle
 
     def dehydrate(self, bundle):
@@ -76,7 +86,7 @@ class SalepointResource(ModelResource):
         return bundle
 
     def get_object_list(self, request, *args, **kwargs):
-        return Salepoint.objects.filter(user=request.user)
+        return Salepoint.objects.filter(((Q(user=request.user) & Q(is_new=True)) & Q(is_redundant=False)) | (Q(user=request.user) & Q(is_new=False) & Q(is_redundant=False) ))
 
     class Meta:
         queryset = Salepoint.objects.all()
@@ -140,6 +150,9 @@ class OfferResource(ModelResource):
             else:
                 bundle.obj.product = _pr
 
+        _sp = Salepoint.objects.get(pk=bundle.data['salepoint_id'])
+        _sp.last_modified_time = datetime.datetime.now()
+
         return bundle
 
     def get_object_list(self, request, *args, **kwargs):
@@ -148,11 +161,29 @@ class OfferResource(ModelResource):
 class ProductResource(ModelResource):
     class Meta:
         queryset = Product.objects.all()
+        excludes = ['id', 'is_new', 'is_redundant',]
         resource_name = 'product'
         authorization = DjangoAuthorization()
         authentication = MyAuthentication()
+        #authorization = Authorization()
+
+    def dehydrate(self, bundle):
+        bundle.data['manufacturer'] = bundle.obj.manufacturer.name if bundle.obj.manufacturer else u''
+        bundle.data['whitebrand_id'] = bundle.obj.white_brand.pk if  bundle.obj.white_brand else 0
+        return bundle
 
     def hydrate(self, bundle):
-        bundle.obj.white_brand = WhiteBrand.objects.get(pk=bundle.data['white_brand'])
+        if int(bundle.data['white_brand']) == 0:
+            bundle.obj.white_brand = None
+        else:
+            bundle.obj.white_brand = WhiteBrand.objects.get(pk=bundle.data['white_brand'])
         bundle.obj.is_new = True
+        bundle.obj.is_redundant = False
         return bundle
+
+    #def dehydrate(self, bundle):
+    #    pass
+
+    def get_object_list(self, request, *args, **kwargs):
+        #Отмодерированные продукты выгружаются всем. Неотмодерированные - только создавшим их пользователям.
+        return Product.objects.filter(((Q(user=request.user) & Q(is_new=True)) & Q(is_redundant=False)) | (Q(is_new=False) & Q(is_redundant=False) ))

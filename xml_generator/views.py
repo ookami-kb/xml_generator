@@ -86,7 +86,7 @@ def generate_xml(request):
         for product in prs:
             _pr = etree.SubElement(NNPL, 'product')
             _pr.set('name', product.title)
-            _pr.set('id', str(product.pk))
+            _pr.set('id', str(product.source_code))
 
 
         for country in Country.objects.filter(product__is_new=False, product__is_redundant=False).distinct():
@@ -105,7 +105,7 @@ def generate_xml(request):
             _modif.set('id', str(product.pk))
             _modif.set('title', product.title)
             _modif.set('title_extra', product.title_extra)
-            _modif.set('product_id', str(product.pk))
+            _modif.set('product_id', str(product.source_code))
             _modif.set('country_id', str(product.country.pk))
             _modif.set('manufacturer_id', str(product.manufacturer.pk))
             _modif.set('type', product.type)

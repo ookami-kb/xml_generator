@@ -5,18 +5,21 @@ from django import forms
 from django.http import HttpResponse, Http404, HttpResponseRedirect, HttpResponseNotFound
 from django.template import RequestContext, loader
 from django.shortcuts import render
+from datetime import datetime
+import time
+
 
 admin.site.register(WhiteBrand)
 
 class ModerateProductForm(forms.Form):
     _selected_action = forms.CharField(widget=forms.MultipleHiddenInput)
-    product = forms.ModelChoiceField(queryset=Product.objects.filter(is_new=False), label=u'Старые продукты')
+    product = forms.ModelChoiceField(queryset=Product.objects.filter(is_new=False), label=u'продукт')
 
 class CreateNewProductForm(forms.ModelForm):
     _selected_action = forms.CharField(widget=forms.MultipleHiddenInput)
     class Meta:
         model = Product
-
+        exclude=('source_code','is_redundant','is_new','product_moderated','source_type',)
 
 def moderate_product(modeladmin, request, queryset):
     form = None
@@ -26,18 +29,22 @@ def moderate_product(modeladmin, request, queryset):
         form_create_new = CreateNewProductForm(request.POST)
         if form.is_valid():
             product = form.cleaned_data['product']
-
             cunt = 0
             for item in queryset:
                 item.product_moderated = product
                 item.is_new = False
                 item.save()
                 cunt += 1
-
             modeladmin.message_user(request, "Старый продукт из базы данных %s привязан к %d новым продуктам от сборщиков." % (product, cunt))
             return HttpResponseRedirect(request.get_full_path())
         elif form_create_new.is_valid():
-            new_product = form_create_new.save()
+            new_product = form_create_new.save(commit=False)
+            new_product.product_moderated=None
+            new_product.source_code = int(time.time())
+            new_product.is_redundant=False
+            new_product.is_new=False
+            new_product.source_type="new"
+            new_product.save()
             cunt = 0
             for item in queryset:
                 item.product_moderated = new_product
@@ -56,12 +63,13 @@ moderate_product.short_description = u"Привязать новые проду�
 
 class ModerateSalepointForm(forms.Form):
     _selected_action = forms.CharField(widget=forms.MultipleHiddenInput)
-    salepoint = forms.ModelChoiceField(queryset=Salepoint.objects.filter(is_new=False), label=u'Старая точка продаж')
+    salepoint = forms.ModelChoiceField(queryset=Salepoint.objects.filter(is_new=False), label=u'точку продаж')
 
 class CreateNewSalepointForm(forms.ModelForm):
     _selected_action = forms.CharField(widget=forms.MultipleHiddenInput)
     class Meta:
         model = Salepoint
+        exclude=('last_modified_time','is_redundant','is_new','salepoint_moderated',)
 
 
 def moderate_salepoint(modeladmin, request, queryset):
@@ -83,7 +91,11 @@ def moderate_salepoint(modeladmin, request, queryset):
             modeladmin.message_user(request, "Старая точка продаж из базы данных %s привязана к %d новым точкам продаж от сборщиков." % (salepoint, cunt))
             return HttpResponseRedirect(request.get_full_path())
         elif form_create_new.is_valid():
-            new_salepoint = form_create_new.save()
+            new_salepoint = form_create_new.save(commit=False)
+            new_salepoint.last_modified_date = datetime.now()
+            new_salepoint.is_redundant = False
+            new_salepoint.is_new = False
+            new_salepoint.save()
             cunt = 0
             for item in queryset:
                 item.salepoint_moderated = new_salepoint
@@ -102,23 +114,23 @@ moderate_salepoint.short_description = u"Привязать новые точк�
 
 class ProductAdmin(admin.ModelAdmin):
     list_display = ('title', 'title_extra', 'manufacturer', 'white_brand',
-              'source_code', 'source_type', 'is_new', 'country')
-    list_filter = ('is_new', )
+              'source_code', 'source_type', 'is_new', 'country', 'is_redundant')
+    list_filter = ('is_new', 'user', 'is_redundant',)
     actions = [moderate_product,]
     
 admin.site.register(Product, ProductAdmin)
 
 class OfferAdmin(admin.ModelAdmin):
     list_display = ('product', 'salepoint', 'price', 'created')
-    list_filter = ('product__is_new', )
+    list_filter = ('product__is_new', 'salepoint',)
 
 admin.site.register(Offer, OfferAdmin)
 
 class SalepointAdmin(admin.ModelAdmin):
-    list_display = ('name', 'address', 'organ', 'user', 'city')
-    list_filter = ('organ', 'user', 'is_new')
+    list_display = ('name', 'address', 'organ', 'last_modified_time', 'user', 'city', 'is_new', 'is_redundant')
+    list_filter = ('user', 'is_new','user', 'is_redundant','organ', )
     actions = [moderate_salepoint, ]
-    list_filter = ('user', )
+
     
 admin.site.register(Salepoint, SalepointAdmin)
 

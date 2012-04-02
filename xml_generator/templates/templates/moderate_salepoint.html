@@ -2,17 +2,46 @@
 
 {% block content %}
 <form action="" method="post">{% csrf_token %}
-    <p>Выберите из 2-х альтернатив:</p>
-    {{ form }}
-    <p>Эти новые точки продаж будут ссылаться на выбранную старую:</p>
+    <h3>Выберите одну из 2-х альтернатив и нажмите 'сохранить':</h3>
+    <br>
+    <h4>Альтернатива 1</h4>
+    <p>Эти новые точки продаж</p>
     <ul>{{ items|unordered_list }}</ul>
-    
+    <p> будут ссылаться на выбранную старую</p>
+    {{ form }}
+    <br>
+    <br>
     <p>---------------------------------------------------------------------------------------</p>
+    <h4>Альтернатива 2</h4>
     <p>Создайте новую точку продаж, к которой будут привязаны новые точки продаж от сборщиков:</p>
 
-    {{form_create_new.as_ul}}
 
-    <input type="hidden" name="action" value="moderate_salepoint" />
-    <input type="submit" name="apply" value="Сохранить" />
+    <table class="fieldWrapper" style="margin-left: 50px; margin-right: 50px">
+         <colgroup>
+              <col width="25%" />
+              <col  width="40%"/>
+              <col width="35%"/>
+         </colgroup>
+         <thead>
+         <tr>
+             <td><b>Поле</b></td>
+             <td><b>Выбор</b></td>
+             <td><b>Описание</b></td>
+         </thead>
+        
+         <tbody>
+             {% for field in form_create_new %}
+             <tr>
+
+                 <td>{{ field.label_tag }} </td>
+                 <td>    {{ field }} {{ field.errors }} </td>
+                 <td>    {{field.help_text}} </td>
+             </tr>
+             {% endfor %}
+         </tbody>
+    </table>
+
+    <input type="hidden" name="action" value="moderate_salepoint" style="margin-left: 50px; margin-right: 50px"/>
+    <input type="submit" name="apply" value="Сохранить" style="color:red; margin-left: 50px; margin-top: 10px; margin-right: 50px"/>
 </form>
 {% endblock %}

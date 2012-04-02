@@ -20,7 +20,7 @@ class Manufacturer(models.Model):
     def __unicode__(self):
         return u'%s' % self.name
 
-
+    '''
     def save(self, *args, **kwargs):
         try:
             self.pk = Manufacturer.objects.get(name=self.name).pk
@@ -28,13 +28,14 @@ class Manufacturer(models.Model):
             self.pk = None
             #pr =  self.logic()
         return super(Manufacturer, self).save(*args, **kwargs)
+    '''
     #ext_id = models.IntegerField(verbose_name=u'Ключ Neiron',
     #    help_text=u'PK производителя в системе Neiron',
     #    primary_key=True)
 
 class Country(models.Model):
     name = models.CharField(u'Страна', max_length=255, blank=True, null=True)
-
+    '''
     def save(self, *args, **kwargs):
         try:
             self.pk = Country.objects.get(name=self.name).pk
@@ -42,7 +43,7 @@ class Country(models.Model):
             self.pk = None
         #pr =  self.logic()
         return super(Country, self).save(*args, **kwargs)
-
+    '''
     def __unicode__(self):
         return u'%s' % self.name
 
@@ -104,6 +105,7 @@ class Salepoint(models.Model):
     VARIATION_TYPE = (
         (u"fuel", u"заправка"),
         (u"product", u"продуктовая"),
+        (u'medecine', u"медецина"),
         )
 
     STATUS = (
@@ -127,9 +129,9 @@ class Salepoint(models.Model):
     pricelist_url = models.CharField(u'юрл прайслиста', max_length=255)
     user = models.ForeignKey(User, null=True, blank=True, verbose_name="сборщик предложений")
     city = models.CharField(u'Город', max_length=255)
-    last_modified_time = models.DateTimeField(null=True, blank=True, verbose_name="время последнего обновления предложений")
+    last_modified_time = models.DateTimeField(null=True, blank=True, verbose_name="время обновления")
     salepoint_moderated = models.ForeignKey('self',null=True,blank=True, verbose_name="отмодерированная точка продаж", help_text='Ссылается на эталонную проверенную модератором точку продаж, если не пусто')
-    is_redundant = models.BooleanField(u'Не нужная', help_text='Эта точка продаж нужна', default=False)
+    is_redundant = models.BooleanField(u'Не нужная', help_text='Эта точка продаж нужна?', default=False)
     def __unicode__(self):
         return u'%s, %s' % (self.name, self.address)
     
