@@ -187,16 +187,15 @@ class ProductResource(ModelResource):
         bundle.obj.is_new = True
         bundle.obj.is_redundant = False
         try:
-            _sp = Salepoint.objects.get(pk=bundle.data['salepoint_id'])
-            bundle.obj.user = _sp.user
+            bundle.obj.user = User.objects.get(username=bundle.data['username'])
         except:
             bundle.obj.user = None
 
         try:
-            _man = Manufacturer.objects.get(name = bundle.data['введите название произодителя из title'])
+            _man = Manufacturer.objects.get(name = u'введите название производителя из "названия"')
             bundle.obj.manufacturer = _man
         except Exception as e:
-            _man = Manufacturer(name = bundle.data['введите название произодителя из title'])
+            _man = Manufacturer(name = u'введите название производителя из "названия"')
             _man.save()
             bundle.obj.manufacturer = _man
 
