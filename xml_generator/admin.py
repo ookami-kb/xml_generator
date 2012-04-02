@@ -7,7 +7,8 @@ from django.template import RequestContext, loader
 from django.shortcuts import render
 from datetime import datetime
 import time
-
+from django.contrib.auth.admin import UserAdmin
+from django.contrib.auth.models import User
 
 admin.site.register(WhiteBrand)
 
@@ -121,8 +122,8 @@ class ProductAdmin(admin.ModelAdmin):
 admin.site.register(Product, ProductAdmin)
 
 class OfferAdmin(admin.ModelAdmin):
-    list_display = ('product', 'salepoint', 'price', 'created')
-    list_filter = ('product__is_new', 'salepoint',)
+    list_display = ('product', 'salepoint', 'price', 'created', 'is_redundant')
+    list_filter = ('product__is_new','salepoint__user', 'salepoint')
 
 admin.site.register(Offer, OfferAdmin)
 
@@ -134,6 +135,16 @@ class SalepointAdmin(admin.ModelAdmin):
     
 admin.site.register(Salepoint, SalepointAdmin)
 
-admin.site.register(Organization)
+class OrganizationAdmin(admin.ModelAdmin):
+    list_display = ('name', 'pk',)
+
+
+admin.site.register(Organization, OrganizationAdmin)
 admin.site.register(Country)
 admin.site.register(Manufacturer)
+
+class MyUserAdmin(UserAdmin):
+    list_filter = UserAdmin.list_filter + ('salepoint',)
+
+admin.site.unregister(User)
+admin.site.register(User, MyUserAdmin)

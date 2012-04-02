@@ -45,6 +45,8 @@ class WhiteBrandResource(ModelResource):
 class SalepointResource(ModelResource):
     def obj_create(self, bundle, request=None, **kwargs):
         return super(SalepointResource, self).obj_create(bundle, request, user=request.user)
+
+
     
     def hydrate(self, bundle):
         try:
@@ -54,29 +56,27 @@ class SalepointResource(ModelResource):
         
         # если мы изменяем уже существующую торговую точку, то не надо
         # менять ее организацию
+
         try:
-            salepoint = Salepoint.objects.get(pk=bundle.obj.id)
-            bundle.obj.organ = salepoint.organ
-            # нахрен удаляем все офферы, относящиеся к данной торговой точке,
-            # следующим этапом мы их все равно будем вносить
-#            Offer.objects.filter(salepoint=salepoint).delete()
-        except Salepoint.DoesNotExist:
-            # если мы создаем новую точку (бывает для заправок),
-            # то можем попытаться присвоить ей организацию,
-            # если юзер правильно ввел название
-            try:
-                bundle.obj.organ = Organization.objects.get(name=bundle.data['org'])
-            except:
-                bundle.obj.organ = Organization.objects.get(name='unknown')
-        
+            bundle.obj.organ = Organization.objects.get(name=u'возьмите из названия')
+        except Exception as e:
+            _org = Organization(name=u'возьмите из названия')
+            _org.save()
+            bundle.obj.organ = _org
         try:
             _coords = bundle.data['coords']
             bundle.obj.longitude = float(_coords.split(',')[1])
             bundle.obj.latitude = float(_coords.split(',')[0])
         except:
             pass
+
         bundle.obj.is_new = True
         bundle.obj.is_redundant=False
+        bundle.obj.last_modified_time = datetime.datetime.now()
+        try:
+            bundle.obj.user = User.objects.get(username=bundle.data['username'])
+        except:
+            bundle.obj.user = None
         return bundle
 
     def dehydrate(self, bundle):
@@ -108,7 +108,9 @@ class OfferResource(ModelResource):
         if username:
             try:
                 user = User.objects.get(username=username)
-                Offer.objects.filter(salepoint__user=user).delete()
+                for obj in Offer.objects.filter(salepoint__user=user):
+                    obj.is_redundant=True
+                    obj.save()
             except User.DoesNotExist:
                 pass
         super(OfferResource, self).patch_list(request, **kwargs)
@@ -142,15 +144,20 @@ class OfferResource(ModelResource):
         bundle.obj.salepoint = Salepoint.objects.get(pk=bundle.data['salepoint_id'])
 
         #если продукт отмодерирован и есть эталонный(дрйгой), то предложение переназначается на него
-        _pr = Product.objects.get(source_code=bundle.data['source_code'],
-            source_type=bundle.data['source_type'])
+        try:
+            _pr = Product.objects.get(source_code=bundle.data['source_code'],
+            source_type=bundle.data['source_type'], is_redundant=False)
+        except:
+            return None
         if not _pr.is_new:
             if _pr.product_moderated:
                 bundle.obj.product = _pr.product_moderated
             else:
                 bundle.obj.product = _pr
-
-        _sp = Salepoint.objects.get(pk=bundle.data['salepoint_id'])
+        try:
+            _sp = Salepoint.objects.get(pk=bundle.data['salepoint_id'], is_redundant=False)
+        except:
+            return None
         _sp.last_modified_time = datetime.datetime.now()
 
         return bundle
@@ -179,6 +186,21 @@ class ProductResource(ModelResource):
             bundle.obj.white_brand = WhiteBrand.objects.get(pk=bundle.data['white_brand'])
         bundle.obj.is_new = True
         bundle.obj.is_redundant = False
+        try:
+            _sp = Salepoint.objects.get(pk=bundle.data['salepoint_id'])
+            bundle.obj.user = _sp.user
+        except:
+            bundle.obj.user = None
+
+        try:
+            _man = Manufacturer.objects.get(name = bundle.data['введите название произодителя из title'])
+            bundle.obj.manufacturer = _man
+        except Exception as e:
+            _man = Manufacturer(name = bundle.data['введите название произодителя из title'])
+            _man.save()
+            bundle.obj.manufacturer = _man
+
+
         return bundle
 
     #def dehydrate(self, bundle):

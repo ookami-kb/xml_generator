@@ -119,16 +119,16 @@ class Salepoint(models.Model):
 
     variation = models.CharField(max_length=17, choices=VARIATION_TYPE, verbose_name="заправка\продукты", default=u"product",null=True, blank=True)
     is_new = models.BooleanField(u'Новая', help_text='Эта точка продаж была создана пользователем и еще не прошла модерацию')
-    status = models.CharField(max_length=12, choices=STATUS, verbose_name="статус")
+    status = models.CharField(max_length=12, choices=STATUS, verbose_name="статус", default=u"on")
     name = models.CharField(u'Название точки продаж', max_length=255)
     address = models.CharField(u'Адрес', max_length=255)
     latitude = models.FloatField(u'Широта', null=True, blank=True)
     longitude = models.FloatField(u'Долгота', null=True, blank=True)
     organ     = models.ForeignKey(Organization, verbose_name="организация")
-    pricelist_name = models.CharField(u'Название прайслиста', max_length=255)
-    pricelist_url = models.CharField(u'юрл прайслиста', max_length=255)
+    pricelist_name = models.CharField(u'Название прайслиста', max_length=255, default=u"введите название прайслиста")
+    pricelist_url = models.CharField(u'юрл прайслиста', max_length=255, default=u'введите url Прайслиста')
     user = models.ForeignKey(User, null=True, blank=True, verbose_name="сборщик предложений")
-    city = models.CharField(u'Город', max_length=255)
+    city = models.CharField(u'Город', max_length=255, default=u"Челябинск")
     last_modified_time = models.DateTimeField(null=True, blank=True, verbose_name="время обновления")
     salepoint_moderated = models.ForeignKey('self',null=True,blank=True, verbose_name="отмодерированная точка продаж", help_text='Ссылается на эталонную проверенную модератором точку продаж, если не пусто')
     is_redundant = models.BooleanField(u'Не нужная', help_text='Эта точка продаж нужна?', default=False)
@@ -140,6 +140,7 @@ class Offer(models.Model):
     salepoint = models.ForeignKey(Salepoint, verbose_name="Точка продаж")
     price = models.FloatField(u'Цена')
     created = models.DateTimeField(verbose_name="время создания")
+    is_redundant = models.BooleanField(u'Не нужная', help_text='Эта точка продаж нужна?', default=False)
 
 
     

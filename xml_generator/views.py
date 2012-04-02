@@ -59,7 +59,7 @@ def generate_xml(request):
                 sh_lon.text = unicode(sp.longitude)
 
                 NPL = etree.Element('offers')
-                _offers = Offer.objects.filter(salepoint=sp, product__is_new=False, price__gt=0, product__is_redundant=False)
+                _offers = Offer.objects.filter(salepoint=sp, product__is_new=False, price__gt=0, product__is_redundant=False, is_redundant=False)
                 for _offer in _offers:
                     offer = etree.SubElement(NPL, 'offer')
                     price = etree.SubElement(offer, 'price')
