@@ -129,7 +129,7 @@ admin.site.register(Offer, OfferAdmin)
 
 class SalepointAdmin(admin.ModelAdmin):
     list_display = ('name', 'address', 'organ', 'last_modified_time', 'user', 'city', 'is_new', 'is_redundant')
-    list_filter = ('user', 'is_new','user', 'is_redundant','organ', )
+    list_filter = ('user', 'is_new', 'is_redundant','organ', )
     actions = [moderate_salepoint, ]
 
     

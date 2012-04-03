@@ -136,11 +136,19 @@ class OfferResource(ModelResource):
             pass
         return bundle
 
+
+
+    def dispatch(self, request_type, request, **kwargs):
+        #username = kwargs.pop('username')
+        #kwargs['user'] = get_object_or_404(User, username=username)
+        self.created = datetime.datetime.now()
+        return super(OfferResource, self).dispatch(request_type, request, **kwargs)
+
     def hydrate(self, bundle):
         try:
             bundle.obj.created = datetime.date.fromtimestamp(int(bundle.data['timestamp']))
         except:
-            bundle.obj.created = datetime.datetime.now()
+            bundle.obj.created = self.created
         bundle.obj.salepoint = Salepoint.objects.get(pk=bundle.data['salepoint_id'])
 
         #если продукт отмодерирован и есть эталонный(дрйгой), то предложение переназначается на него
@@ -149,11 +157,11 @@ class OfferResource(ModelResource):
             source_type=bundle.data['source_type'], is_redundant=False)
         except:
             return None
+        bundle.obj.product = _pr
         if not _pr.is_new:
             if _pr.product_moderated:
                 bundle.obj.product = _pr.product_moderated
-            else:
-                bundle.obj.product = _pr
+
         try:
             _sp = Salepoint.objects.get(pk=bundle.data['salepoint_id'], is_redundant=False)
         except:
@@ -207,4 +215,15 @@ class ProductResource(ModelResource):
 
     def get_object_list(self, request, *args, **kwargs):
         #Отмодерированные продукты выгружаются всем. Неотмодерированные - только создавшим их пользователям.
-        return Product.objects.filter(((Q(user=request.user) & Q(is_new=True)) & Q(is_redundant=False)) | (Q(is_new=False) & Q(is_redundant=False) ))
+        return Product.objects.filter(((Q(user=request.user) & Q(is_new=True)) & Q(is_redundant=False)) | (Q(is_new=False) & Q(product_moderated=None) & Q(is_redundant=False) ))
+
+
+def generate_analytics():
+    o = Offer.objects.filter(salepoint__user__username='user3').values('created').annotate(ncount=Count('pk'))
+    '''[{'ncount': 3, 'created': datetime.datetime(2012, 4, 3, 5, 0, tzinfo=<UTC>)}, {'ncount': 1, 'created': datetime.datetime(2012, 4, 3, 6, 5, 33, 660143, tzinfo=<UTC>)}, {'ncount': 1, 'created': datetime.datetime(2012, 4, 3, 6, 5, 33, 668199, tzinfo=<UTC>)}, {'ncount': 1, 'created': datetime.datetime(2012, 4, 3, 6, 10, 19, 766095, tzinfo=<UTC>)}, {'ncount': 1, 'created': datetime.datetime(2012, 4, 3, 6, 16, 38, 460653, tzinfo=<UTC>)}]
+
+        '''
+
+    _sps = Salepoint.objects.filter(user__username='user3')
+    for sp in _sps:
+        o = Offer.objects.filter(salepoint=sp).values('created').annotate(ncount=Count('pk'))

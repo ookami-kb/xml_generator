@@ -7,6 +7,8 @@ import os, shutil
 from lxml import etree
 from django.views.decorators.csrf import csrf_exempt
 from django.db.models import Max
+from django.template.response import TemplateResponse
+
 from django.conf import settings
 global_path = settings.GLOBAL_PATH
 from xml_generator.models import *
@@ -137,5 +139,11 @@ def generate_xml(request):
 
         return HttpResponse(content, mimetype='application/javascript')
 
+
+def view_data(request):
+    template_name = 'templates/analytics.html'
+    context = {}
+
+    return TemplateResponse(request, template_name, context)
 
 
