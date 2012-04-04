@@ -33,7 +33,7 @@ def generate_xml(request):
 
             NOL = etree.Element('pricelists')
             orgs = org.salepoint_set.filter(is_redundant=False, is_new=False)
-            for sp in org.salepoint_set.all():
+            for sp in orgs:
                 pricelist = etree.SubElement(NOL, 'pricelist')
                 pr_name = etree.SubElement(pricelist, 'name')
                 pr_name.text = sp.pricelist_name
@@ -91,25 +91,28 @@ def generate_xml(request):
             _pr.set('id', str(product.source_code))
 
 
-        for country in Country.objects.filter(product__is_new=False, product__is_redundant=False).distinct():
+        for country in Country.objects.all().distinct():
             _cunt = etree.SubElement(NNPL, 'country')
             _cunt.set('name', country.name)
             _cunt.set('id', str(country.pk))
 
-        for _mf in Manufacturer.objects.filter(product__is_new=False, product__is_redundant=False).exclude(name=None).distinct():
+        for _mf in Manufacturer.objects.all().exclude(name=None).distinct():
             _mfuck  = etree.SubElement(NNPL, 'manufacturer')
             _mfuck.set('name', _mf.name)
             _mfuck.set('id', str(_mf.pk))
 
-        prs = Product.objects.filter(is_new=False, is_redundant=False)
+        prs = Product.objects.filter(is_new=False, is_redundant=False).exclude(manufacturer=None)
         for product in prs:
             _modif = etree.SubElement(NNPL, 'modification')
             _modif.set('id', str(product.pk))
             _modif.set('title', product.title)
-            _modif.set('title_extra', product.title_extra)
+            if product.title_extra:
+                _modif.set('title_extra', product.title_extra)
+            else: _modif.set('title_extra', '')
             _modif.set('product_id', str(product.source_code))
             _modif.set('country_id', str(product.country.pk))
-            _modif.set('manufacturer_id', str(product.manufacturer.pk))
+            if product.manufacturer:
+                _modif.set('manufacturer_id', str(product.manufacturer.pk))
             _modif.set('type', product.type)
             if product.white_brand:
                 _modif.set('wb_id', str(product.white_brand.pk))
