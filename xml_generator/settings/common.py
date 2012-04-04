@@ -73,6 +73,7 @@ STATICFILES_DIRS = (
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
+    #STATIC_ROOT + 'admintools_bootstrap',
 )
 
 # List of finder classes that know how to find static files in
@@ -82,7 +83,18 @@ STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
 #    'django.contrib.staticfiles.finders.DefaultStorageFinder',
 )
+TEMPLATE_CONTEXT_PROCESSORS = (
+    # default template context processors
+    "django.contrib.auth.context_processors.auth",
+    'django.core.context_processors.debug',
+    'django.core.context_processors.i18n',
+    'django.core.context_processors.media',
 
+
+
+    # required by django-admin-tools
+    'django.core.context_processors.request',
+    )
 # Make this unique, and don't share it with anybody.
 SECRET_KEY = 'tt+!@nf%y&*ho+tobg00(%dmet&hi0n-!n7v_rve&1(-3-+-_s'
 
@@ -110,12 +122,19 @@ ROOT_URLCONF = 'xml_generator.urls'
 WSGI_APPLICATION = 'xml_generator.wsgi.application'
 
 TEMPLATE_DIRS = (
+    #'/home/eugene/Documents/xml_generator/xml_generator/templates/'
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
 )
 
 INSTALLED_APPS = (
+    #'admintools_bootstrap',
+    'admin_tools',
+    'admin_tools.theming',
+    'admin_tools.menu',
+    'admin_tools.dashboard',
+    "django.contrib.staticfiles",
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -156,3 +175,10 @@ LOGGING = {
         },
     }
 }
+
+ADMIN_MEDIA_PREFIX = STATIC_URL + "admin/"
+ADMIN_TOOLS_MENU = 'xml_generator.menu.CustomMenu'
+ADMIN_TOOLS_INDEX_DASHBOARD = 'xml_generator.dashboard.CustomIndexDashboard'
+ADMIN_TOOLS_APP_INDEX_DASHBOARD = 'xml_generator.dashboard.CustomAppIndexDashboard'
+
+#ADMIN_TOOLS_THEMING_CSS = 'theming.css'

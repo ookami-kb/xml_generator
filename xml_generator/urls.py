@@ -5,7 +5,7 @@ from django.conf.urls import *
 from tastypie.api import Api
 from models import *
 from api import *
-
+from django.conf import settings
 v1_api = Api(api_name = 'v1')
 v1_api.register(SalepointResource())
 v1_api.register(OfferResource())
@@ -26,4 +26,8 @@ urlpatterns = patterns('',
     url(r'^api/', include(v1_api.urls)),
     url(r'^generate-xml/$', 'xml_generator.views.generate_xml'),
     url(r'^view-data/$', 'xml_generator.views.view_data'),
+    url(r'^admin_tools/', include('admin_tools.urls')),
+    #(r'^admins/(?P<path>.*)$', 'django.views.static.serve', {'document_root': '/home/eugene/Documents/xml_generator/xml_generator/templates/templates/admin/static', 'show_indexes': True}),
 )
+
+
