@@ -2,7 +2,7 @@
 .pydevproject
 xml_generator/settings/personal.py
 settings/personal.py
-
+db
 *.pyc
 .settings
 .idea
