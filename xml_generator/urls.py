@@ -28,6 +28,7 @@ urlpatterns = patterns('',
     url(r'^view-data/$', 'xml_generator.views.view_data'),
     
     url(r'^analytics/', include('xml_generator.analytics.urls')),
+    url(r'^admin_tools/', include('admin_tools.urls')),
 )
 
 # serve static content

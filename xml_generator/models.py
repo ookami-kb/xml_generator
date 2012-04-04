@@ -15,11 +15,15 @@ class WhiteBrand(models.Model):
     def __unicode__(self):
         return self.name
 
+    class Meta:
+        verbose_name = u"Белый бренд"
+
 class Manufacturer(models.Model):
     name = models.CharField(u'Производитель', max_length=255, blank=True, null=True)
     def __unicode__(self):
         return u'%s' % self.name
-
+    class Meta:
+        verbose_name = u"Производитель"
     '''
     def save(self, *args, **kwargs):
         try:
@@ -47,6 +51,8 @@ class Country(models.Model):
     def __unicode__(self):
         return u'%s' % self.name
 
+    class Meta:
+        verbose_name = u"Страна"
     #ext_id = models.IntegerField(verbose_name=u'Ключ Neiron',
     #    help_text=u'PK страны в системе Neiron',
     #    primary_key=True)
@@ -64,10 +70,12 @@ class Product(models.Model):
     product_moderated = models.ForeignKey('self',null=True,blank=True, help_text='Ссылается на эталонный проверенный модератором продуктом, если не пусто')
     type = models.CharField(u'тип продукта', max_length=255, blank=True, null=True)
     is_redundant = models.BooleanField(u'не нужный', help_text='Этот продукт не нужен?', default=False)
+    class Meta:
+        verbose_name = u"Продукт"
 
     def __unicode__(self):
         return u'%s. %s (%s)' % (self.title, self.title_extra, self.manufacturer)
-    
+
     def clean(self):
         # надо удостовериться, что есть только один продукт с таким
         # source_code и source_type
@@ -90,6 +98,8 @@ class Organization(models.Model):
     #ext_id = models.IntegerField(verbose_name=u'Ключ Neiron',
     #    help_text=u'PK организации в системе Neiron',
     #    primary_key=True)
+    class Meta:
+        verbose_name = u"Организация"
 
     def __unicode__(self):
         return self.name
@@ -131,7 +141,11 @@ class Salepoint(models.Model):
     city = models.CharField(u'Город', max_length=255, default=u"Челябинск")
     last_modified_time = models.DateTimeField(null=True, blank=True, verbose_name="время обновления")
     salepoint_moderated = models.ForeignKey('self',null=True,blank=True, verbose_name="отмодерированная точка продаж", help_text='Ссылается на эталонную проверенную модератором точку продаж, если не пусто')
-    is_redundant = models.BooleanField(u'Не нужная', help_text='Эта точка продаж нужна?', default=False)
+    is_redundant = models.BooleanField(u'Не нужная', help_text='Этот точка продаж нужна?', default=False)
+
+    class Meta:
+        verbose_name = u"Точка продаж"
+
     def __unicode__(self):
         return u'%s, %s' % (self.name, self.address)
     
@@ -140,10 +154,11 @@ class Offer(models.Model):
     salepoint = models.ForeignKey(Salepoint, verbose_name="Точка продаж")
     price = models.FloatField(u'Цена')
     created = models.DateTimeField(verbose_name="время создания")
-    is_redundant = models.BooleanField(u'Не нужная', help_text='Эта точка продаж нужна?', default=False)
+    is_redundant = models.BooleanField(u'Не нужно', help_text='Это предложение нужно?', default=False)
 
+    class Meta:
+        verbose_name = u"Предложение"
 
-    
     def __unicode__(self):
         return u'%s в магазине %s' % (self.product, self.salepoint)
     

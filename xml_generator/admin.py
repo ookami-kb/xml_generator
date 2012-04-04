@@ -136,7 +136,7 @@ class SalepointAdmin(admin.ModelAdmin):
 admin.site.register(Salepoint, SalepointAdmin)
 
 class OrganizationAdmin(admin.ModelAdmin):
-    list_display = ('name', 'pk',)
+    list_display = ('name', )
 
 
 admin.site.register(Organization, OrganizationAdmin)
