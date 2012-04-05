@@ -55,6 +55,7 @@ class Country(models.Model):
 
     class Meta:
         verbose_name = u"Страна"
+        verbose_name_plural = u'Страны'
     #ext_id = models.IntegerField(verbose_name=u'Ключ Neiron',
     #    help_text=u'PK страны в системе Neiron',
     #    primary_key=True)
