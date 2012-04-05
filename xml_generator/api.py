@@ -207,7 +207,7 @@ class ProductResource(ModelResource):
 #            _man.save()
 #            bundle.obj.manufacturer = _man
 
-
+        bundle.obj.country = Country.objects.get(name=u'Россия')
         return bundle
 
     #def dehydrate(self, bundle):
