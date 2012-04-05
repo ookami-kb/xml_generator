@@ -25,6 +25,7 @@ class Manufacturer(models.Model):
         return u'%s' % self.name
     class Meta:
         verbose_name = u"Производитель"
+        verbose_name_plural = u'Производители'
     '''
     def save(self, *args, **kwargs):
         try:
@@ -102,6 +103,7 @@ class Organization(models.Model):
     #    primary_key=True)
     class Meta:
         verbose_name = u"Организация"
+        verbose_name_plural = u'Организации'
 
     def __unicode__(self):
         return self.name
@@ -140,13 +142,13 @@ class Salepoint(models.Model):
     address = models.CharField(u'Адрес', max_length=255)
     latitude = models.FloatField(u'Широта', null=True, blank=True)
     longitude = models.FloatField(u'Долгота', null=True, blank=True)
-    organ     = models.ForeignKey(Organization, verbose_name="организация")
+    organ     = models.ForeignKey(Organization, verbose_name="организация", null=True, blank=True)
     pricelist_name = models.CharField(u'Название прайслиста', max_length=255, default=u"введите название прайслиста")
     pricelist_url = models.CharField(u'юрл прайслиста', max_length=255, default=u'введите url Прайслиста')
     user = models.ForeignKey(User, null=True, blank=True, verbose_name="сборщик предложений")
     city = models.CharField(u'Город', max_length=255, default=u"Челябинск")
     last_modified_time = models.DateTimeField(null=True, blank=True, verbose_name=u"обновлена")
-    salepoint_moderated = models.ForeignKey('self',null=True,blank=True, verbose_name="отмодерированная точка продаж", help_text='Ссылается на эталонную проверенную модератором точку продаж, если не пусто')
+    #salepoint_moderated = models.ForeignKey('self',null=True,blank=True, verbose_name="отмодерированная точка продаж", help_text='Ссылается на эталонную проверенную модератором точку продаж, если не пусто')
     is_redundant = models.BooleanField(u'Не нужная', help_text='Этот точка продаж нужна?', default=False)
     
     with_offers = OfferSalepointManager()

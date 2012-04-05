@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='cp1251'?>
+<pricelists>
+  <pricelist>
+    <name>Игуменка, 187/2</name>
+    <url>price-969.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>АЗС</name>
+        <city>Челябинск</city>
+        <address>Игуменка 187/2</address>
+        <coord>
+          <latitude>55.1089041178</latitude>
+          <longitude>61.4083242734</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+</pricelists>

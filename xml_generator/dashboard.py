@@ -25,6 +25,7 @@ class CustomIndexDashboard(Dashboard):
     def init_with_context(self, context):
         site_name = get_admin_site_name(context)
         # append a link list module for "quick links"
+        '''
         self.children.append(modules.LinkList(
             _(u'Быстрые ссылки'),
             layout='inline',
@@ -38,7 +39,7 @@ class CustomIndexDashboard(Dashboard):
                 [_('Log out'), reverse('%s:logout' % site_name)],
             ]
         ))
-
+        '''
         # append an app list module for "Applications"
         self.children.append(modules.AppList(
             _(u'Данные'),

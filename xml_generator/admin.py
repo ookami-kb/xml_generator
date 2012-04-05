@@ -61,7 +61,7 @@ def moderate_product(modeladmin, request, queryset):
     return render(request, 'templates/moderate_product.html', {'items': queryset,'form': form, 'form_create_new':form_create_new, 'title':u'Привязка к существующему продукту'})
 
 moderate_product.short_description = u"Привязать новые продукты от сброщиков к имеющемуся продукту в базе данных или создать его"
-
+'''
 class ModerateSalepointForm(forms.Form):
     _selected_action = forms.CharField(widget=forms.MultipleHiddenInput)
     salepoint = forms.ModelChoiceField(queryset=Salepoint.objects.filter(is_new=False), label=u'точку продаж')
@@ -112,7 +112,7 @@ def moderate_salepoint(modeladmin, request, queryset):
     return render(request, 'templates/moderate_salepoint.html', {'items': queryset,'form': form, 'form_create_new':form_create_new, 'title':u'Привязка к существующей точке продаж'})
 
 moderate_salepoint.short_description = u"Привязать новые точки продаж от сборщиков к имеющейся точке продаж в базе данных или создать ее"
-
+'''
 class ProductAdmin(admin.ModelAdmin):
     list_display = ('title', 'title_extra', 'manufacturer', 'white_brand',
               'is_new', 'is_redundant')
@@ -130,7 +130,7 @@ admin.site.register(Offer, OfferAdmin)
 class SalepointAdmin(admin.ModelAdmin):
     list_display = ('name', 'address', 'organ', 'last_modified_time', 'user', 'is_new', 'is_redundant', 'offers_count')
     list_filter = ('user', 'is_new', 'is_redundant','organ', )
-    actions = [moderate_salepoint, ]
+    #actions = [moderate_salepoint, ]
 
     
 admin.site.register(Salepoint, SalepointAdmin)
@@ -144,7 +144,7 @@ admin.site.register(Country)
 admin.site.register(Manufacturer)
 
 class MyUserAdmin(UserAdmin):
-    list_filter = UserAdmin.list_filter + ('salepoint',)
+    list_filter = UserAdmin.list_filter + ('salepoint','salepoint__user__username',)
 
 admin.site.unregister(User)
 admin.site.register(User, MyUserAdmin)

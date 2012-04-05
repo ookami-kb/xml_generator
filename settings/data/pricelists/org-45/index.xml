@@ -1,0 +1,1023 @@
+<?xml version='1.0' encoding='cp1251'?>
+<pricelists>
+  <pricelist>
+    <name>МОПРа площадь, 10</name>
+    <url>5.xml</url>
+    <shops>
+      <shop type="salon">
+        <name>Пятерочка</name>
+        <city>Челябинск</city>
+        <address>МОПРа площадь, 10</address>
+        <coord>
+          <latitude>55.1636055976</latitude>
+          <longitude>61.4175820974</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Академика Королёва, 24</name>
+    <url>5.xml</url>
+    <shops>
+      <shop type="salon">
+        <name>Пятерочка</name>
+        <city>Челябинск</city>
+        <address>Академика Королёва, 24</address>
+        <coord>
+          <latitude>55.1641143387</latitude>
+          <longitude>61.2971340699</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Ленина проспект, 64д</name>
+    <url>5.xml</url>
+    <shops>
+      <shop type="salon">
+        <name>Пятерочка</name>
+        <city>Челябинск</city>
+        <address>Ленина проспект, 64д</address>
+        <coord>
+          <latitude>55.1604536211</latitude>
+          <longitude>61.3878615082</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Победы проспект, 111</name>
+    <url>5.xml</url>
+    <shops>
+      <shop type="salon">
+        <name>Пятерочка</name>
+        <city>Челябинск</city>
+        <address>Победы проспект, 111</address>
+        <coord>
+          <latitude>55.1866555533</latitude>
+          <longitude>61.4379288481</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Молодогвардейцев, 35б</name>
+    <url>5.xml</url>
+    <shops>
+      <shop type="salon">
+        <name>Пятерочка</name>
+        <city>Челябинск</city>
+        <address>Молодогвардейцев, 35б</address>
+        <coord>
+          <latitude>55.1865464625</latitude>
+          <longitude>61.3336639983</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Братьев Кашириных, 104</name>
+    <url>5.xml</url>
+    <shops>
+      <shop type="salon">
+        <name>Пятерочка</name>
+        <city>Челябинск</city>
+        <address>Братьев Кашириных, 104</address>
+        <coord>
+          <latitude>55.1789286509</latitude>
+          <longitude>61.3156318381</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Молодогвардейцев, 31</name>
+    <url>5.xml</url>
+    <shops>
+      <shop type="salon">
+        <name>Пятерочка</name>
+        <city>Челябинск</city>
+        <address>Молодогвардейцев, 31</address>
+        <coord>
+          <latitude>55.18832619</latitude>
+          <longitude>61.3337554271</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Каслинская, 21</name>
+    <url>5.xml</url>
+    <shops>
+      <shop type="salon">
+        <name>Пятерочка</name>
+        <city>Челябинск</city>
+        <address>Каслинская, 21</address>
+        <coord>
+          <latitude>55.1870998456</latitude>
+          <longitude>61.3940194661</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Победы проспект, 158</name>
+    <url>5.xml</url>
+    <shops>
+      <shop type="salon">
+        <name>Пятерочка</name>
+        <city>Челябинск</city>
+        <address>Победы проспект, 158</address>
+        <coord>
+          <latitude>55.1849530764</latitude>
+          <longitude>61.4059576517</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Молодогвардейцев, 53</name>
+    <url>5.xml</url>
+    <shops>
+      <shop type="salon">
+        <name>Пятерочка</name>
+        <city>Челябинск</city>
+        <address>Молодогвардейцев, 53</address>
+        <coord>
+          <latitude>55.1810056485</latitude>
+          <longitude>61.3334671944</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>40 лет Победы, 37 / 250 лет Челябинску, 11</name>
+    <url>5.xml</url>
+    <shops>
+      <shop type="salon">
+        <name>Пятерочка</name>
+        <city>Челябинск</city>
+        <address>40 лет Победы, 37 / 250 лет Челябинску, 11</address>
+        <coord>
+          <latitude>55.1811293694</latitude>
+          <longitude>61.3066358051</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Кирова, 19</name>
+    <url>5.xml</url>
+    <shops>
+      <shop type="salon">
+        <name>Пятерочка</name>
+        <city>Челябинск</city>
+        <address>Кирова, 19</address>
+        <coord>
+          <latitude>55.1746149383</latitude>
+          <longitude>61.4003200065</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Братьев Кашириных, 95а</name>
+    <url>5.xml</url>
+    <shops>
+      <shop type="salon">
+        <name>Пятерочка</name>
+        <city>Челябинск</city>
+        <address>Братьев Кашириных, 95а</address>
+        <coord>
+          <latitude>55.1778042161</latitude>
+          <longitude>61.3567871328</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Салавата Юлаева, 27</name>
+    <url>5.xml</url>
+    <shops>
+      <shop type="salon">
+        <name>Пятерочка</name>
+        <city>Челябинск</city>
+        <address>Салавата Юлаева, 27</address>
+        <coord>
+          <latitude>55.1728424757</latitude>
+          <longitude>61.2936548534</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Чичерина, 35в</name>
+    <url>5.xml</url>
+    <shops>
+      <shop type="salon">
+        <name>Пятерочка</name>
+        <city>Челябинск</city>
+        <address>Чичерина, 35в</address>
+        <coord>
+          <latitude>55.1773931229</latitude>
+          <longitude>61.3052110896</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Молодогвардейцев, 32</name>
+    <url>5.xml</url>
+    <shops>
+      <shop type="salon">
+        <name>Пятерочка</name>
+        <city>Челябинск</city>
+        <address>Молодогвардейцев, 32</address>
+        <coord>
+          <latitude>55.1950266226</latitude>
+          <longitude>61.3322834887</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Каслинская, 97б</name>
+    <url>5.xml</url>
+    <shops>
+      <shop type="salon">
+        <name>Пятерочка</name>
+        <city>Челябинск</city>
+        <address>Каслинская, 97б</address>
+        <coord>
+          <latitude>55.175993861</latitude>
+          <longitude>61.3970592695</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Захаренко, 4</name>
+    <url>5.xml</url>
+    <shops>
+      <shop type="salon">
+        <name>Пятерочка</name>
+        <city>Челябинск</city>
+        <address>Захаренко, 4</address>
+        <coord>
+          <latitude>55.1990547604</latitude>
+          <longitude>61.3141311575</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Солнечная, 20</name>
+    <url>5.xml</url>
+    <shops>
+      <shop type="salon">
+        <name>Пятерочка</name>
+        <city>Челябинск</city>
+        <address>Солнечная, 20</address>
+        <coord>
+          <latitude>55.1996034234</latitude>
+          <longitude>61.3184076385</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Комсомольский проспект, 36</name>
+    <url>5.xml</url>
+    <shops>
+      <shop type="salon">
+        <name>Пятерочка</name>
+        <city>Челябинск</city>
+        <address>Комсомольский проспект, 36</address>
+        <coord>
+          <latitude>55.1949782974</latitude>
+          <longitude>61.3413478404</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Комсомольский проспект, 86</name>
+    <url>5.xml</url>
+    <shops>
+      <shop type="salon">
+        <name>Пятерочка</name>
+        <city>Челябинск</city>
+        <address>Комсомольский проспект, 86</address>
+        <coord>
+          <latitude>55.1950014783</latitude>
+          <longitude>61.3029608521</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Комсомольский проспект, 26</name>
+    <url>5.xml</url>
+    <shops>
+      <shop type="salon">
+        <name>Пятерочка</name>
+        <city>Челябинск</city>
+        <address>Комсомольский проспект, 26</address>
+        <coord>
+          <latitude>55.1944580095</latitude>
+          <longitude>61.3574401092</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Свердловский проспект, 11 / Островского, 12</name>
+    <url>5.xml</url>
+    <shops>
+      <shop type="salon">
+        <name>Пятерочка</name>
+        <city>Челябинск</city>
+        <address>Свердловский проспект, 11 / Островского, 12</address>
+        <coord>
+          <latitude>55.1885294691</latitude>
+          <longitude>61.3869761088</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Кыштымская, 14 / Победы проспект, 180</name>
+    <url>5.xml</url>
+    <shops>
+      <shop type="salon">
+        <name>Пятерочка</name>
+        <city>Челябинск</city>
+        <address>Кыштымская, 14 / Победы проспект, 180</address>
+        <coord>
+          <latitude>55.184817418</latitude>
+          <longitude>61.3911636913</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Победы проспект, 192</name>
+    <url>5.xml</url>
+    <shops>
+      <shop type="salon">
+        <name>Пятерочка</name>
+        <city>Челябинск</city>
+        <address>Победы проспект, 192</address>
+        <coord>
+          <latitude>55.1843716096</latitude>
+          <longitude>61.3853429942</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Рязанская, 12</name>
+    <url>5.xml</url>
+    <shops>
+      <shop type="salon">
+        <name>Пятерочка</name>
+        <city>Челябинск</city>
+        <address>Рязанская, 12</address>
+        <coord>
+          <latitude>55.1882189513</latitude>
+          <longitude>61.2754348061</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Бейвеля, 3</name>
+    <url>5.xml</url>
+    <shops>
+      <shop type="salon">
+        <name>Пятерочка</name>
+        <city>Челябинск</city>
+        <address>Бейвеля, 3</address>
+        <coord>
+          <latitude>55.1918652249</latitude>
+          <longitude>61.2790271132</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Островского, 41</name>
+    <url>5.xml</url>
+    <shops>
+      <shop type="salon">
+        <name>Пятерочка</name>
+        <city>Челябинск</city>
+        <address>Островского, 41</address>
+        <coord>
+          <latitude>55.1874539</latitude>
+          <longitude>61.3759225</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Победы проспект, 392</name>
+    <url>5.xml</url>
+    <shops>
+      <shop type="salon">
+        <name>Пятерочка</name>
+        <city>Челябинск</city>
+        <address>Победы проспект, 392</address>
+        <coord>
+          <latitude>55.1834650743</latitude>
+          <longitude>61.2924439373</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Комсомольский проспект, 103а</name>
+    <url>5.xml</url>
+    <shops>
+      <shop type="salon">
+        <name>Пятерочка</name>
+        <city>Челябинск</city>
+        <address>Комсомольский проспект, 103а</address>
+        <coord>
+          <latitude>55.1903737538</latitude>
+          <longitude>61.2955586831</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Победы проспект, 159</name>
+    <url>5.xml</url>
+    <shops>
+      <shop type="salon">
+        <name>Пятерочка</name>
+        <city>Челябинск</city>
+        <address>Победы проспект, 159</address>
+        <coord>
+          <latitude>55.1838937856</latitude>
+          <longitude>61.4009257367</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Комсомольский проспект, 107</name>
+    <url>5.xml</url>
+    <shops>
+      <shop type="salon">
+        <name>Пятерочка</name>
+        <city>Челябинск</city>
+        <address>Комсомольский проспект, 107</address>
+        <coord>
+          <latitude>55.1884313682</latitude>
+          <longitude>61.2909531794</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Тухачевского, 11</name>
+    <url>5.xml</url>
+    <shops>
+      <shop type="salon">
+        <name>Пятерочка</name>
+        <city>Челябинск</city>
+        <address>Тухачевского, 11</address>
+        <coord>
+          <latitude>55.1453550269</latitude>
+          <longitude>61.4350099455</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Масленникова, 8</name>
+    <url>5.xml</url>
+    <shops>
+      <shop type="salon">
+        <name>Пятерочка</name>
+        <city>Челябинск</city>
+        <address>Масленникова, 8</address>
+        <coord>
+          <latitude>55.1185369744</latitude>
+          <longitude>61.4633496767</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Новороссийская, 61</name>
+    <url>5.xml</url>
+    <shops>
+      <shop type="salon">
+        <name>Пятерочка</name>
+        <city>Челябинск</city>
+        <address>Новороссийская, 61</address>
+        <coord>
+          <latitude>55.109261579</latitude>
+          <longitude>61.4756286862</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Копейское шоссе, 7</name>
+    <url>5.xml</url>
+    <shops>
+      <shop type="salon">
+        <name>Пятерочка</name>
+        <city>Челябинск</city>
+        <address>Копейское шоссе, 7</address>
+        <coord>
+          <latitude>55.1215422911</latitude>
+          <longitude>61.5051920186</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Кронштадтская, 30</name>
+    <url>5.xml</url>
+    <shops>
+      <shop type="salon">
+        <name>Пятерочка</name>
+        <city>Челябинск</city>
+        <address>Кронштадтская, 30</address>
+        <coord>
+          <latitude>55.124042435</latitude>
+          <longitude>61.4673000615</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Дзержинского, 93а</name>
+    <url>5.xml</url>
+    <shops>
+      <shop type="salon">
+        <name>Пятерочка</name>
+        <city>Челябинск</city>
+        <address>Дзержинского, 93а</address>
+        <coord>
+          <latitude>55.1313436726</latitude>
+          <longitude>61.4338816451</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Новороссийская, 84</name>
+    <url>5.xml</url>
+    <shops>
+      <shop type="salon">
+        <name>Пятерочка</name>
+        <city>Челябинск</city>
+        <address>Новороссийская, 84</address>
+        <coord>
+          <latitude>55.1138862475</latitude>
+          <longitude>61.4577598104</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Гагарина (Ленинский), 58</name>
+    <url>5.xml</url>
+    <shops>
+      <shop type="salon">
+        <name>Пятерочка</name>
+        <city>Челябинск</city>
+        <address>Гагарина (Ленинский), 58</address>
+        <coord>
+          <latitude>55.1192969518</latitude>
+          <longitude>61.4344572392</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Харлова, 1 / Гагарина (Ленинский), 2</name>
+    <url>5.xml</url>
+    <shops>
+      <shop type="salon">
+        <name>Пятерочка</name>
+        <city>Челябинск</city>
+        <address>Харлова, 1 / Гагарина (Ленинский), 2</address>
+        <coord>
+          <latitude>55.1459388821</latitude>
+          <longitude>61.4445154833</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Суркова, 11</name>
+    <url>5.xml</url>
+    <shops>
+      <shop type="salon">
+        <name>Пятерочка</name>
+        <city>Челябинск</city>
+        <address>Суркова, 11</address>
+        <coord>
+          <latitude>55.1154543246</latitude>
+          <longitude>61.4641330025</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Гагарина (Ленинский), 25</name>
+    <url>5.xml</url>
+    <shops>
+      <shop type="salon">
+        <name>Пятерочка</name>
+        <city>Челябинск</city>
+        <address>Гагарина (Ленинский), 25</address>
+        <coord>
+          <latitude>55.1353818386</latitude>
+          <longitude>61.4392529994</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Гагарина (Ленинский), 13</name>
+    <url>5.xml</url>
+    <shops>
+      <shop type="salon">
+        <name>Пятерочка</name>
+        <city>Челябинск</city>
+        <address>Гагарина (Ленинский), 13</address>
+        <coord>
+          <latitude>55.1401893698</latitude>
+          <longitude>61.4422211408</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>50 лет ВЛКСМ, 11</name>
+    <url>5.xml</url>
+    <shops>
+      <shop type="salon">
+        <name>Пятерочка</name>
+        <city>Челябинск</city>
+        <address>50 лет ВЛКСМ, 11</address>
+        <coord>
+          <latitude>55.2440419947</latitude>
+          <longitude>61.3878865611</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Богдана Хмельницкого, 14 / Жукова, 5</name>
+    <url>5.xml</url>
+    <shops>
+      <shop type="salon">
+        <name>Пятерочка</name>
+        <city>Челябинск</city>
+        <address>Богдана Хмельницкого, 14 / Жукова, 5</address>
+        <coord>
+          <latitude>55.2586958445</latitude>
+          <longitude>61.3920648458</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Черкасская, 4 / Комаровского, 1</name>
+    <url>5.xml</url>
+    <shops>
+      <shop type="salon">
+        <name>Пятерочка</name>
+        <city>Челябинск</city>
+        <address>Черкасская, 4 / Комаровского, 1</address>
+        <coord>
+          <latitude>55.2408202655</latitude>
+          <longitude>61.3786545189</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Богдана Хмельницкого, 27 / Липецкая, 6</name>
+    <url>5.xml</url>
+    <shops>
+      <shop type="salon">
+        <name>Пятерочка</name>
+        <city>Челябинск</city>
+        <address>Богдана Хмельницкого, 27 / Липецкая, 6</address>
+        <coord>
+          <latitude>55.2581408759</latitude>
+          <longitude>61.3843924938</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>60 лет Октября, 10</name>
+    <url>5.xml</url>
+    <shops>
+      <shop type="salon">
+        <name>Пятерочка</name>
+        <city>Челябинск</city>
+        <address>60 лет Октября, 10</address>
+        <coord>
+          <latitude>55.2646014324</latitude>
+          <longitude>61.3988989603</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Сталеваров, 60</name>
+    <url>5.xml</url>
+    <shops>
+      <shop type="salon">
+        <name>Пятерочка</name>
+        <city>Челябинск</city>
+        <address>Сталеваров, 60</address>
+        <coord>
+          <latitude>55.2526731996</latitude>
+          <longitude>61.4028448539</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Металлургов шоссе, 5</name>
+    <url>5.xml</url>
+    <shops>
+      <shop type="salon">
+        <name>Пятерочка</name>
+        <city>Челябинск</city>
+        <address>Металлургов шоссе, 5</address>
+        <coord>
+          <latitude>55.2490033985</latitude>
+          <longitude>61.4010461688</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Трудовая, 10</name>
+    <url>5.xml</url>
+    <shops>
+      <shop type="salon">
+        <name>Пятерочка</name>
+        <city>Челябинск</city>
+        <address>Трудовая, 10</address>
+        <coord>
+          <latitude>55.2682232057</latitude>
+          <longitude>61.3949824993</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Сталеваров, 45</name>
+    <url>5.xml</url>
+    <shops>
+      <shop type="salon">
+        <name>Пятерочка</name>
+        <city>Челябинск</city>
+        <address>Сталеваров, 45</address>
+        <coord>
+          <latitude>55.2464731059</latitude>
+          <longitude>61.4044414302</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Комарова, 131</name>
+    <url>5.xml</url>
+    <shops>
+      <shop type="salon">
+        <name>Пятерочка</name>
+        <city>Челябинск</city>
+        <address>Комарова, 131</address>
+        <coord>
+          <latitude>55.177494737</latitude>
+          <longitude>61.4593297388</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Комарова, 110</name>
+    <url>5.xml</url>
+    <shops>
+      <shop type="salon">
+        <name>Пятерочка</name>
+        <city>Челябинск</city>
+        <address>Комарова, 110</address>
+        <coord>
+          <latitude>55.1773753536</latitude>
+          <longitude>61.4572344051</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Лермонтовский 1-й пер, 3 / Бажова, 44</name>
+    <url>5.xml</url>
+    <shops>
+      <shop type="salon">
+        <name>Пятерочка</name>
+        <city>Челябинск</city>
+        <address>Лермонтовский 1-й пер, 3 / Бажова, 44</address>
+        <coord>
+          <latitude>55.1834962045</latitude>
+          <longitude>61.4546475796</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Кудрявцева, 75а</name>
+    <url>5.xml</url>
+    <shops>
+      <shop type="salon">
+        <name>Пятерочка</name>
+        <city>Челябинск</city>
+        <address>Кудрявцева, 75а</address>
+        <coord>
+          <latitude>55.176191982</latitude>
+          <longitude>61.4285227052</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Танкистов, 136</name>
+    <url>5.xml</url>
+    <shops>
+      <shop type="salon">
+        <name>Пятерочка</name>
+        <city>Челябинск</city>
+        <address>Танкистов, 136</address>
+        <coord>
+          <latitude>55.1731176104</latitude>
+          <longitude>61.4719827934</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Марченко, 25 / 1 Пятилетки, 4</name>
+    <url>5.xml</url>
+    <shops>
+      <shop type="salon">
+        <name>Пятерочка</name>
+        <city>Челябинск</city>
+        <address>Марченко, 25 / 1 Пятилетки, 4</address>
+        <coord>
+          <latitude>55.1662244134</latitude>
+          <longitude>61.4597497322</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Героев Танкограда, 55 / Котина, 28</name>
+    <url>5.xml</url>
+    <shops>
+      <shop type="salon">
+        <name>Пятерочка</name>
+        <city>Челябинск</city>
+        <address>Героев Танкограда, 55 / Котина, 28</address>
+        <coord>
+          <latitude>55.1781653988</latitude>
+          <longitude>61.4490724941</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Эльтонская 2-я, 26</name>
+    <url>5.xml</url>
+    <shops>
+      <shop type="salon">
+        <name>Пятерочка</name>
+        <city>Челябинск</city>
+        <address>Эльтонская 2-я, 26</address>
+        <coord>
+          <latitude>55.1695220018</latitude>
+          <longitude>61.533209662</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Салютная, 11</name>
+    <url>5.xml</url>
+    <shops>
+      <shop type="salon">
+        <name>Пятерочка</name>
+        <city>Челябинск</city>
+        <address>Салютная, 11</address>
+        <coord>
+          <latitude>55.1712129569</latitude>
+          <longitude>61.4512823188</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Худякова, 12 к2</name>
+    <url>maxi.xml</url>
+    <shops>
+      <shop type="salon">
+        <name>Пятерочка Макси</name>
+        <city>Челябинск</city>
+        <address>Худякова, 12 к2</address>
+        <coord>
+          <latitude>55.1487836378</latitude>
+          <longitude>61.3731727675</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Черкасская, 15</name>
+    <url>maxi.xml</url>
+    <shops>
+      <shop type="salon">
+        <name>Пятерочка Макси</name>
+        <city>Челябинск</city>
+        <address>Черкасская, 15</address>
+        <coord>
+          <latitude>55.2302719587</latitude>
+          <longitude>61.3781282278</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Степана Разина 4</name>
+    <url>price-768.xml</url>
+    <shops>
+      <shop type="salon">
+        <name>Пятерочка</name>
+        <city>Челябинск</city>
+        <address>Степана Разина 4</address>
+        <coord>
+          <latitude>55.1416293</latitude>
+          <longitude>61.411804</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Цвиллинга, 66б</name>
+    <url>price-773.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>Пятерочка</name>
+        <city>Челябинск</city>
+        <address>Цвиллинга, 66б</address>
+        <coord>
+          <latitude>55.1468843575</latitude>
+          <longitude>61.4120205437</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Победы проспект, 137</name>
+    <url>price-942.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>Пятерочка</name>
+        <city>Челябинск</city>
+        <address>Победы проспект, 137</address>
+        <coord>
+          <latitude>55.1851471</latitude>
+          <longitude>61.4196089</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Проспект победы 382а</name>
+    <url>price-987.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>Пятерочка</name>
+        <city>Челябинск</city>
+        <address>Проспект победы 382а</address>
+        <coord>
+          <latitude>55.1870031</latitude>
+          <longitude>61.3002128</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+</pricelists>

@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='cp1251'?>
+<pricelists>
+  <pricelist>
+    <name>3-го Интернационала, 117</name>
+    <url>price-940.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>Турист</name>
+        <city>Челябинск</city>
+        <address>3 Интернационала, 117</address>
+        <coord>
+          <latitude>55.163219</latitude>
+          <longitude>61.4216707</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+</pricelists>

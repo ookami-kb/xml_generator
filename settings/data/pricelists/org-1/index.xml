@@ -1,0 +1,2163 @@
+<?xml version='1.0' encoding='cp1251'?>
+<pricelists>
+  <pricelist>
+    <name>ул. Кирова, 141</name>
+    <url>1376258.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>Аптека №1 г.Челябинск</name>
+        <city>Челябинск</city>
+        <address>ул. Кирова, 141</address>
+        <coord>
+          <latitude>55.166212</latitude>
+          <longitude>61.400631</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>ул. 250-летия Челябинска, 15А</name>
+    <url>1441794.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>Аптека №4</name>
+        <city>Челябинск</city>
+        <address>ул. 250-летия Челябинска, 15А</address>
+        <coord>
+          <latitude>55.178928</latitude>
+          <longitude>61.301682</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>пр. Гагарина, 1 линия, 15</name>
+    <url>1572866.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>Аптека №192</name>
+        <city>Златоуст</city>
+        <address>пр. Гагарина, 1 линия, 15</address>
+        <coord>
+          <latitude>0.0</latitude>
+          <longitude>0.0</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>ул. Карла Маркса, 20</name>
+    <url>1638402.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>Аптека №315</name>
+        <city>Златоуст</city>
+        <address>ул. Карла Маркса, 20</address>
+        <coord>
+          <latitude>0.0</latitude>
+          <longitude>0.0</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>пр. Гагарина, 8 линия, 8</name>
+    <url>1703938.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>Аптека №6</name>
+        <city>Златоуст</city>
+        <address>пр. Гагарина, 8 линия, 8</address>
+        <coord>
+          <latitude>0.0</latitude>
+          <longitude>0.0</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>ул. Республики, 8</name>
+    <url>1769474.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>Аптека №139</name>
+        <city>Кыштым</city>
+        <address>ул. Республики, 8</address>
+        <coord>
+          <latitude>0.0</latitude>
+          <longitude>0.0</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>ул. К. Либкнехта, 123-а</name>
+    <url>1769480.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>АП г. Кыштым, ул. К. Либкнехта (*)</name>
+        <city>Кыштым</city>
+        <address>ул. К. Либкнехта, 123-а</address>
+        <coord>
+          <latitude>0.0</latitude>
+          <longitude>0.0</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>ул. Ленина 25а</name>
+    <url>1769483.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>АП г. Кыштым, ул. Ленина (*)</name>
+        <city>Кыштым</city>
+        <address>ул. Ленина 25а</address>
+        <coord>
+          <latitude>0.0</latitude>
+          <longitude>0.0</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>пр. Победы, 10</name>
+    <url>1835010.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>Аптека №63</name>
+        <city>Южноуральск</city>
+        <address>пр. Победы, 10</address>
+        <coord>
+          <latitude>0.0</latitude>
+          <longitude>0.0</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>ул. Ленина, 29</name>
+    <url>1835013.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>АП г. Южноуральск, Взрослая поликлиника (*)</name>
+        <city>Южноуральск</city>
+        <address>ул. Ленина, 29</address>
+        <coord>
+          <latitude>0.0</latitude>
+          <longitude>0.0</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>ул. Мира, 39</name>
+    <url>1900546.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>Аптека №16</name>
+        <city>Южноуральск</city>
+        <address>ул. Мира, 39</address>
+        <coord>
+          <latitude>0.0</latitude>
+          <longitude>0.0</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>ул. Чайковского, 2</name>
+    <url>2031618.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>Аптека №239</name>
+        <city>Пласт</city>
+        <address>ул. Чайковского, 2</address>
+        <coord>
+          <latitude>0.0</latitude>
+          <longitude>0.0</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>ул. Строителей, 8</name>
+    <url>2031621.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>АП г. Пласт, Поликлиника (*)</name>
+        <city>Пласт</city>
+        <address>ул. Строителей, 8</address>
+        <coord>
+          <latitude>0.0</latitude>
+          <longitude>0.0</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>ул. Солнечная, 15</name>
+    <url>2097154.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>Аптека №92</name>
+        <city>Сатка</city>
+        <address>ул. Солнечная, 15</address>
+        <coord>
+          <latitude>0.0</latitude>
+          <longitude>0.0</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>ул. Куйбышева,15</name>
+    <url>2097162.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>АП г. Сатка, Поликлиника №1 (2этаж) (*)</name>
+        <city>Сатка</city>
+        <address>ул. Куйбышева,15</address>
+        <coord>
+          <latitude>0.0</latitude>
+          <longitude>0.0</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>ул.Свободы, 10-А</name>
+    <url>2097166.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>АП г. Сатка, ул. Свободы (*)</name>
+        <city>Сатка</city>
+        <address>ул.Свободы, 10-А</address>
+        <coord>
+          <latitude>0.0</latitude>
+          <longitude>0.0</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>ул. 50 лет Октября, 18</name>
+    <url>2162690.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>Аптека №241</name>
+        <city>Сатка</city>
+        <address>ул. 50 лет Октября, 18</address>
+        <coord>
+          <latitude>0.0</latitude>
+          <longitude>0.0</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>ул. Каслинская, 60-б</name>
+    <url>2228226.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>Аптека №19</name>
+        <city>Челябинск</city>
+        <address>ул. Каслинская, 60-б</address>
+        <coord>
+          <latitude>55.175941</latitude>
+          <longitude>61.392475</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>ул. Медгородок, 8</name>
+    <url>2228229.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>АП 1 г. Челябинск, Медгородок (*)</name>
+        <city>Челябинск</city>
+        <address>ул. Медгородок, 8</address>
+        <coord>
+          <latitude>55.136751</latitude>
+          <longitude>61.369244</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>ул.Блюхера, 42</name>
+    <url>2228233.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>АП 8 г. Челябинск, ул. Блюхера (*)</name>
+        <city>Челябинск</city>
+        <address>ул.Блюхера, 42</address>
+        <coord>
+          <latitude>55.133447</latitude>
+          <longitude>61.369199</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>ул. Воровского, 70</name>
+    <url>2228234.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>АП 9 г. Челябинск, ул. Воровского, 70 (*)</name>
+        <city>Челябинск</city>
+        <address>ул. Воровского, 70</address>
+        <coord>
+          <latitude>55.13656</latitude>
+          <longitude>61.373772</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>пр. Победы, 287</name>
+    <url>2228237.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>АП 30 г. Челябинск, пр. Победы (*)</name>
+        <city>Челябинск</city>
+        <address>пр. Победы, 287</address>
+        <coord>
+          <latitude>55.187867</latitude>
+          <longitude>61.339528</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>ул. Воровского, 70</name>
+    <url>2228238.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>АП 32 г. Челябинск, ул. Воровского, 70 (*)</name>
+        <city>Челябинск</city>
+        <address>ул. Воровского, 70</address>
+        <coord>
+          <latitude>55.13656</latitude>
+          <longitude>61.373772</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>ул. Блюхера, 42</name>
+    <url>2228239.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>АП 35 г. Челябинск, ул. Блюхера (*)</name>
+        <city>Челябинск</city>
+        <address>ул. Блюхера, 42</address>
+        <coord>
+          <latitude>55.133447</latitude>
+          <longitude>61.369199</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>ул. Воровского, 16</name>
+    <url>2228240.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>АП 36 г. Челябинск, ул. Воровского, 16 (*)</name>
+        <city>Челябинск</city>
+        <address>ул. Воровского, 16</address>
+        <coord>
+          <latitude>55.155412</latitude>
+          <longitude>61.392573</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>ул. Кузнецова, 2-А</name>
+    <url>2228242.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>АП 38 г. Челябинск, ул. Кузнецова (*)</name>
+        <city>Челябинск</city>
+        <address>ул. Кузнецова, 2-А</address>
+        <coord>
+          <latitude>55.118071</latitude>
+          <longitude>61.356452</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>ул. III Интернационала, 69</name>
+    <url>2228243.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>АП 39 г. Челябинск, ул. III Интернационала (*)</name>
+        <city>Челябинск</city>
+        <address>ул. III Интернационала, 69</address>
+        <coord>
+          <latitude>0.0</latitude>
+          <longitude>0.0</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>ул. Горького, 14</name>
+    <url>2228256.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>АП 11 г. Челябинск, ул. Горького (*)</name>
+        <city>Челябинск</city>
+        <address>ул. Горького, 14</address>
+        <coord>
+          <latitude>55.166603</latitude>
+          <longitude>61.44313</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>ул. Гагарина, 16</name>
+    <url>2228257.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>АП 12 г. Челябинск, ул. Гагарина (*)</name>
+        <city>Челябинск</city>
+        <address>ул. Гагарина, 16</address>
+        <coord>
+          <latitude>55.139622</latitude>
+          <longitude>61.439582</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>ул. Богдана Хмельницкого, 35</name>
+    <url>2228258.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>АП 14 г. Челябинск, ул. Б. Хмельницкого (*)</name>
+        <city>Челябинск</city>
+        <address>ул. Богдана Хмельницкого, 35</address>
+        <coord>
+          <latitude>0.0</latitude>
+          <longitude>0.0</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>ул. Богдана Хмельницкого, 31</name>
+    <url>2228259.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>АП 13 г. Челябинск, ул. Б. Хмельницкого (*)</name>
+        <city>Челябинск</city>
+        <address>ул. Богдана Хмельницкого, 31</address>
+        <coord>
+          <latitude>0.0</latitude>
+          <longitude>0.0</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>ул. Ленинградская, 15-б</name>
+    <url>2293762.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>Аптека №39</name>
+        <city>Куса</city>
+        <address>ул. Ленинградская, 15-б</address>
+        <coord>
+          <latitude>0.0</latitude>
+          <longitude>0.0</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>ул.Бубнова,28</name>
+    <url>2293765.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>АП г. Куса, ул. Бубнова (*)</name>
+        <city>Куса</city>
+        <address>ул.Бубнова,28</address>
+        <coord>
+          <latitude>0.0</latitude>
+          <longitude>0.0</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>ул. 8 марта,3</name>
+    <url>2293766.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>АП г. Куса, Поликлиника (*)</name>
+        <city>Куса</city>
+        <address>ул. 8 марта,3</address>
+        <coord>
+          <latitude>0.0</latitude>
+          <longitude>0.0</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>ул. Степана Разина, 23</name>
+    <url>2359298.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>Аптека №65</name>
+        <city>Троицк</city>
+        <address>ул. Степана Разина, 23</address>
+        <coord>
+          <latitude>0.0</latitude>
+          <longitude>0.0</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Майская площадь, 1</name>
+    <url>2359326.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>АП г. Троицк, Поликлиника ЦРБ (*)</name>
+        <city>Троицк</city>
+        <address>Майская площадь, 1</address>
+        <coord>
+          <latitude>0.0</latitude>
+          <longitude>0.0</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>ул. Медведева, 2</name>
+    <url>2359341.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>АП г. Троицк, п. ГРЭС, ул. Медведева (*)</name>
+        <city>Троицк</city>
+        <address>ул. Медведева, 2</address>
+        <coord>
+          <latitude>0.0</latitude>
+          <longitude>0.0</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>ул. Освобождения Урала, 1</name>
+    <url>2424834.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>Аптека №11</name>
+        <city>Кыштым</city>
+        <address>ул. Освобождения Урала, 1</address>
+        <coord>
+          <latitude>0.0</latitude>
+          <longitude>0.0</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>ул. Степана Разина, 6</name>
+    <url>2490370.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>Аптека №81</name>
+        <city>Златоуст</city>
+        <address>ул. Степана Разина, 6</address>
+        <coord>
+          <latitude>0.0</latitude>
+          <longitude>0.0</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>ул. 40-летия Победы, 48</name>
+    <url>2621442.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>Аптека №15</name>
+        <city>Златоуст</city>
+        <address>ул. 40-летия Победы, 48</address>
+        <coord>
+          <latitude>0.0</latitude>
+          <longitude>0.0</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>ул. Ленина, 9</name>
+    <url>2818050.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>Аптека №216</name>
+        <city>Коркино</city>
+        <address>ул. Ленина, 9</address>
+        <coord>
+          <latitude>0.0</latitude>
+          <longitude>0.0</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>пр. Мира, 20</name>
+    <url>2883586.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>Аптека №20</name>
+        <city>Златоуст</city>
+        <address>пр. Мира, 20</address>
+        <coord>
+          <latitude>0.0</latitude>
+          <longitude>0.0</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>пр. Гагарина, 3-й микрорайон, 9</name>
+    <url>2949122.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>Аптека №259</name>
+        <city>Златоуст</city>
+        <address>пр. Гагарина, 3-й микрорайон, 9</address>
+        <coord>
+          <latitude>0.0</latitude>
+          <longitude>0.0</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>ул. Горняков, 2</name>
+    <url>3014658.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>Аптека №100</name>
+        <city>Коркино</city>
+        <address>ул. Горняков, 2</address>
+        <coord>
+          <latitude>0.0</latitude>
+          <longitude>0.0</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>ул. Дм. Тараканова, д. 10, нежил. пом. № 2</name>
+    <url>3080194.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>АП г.Катав-Ивановск</name>
+        <city>Катав-Ивановск</city>
+        <address>ул. Дм. Тараканова, д. 10, нежил. пом. № 2</address>
+        <coord>
+          <latitude>0.0</latitude>
+          <longitude>0.0</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>ул. Некрасова, 3</name>
+    <url>3145730.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>Аптека №42</name>
+        <city>Златоуст</city>
+        <address>ул. Некрасова, 3</address>
+        <coord>
+          <latitude>0.0</latitude>
+          <longitude>0.0</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>ул. Дворцовая, 3</name>
+    <url>3342338.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>Аптека №221</name>
+        <city>Златоуст</city>
+        <address>ул. Дворцовая, 3</address>
+        <coord>
+          <latitude>0.0</latitude>
+          <longitude>0.0</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>ул. Космонавтов, 15</name>
+    <url>3473410.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>Аптека №14</name>
+        <city>Южноуральск</city>
+        <address>ул. Космонавтов, 15</address>
+        <coord>
+          <latitude>0.0</latitude>
+          <longitude>0.0</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>ул. Декабристов, 134</name>
+    <url>3538946.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>Аптека №277</name>
+        <city>Касли</city>
+        <address>ул. Декабристов, 134</address>
+        <coord>
+          <latitude>0.0</latitude>
+          <longitude>0.0</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>ул. Советская, 29</name>
+    <url>3604482.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>Аптека №29</name>
+        <city>Касли</city>
+        <address>ул. Советская, 29</address>
+        <coord>
+          <latitude>0.0</latitude>
+          <longitude>0.0</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>ул. Коммуны 61</name>
+    <url>3604485.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>АП г. Касли, Поликлиника (*)</name>
+        <city>Касли</city>
+        <address>ул. Коммуны 61</address>
+        <coord>
+          <latitude>0.0</latitude>
+          <longitude>0.0</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>ул. Ленина, 48-а</name>
+    <url>3670018.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>Аптека №46</name>
+        <city>Усть-Катав</city>
+        <address>ул. Ленина, 48-а</address>
+        <coord>
+          <latitude>0.0</latitude>
+          <longitude>0.0</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>ул. им. П.П. Аносова, 255</name>
+    <url>3735554.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>АП г.Златоуст ул.Аносова</name>
+        <city>Златоуст</city>
+        <address>ул. им. П.П. Аносова, 255</address>
+        <coord>
+          <latitude>0.0</latitude>
+          <longitude>0.0</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>ул. Ленина, 21</name>
+    <url>3801090.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>Аптека №27</name>
+        <city>Аша</city>
+        <address>ул. Ленина, 21</address>
+        <coord>
+          <latitude>0.0</latitude>
+          <longitude>0.0</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>ул. Куйбышева, 10</name>
+    <url>3866626.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>Аптека №210</name>
+        <city>Южноуральск</city>
+        <address>ул. Куйбышева, 10</address>
+        <coord>
+          <latitude>0.0</latitude>
+          <longitude>0.0</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>ул. Ленина, пом. 2 (перед магазином "Дикси")</name>
+    <url>3932162.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>АП г.Касли</name>
+        <city>Касли</city>
+        <address>ул. Ленина, пом. 2 (перед магазином "Дикси")</address>
+        <coord>
+          <latitude>0.0</latitude>
+          <longitude>0.0</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>ул. Тимирязева, 13</name>
+    <url>4063234.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>Аптека №32</name>
+        <city>Карабаш</city>
+        <address>ул. Тимирязева, 13</address>
+        <coord>
+          <latitude>0.0</latitude>
+          <longitude>0.0</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>ул. Гагарина,1а</name>
+    <url>4063237.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>АП г. Карабаш, Поликлиника (*)</name>
+        <city>Карабаш</city>
+        <address>ул. Гагарина,1а</address>
+        <coord>
+          <latitude>0.0</latitude>
+          <longitude>0.0</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>ул. Октябрьская, 17</name>
+    <url>4128770.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>Аптека №121</name>
+        <city>Королев</city>
+        <address>ул. Октябрьская, 17</address>
+        <coord>
+          <latitude>55.94818</latitude>
+          <longitude>37.866244</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>10-й квартал, 7-а</name>
+    <url>4194306.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>Аптека №179</name>
+        <city>Троицк</city>
+        <address>10-й квартал, 7-а</address>
+        <coord>
+          <latitude>0.0</latitude>
+          <longitude>0.0</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>ул. Крупской, 6</name>
+    <url>4259842.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>Аптека №283</name>
+        <city>Троицк</city>
+        <address>ул. Крупской, 6</address>
+        <coord>
+          <latitude>0.0</latitude>
+          <longitude>0.0</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>ул. Карла Маркса, 45</name>
+    <url>4390914.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>Аптека №133</name>
+        <city>Златоуст</city>
+        <address>ул. Карла Маркса, 45</address>
+        <coord>
+          <latitude>0.0</latitude>
+          <longitude>0.0</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>пр. Макеева, 37</name>
+    <url>4456450.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>Аптека №23</name>
+        <city>Миасс</city>
+        <address>пр. Макеева, 37</address>
+        <coord>
+          <latitude>0.0</latitude>
+          <longitude>0.0</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>ул. Карташова, 44</name>
+    <url>4587522.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>Аптека №66</name>
+        <city>Троицк</city>
+        <address>ул. Карташова, 44</address>
+        <coord>
+          <latitude>0.0</latitude>
+          <longitude>0.0</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>ул. Степана Разина, 53</name>
+    <url>4784130.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>Аптека №45</name>
+        <city>Катав-Ивановск</city>
+        <address>ул. Степана Разина, 53</address>
+        <coord>
+          <latitude>0.0</latitude>
+          <longitude>0.0</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>ул. Гагарина, 14</name>
+    <url>4784133.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>АП г. Катав-Ивановск, Поликлиника (*)</name>
+        <city>Катав-Ивановск</city>
+        <address>ул. Гагарина, 14</address>
+        <coord>
+          <latitude>0.0</latitude>
+          <longitude>0.0</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>ул. Гагарина, 14</name>
+    <url>4849666.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>Аптека №232</name>
+        <city>Троицк</city>
+        <address>ул. Гагарина, 14</address>
+        <coord>
+          <latitude>0.0</latitude>
+          <longitude>0.0</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>ул. Титова, 14</name>
+    <url>4915202.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>Аптека №17</name>
+        <city>Еманжелинск</city>
+        <address>ул. Титова, 14</address>
+        <coord>
+          <latitude>0.0</latitude>
+          <longitude>0.0</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>микрорайон 2, 7</name>
+    <url>5242882.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>Аптека №244</name>
+        <city>Усть-Катав</city>
+        <address>микрорайон 2, 7</address>
+        <coord>
+          <latitude>0.0</latitude>
+          <longitude>0.0</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>ул. Щербакова, 3</name>
+    <url>5308418.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>Аптека №33</name>
+        <city>Нязепетровск</city>
+        <address>ул. Щербакова, 3</address>
+        <coord>
+          <latitude>0.0</latitude>
+          <longitude>0.0</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>ул. Щербакова, д.4, пом. 08</name>
+    <url>5373954.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>АП г.Нязепетровск</name>
+        <city>Нязепетровск</city>
+        <address>ул. Щербакова, д.4, пом. 08</address>
+        <coord>
+          <latitude>0.0</latitude>
+          <longitude>0.0</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>пр. Мира, 9</name>
+    <url>5636098.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>АП г.Сатка</name>
+        <city>Сатка</city>
+        <address>пр. Мира, 9</address>
+        <coord>
+          <latitude>0.0</latitude>
+          <longitude>0.0</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>ул. Ленина, 41 строение 1</name>
+    <url>6029314.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>АП г.Усть-Катав</name>
+        <city>Усть-Катав</city>
+        <address>ул. Ленина, 41 строение 1</address>
+        <coord>
+          <latitude>0.0</latitude>
+          <longitude>0.0</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>ул. Лихачева, 16</name>
+    <url>6094850.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>Аптека №22</name>
+        <city>Миасс</city>
+        <address>ул. Лихачева, 16</address>
+        <coord>
+          <latitude>0.0</latitude>
+          <longitude>0.0</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>ул. Ленина, 41</name>
+    <url>6225922.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>Аптека №30</name>
+        <city>Аша</city>
+        <address>ул. Ленина, 41</address>
+        <coord>
+          <latitude>0.0</latitude>
+          <longitude>0.0</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>ул. Металлургов, 11/1</name>
+    <url>6291458.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>АП г.Карабаш, ул.Металлургов 11/1</name>
+        <city>Карабаш</city>
+        <address>ул. Металлургов, 11/1</address>
+        <coord>
+          <latitude>0.0</latitude>
+          <longitude>0.0</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>ул. 40 лет Победы, 16-а</name>
+    <url>6422530.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>Аптека №153</name>
+        <city>Златоуст</city>
+        <address>ул. 40 лет Победы, 16-а</address>
+        <coord>
+          <latitude>0.0</latitude>
+          <longitude>0.0</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>ул. Свободы, д. 10-а</name>
+    <url>7012354.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>Аптека №250</name>
+        <city>Сатка</city>
+        <address>ул. Свободы, д. 10-а</address>
+        <coord>
+          <latitude>0.0</latitude>
+          <longitude>0.0</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>ул. Карла Маркса, д. 16</name>
+    <url>7143426.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>Аптека №43</name>
+        <city>Сатка</city>
+        <address>ул. Карла Маркса, д. 16</address>
+        <coord>
+          <latitude>0.0</latitude>
+          <longitude>0.0</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>ул. Толстого, 5</name>
+    <url>7208962.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>Аптека №26</name>
+        <city>Аша</city>
+        <address>ул. Толстого, 5</address>
+        <coord>
+          <latitude>0.0</latitude>
+          <longitude>0.0</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>ул. Пушкина, д. 9</name>
+    <url>7274498.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>Аптека №326</name>
+        <city>Сим</city>
+        <address>ул. Пушкина, д. 9</address>
+        <coord>
+          <latitude>0.0</latitude>
+          <longitude>0.0</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>ул.40 лет Октября,1</name>
+    <url>7274502.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>АП г. Сим, МУЗ СГБ (*)</name>
+        <city>Сим</city>
+        <address>ул.40 лет Октября,1</address>
+        <coord>
+          <latitude>0.0</latitude>
+          <longitude>0.0</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Гагарина, 33</name>
+    <url>7733250.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>АП г.Троицк</name>
+        <city>Троицк</city>
+        <address>Гагарина, 33</address>
+        <coord>
+          <latitude>0.0</latitude>
+          <longitude>0.0</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>ул. Салавата Юлаева, 20</name>
+    <url>7929858.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>Аптека №34</name>
+        <city>Челябинск</city>
+        <address>ул. Салавата Юлаева, 20</address>
+        <coord>
+          <latitude>55.189619</latitude>
+          <longitude>61.276637</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>ул. Зеленая, 28</name>
+    <url>7995394.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>Аптека №10</name>
+        <city>Златоуст</city>
+        <address>ул. Зеленая, 28</address>
+        <coord>
+          <latitude>0.0</latitude>
+          <longitude>0.0</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>ул. Ильменская, 81</name>
+    <url>7995405.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>АП г. Миасс, ГБ №2 (*)</name>
+        <city>Миасс</city>
+        <address>ул. Ильменская, 81</address>
+        <coord>
+          <latitude>0.0</latitude>
+          <longitude>0.0</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>ул. Калинина, 5</name>
+    <url>7995408.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>АП г. Чебаркуль, ул. Калинина, 5 (закрыт 01.10.10)</name>
+        <city>Чебаркуль</city>
+        <address>ул. Калинина, 5</address>
+        <coord>
+          <latitude>0.0</latitude>
+          <longitude>0.0</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>ул. Горького, д. 100</name>
+    <url>8060930.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>Аптека №48</name>
+        <city>Миньяр</city>
+        <address>ул. Горького, д. 100</address>
+        <coord>
+          <latitude>0.0</latitude>
+          <longitude>0.0</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>ул. Гайдара, 1</name>
+    <url>8323074.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>АП г.Еманжелинск, ул.Гайдара</name>
+        <city>Еманжелинск</city>
+        <address>ул. Гайдара, 1</address>
+        <coord>
+          <latitude>0.0</latitude>
+          <longitude>0.0</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>ул. Озимина, 38</name>
+    <url>8585218.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>Аптека №47</name>
+        <city>Аша</city>
+        <address>ул. Озимина, 38</address>
+        <coord>
+          <latitude>0.0</latitude>
+          <longitude>0.0</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>ул. Некрасова, 19</name>
+    <url>8585221.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>АП г. Аша, ЦГБ (*)</name>
+        <city>Аша</city>
+        <address>ул. Некрасова, 19</address>
+        <coord>
+          <latitude>0.0</latitude>
+          <longitude>0.0</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>ул. Пролетарская, 14</name>
+    <url>8978434.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>Аптека №40</name>
+        <city>Миасс</city>
+        <address>ул. Пролетарская, 14</address>
+        <coord>
+          <latitude>0.0</latitude>
+          <longitude>0.0</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>ул. Пролетарская, 20</name>
+    <url>8978438.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>АП г. Миасс, ГБ №1 (розница)</name>
+        <city>Миасс</city>
+        <address>ул. Пролетарская, 20</address>
+        <coord>
+          <latitude>0.0</latitude>
+          <longitude>0.0</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>ул. Строителей, д. 9</name>
+    <url>9306114.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>Аптека №312</name>
+        <city>Златоуст</city>
+        <address>ул. Строителей, д. 9</address>
+        <coord>
+          <latitude>0.0</latitude>
+          <longitude>0.0</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>ул. Блюхера, 42</name>
+    <url>9633794.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>Аптека Межбольничная г.Челябинск</name>
+        <city>Челябинск</city>
+        <address>ул. Блюхера, 42</address>
+        <coord>
+          <latitude>55.133447</latitude>
+          <longitude>61.369199</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>пр. Автозаводцев, д. 35</name>
+    <url>9764866.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>Аптека №24</name>
+        <city>Миасс</city>
+        <address>пр. Автозаводцев, д. 35</address>
+        <coord>
+          <latitude>0.0</latitude>
+          <longitude>0.0</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Свердловский проспект, 6</name>
+    <url>11665410.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>АП №10</name>
+        <city>Челябинск</city>
+        <address>Свердловский проспект, 6</address>
+        <coord>
+          <latitude>55.191192</latitude>
+          <longitude>61.385899</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>пр. К. Маркса, 104</name>
+    <url>12582914.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>Аптека №37 г.Магнитогорск</name>
+        <city>Магнитогорск</city>
+        <address>пр. К. Маркса, 104</address>
+        <coord>
+          <latitude>0.0</latitude>
+          <longitude>0.0</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>ул. Сони Кривой, д. 69-а</name>
+    <url>13041666.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>Аптека №2</name>
+        <city>Челябинск</city>
+        <address>ул. Сони Кривой, д. 69-а</address>
+        <coord>
+          <latitude>55.157171</latitude>
+          <longitude>61.376035</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>ул. 50 лет ВЛКСМ, д. 20</name>
+    <url>13107202.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>Аптека №49</name>
+        <city>Челябинск</city>
+        <address>ул. 50 лет ВЛКСМ, д. 20</address>
+        <coord>
+          <latitude>55.242068</latitude>
+          <longitude>61.382925</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>10-й квартал, 7а</name>
+    <url>13565954.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>АП г.Троицк, 10-й квартал, 7а</name>
+        <city>Троицк</city>
+        <address>10-й квартал, 7а</address>
+        <coord>
+          <latitude>0.0</latitude>
+          <longitude>0.0</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>ул. Металлургов, д. 15/1</name>
+    <url>14942210.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>Аптека №51</name>
+        <city>Карабаш</city>
+        <address>ул. Металлургов, д. 15/1</address>
+        <coord>
+          <latitude>0.0</latitude>
+          <longitude>0.0</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>пер. Садовый, д. 3</name>
+    <url>15269890.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>Аптека №52</name>
+        <city>Миасс</city>
+        <address>пер. Садовый, д. 3</address>
+        <coord>
+          <latitude>0.0</latitude>
+          <longitude>0.0</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>ул. Калинина, 34</name>
+    <url>15466498.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>Аптека №53</name>
+        <city>Челябинск</city>
+        <address>ул. Калинина, 34</address>
+        <coord>
+          <latitude>55.17957</latitude>
+          <longitude>61.387947</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>ул. Октября 66</name>
+    <url>15925250.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>АП г.Миасс ул. Октября 66</name>
+        <city>Миасс</city>
+        <address>ул. Октября 66</address>
+        <coord>
+          <latitude>0.0</latitude>
+          <longitude>0.0</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>ул. Крупской, д. 18</name>
+    <url>16121858.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>Аптека №87</name>
+        <city>Чебаркуль</city>
+        <address>ул. Крупской, д. 18</address>
+        <coord>
+          <latitude>0.0</latitude>
+          <longitude>0.0</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>ул. Советская, 197</name>
+    <url>16252930.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>Аптека №284</name>
+        <city>Магнитогорск</city>
+        <address>ул. Советская, 197</address>
+        <coord>
+          <latitude>0.0</latitude>
+          <longitude>0.0</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>пр. К. Маркса, 160</name>
+    <url>16252933.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>АП г. Магнитогорск, Поликлиника № 2 ГБ № 3 (*)</name>
+        <city>Магнитогорск</city>
+        <address>пр. К. Маркса, 160</address>
+        <coord>
+          <latitude>0.0</latitude>
+          <longitude>0.0</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>ул. Советская, 88</name>
+    <url>16252934.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>АП г. Магнитогорск, Поликлиника № 1 ГБ № 3 (*)</name>
+        <city>Магнитогорск</city>
+        <address>ул. Советская, 88</address>
+        <coord>
+          <latitude>0.0</latitude>
+          <longitude>0.0</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>пр. К. Маркса, 73</name>
+    <url>16318466.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>Аптека №156</name>
+        <city>Магнитогорск</city>
+        <address>пр. К. Маркса, 73</address>
+        <coord>
+          <latitude>0.0</latitude>
+          <longitude>0.0</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>ул. Тимирязева, 31</name>
+    <url>16318469.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>АП г. Магнитогорск, ул. Тимирязева, 31 (*)</name>
+        <city>Магнитогорск</city>
+        <address>ул. Тимирязева, 31</address>
+        <coord>
+          <latitude>0.0</latitude>
+          <longitude>0.0</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>ул. Фрунзе, 38</name>
+    <url>16384002.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>Аптека №141</name>
+        <city>Магнитогорск</city>
+        <address>ул. Фрунзе, 38</address>
+        <coord>
+          <latitude>0.0</latitude>
+          <longitude>0.0</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>ул. Чкалова, 44</name>
+    <url>16384005.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>АП г. Магнитогорск, ул. Чкалова, 44 (закрыт с 01.03.2012)</name>
+        <city>Магнитогорск</city>
+        <address>ул. Чкалова, 44</address>
+        <coord>
+          <latitude>0.0</latitude>
+          <longitude>0.0</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>ул. Герцена, 4</name>
+    <url>16384006.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>АП г. Магнитогорск, ул. Герцена, 4 (*)</name>
+        <city>Магнитогорск</city>
+        <address>ул. Герцена, 4</address>
+        <coord>
+          <latitude>0.0</latitude>
+          <longitude>0.0</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>ул. Кирова, 198</name>
+    <url>16384007.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>57 - Аптека г. Магнитогорск (*)</name>
+        <city>Магнитогорск</city>
+        <address>ул. Кирова, 198</address>
+        <coord>
+          <latitude>0.0</latitude>
+          <longitude>0.0</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>пр. К. Маркса, 168</name>
+    <url>16449538.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>Аптека №251</name>
+        <city>Магнитогорск</city>
+        <address>пр. К. Маркса, 168</address>
+        <coord>
+          <latitude>0.0</latitude>
+          <longitude>0.0</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>ул. Советская, 174</name>
+    <url>16449541.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>АП г. Магнитогорск, ул. Советская, 174 (*) закрыт</name>
+        <city>Магнитогорск</city>
+        <address>ул. Советская, 174</address>
+        <coord>
+          <latitude>0.0</latitude>
+          <longitude>0.0</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>пр. Ленина, 136/1</name>
+    <url>16449542.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>АП г. Магнитогорск, пр. Ленина, 136/1 (*)</name>
+        <city>Магнитогорск</city>
+        <address>пр. Ленина, 136/1</address>
+        <coord>
+          <latitude>0.0</latitude>
+          <longitude>0.0</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>пр. Ленина, 136</name>
+    <url>16449543.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>61 - Аптека г. Магнитогорск (*) (не работает с 01.03.12)</name>
+        <city>Магнитогорск</city>
+        <address>пр. Ленина, 136</address>
+        <coord>
+          <latitude>0.0</latitude>
+          <longitude>0.0</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>ул. Октябрьская, 13</name>
+    <url>16515074.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>Аптека №131</name>
+        <city>Магнитогорск</city>
+        <address>ул. Октябрьская, 13</address>
+        <coord>
+          <latitude>0.0</latitude>
+          <longitude>0.0</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>ул. имени газеты "Правда", 24</name>
+    <url>16580610.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>Аптека №204</name>
+        <city>Магнитогорск</city>
+        <address>ул. имени газеты "Правда", 24</address>
+        <coord>
+          <latitude>0.0</latitude>
+          <longitude>0.0</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>ул. Металлургов, 18</name>
+    <url>16711682.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>Аптека №51</name>
+        <city>Магнитогорск</city>
+        <address>ул. Металлургов, 18</address>
+        <coord>
+          <latitude>0.0</latitude>
+          <longitude>0.0</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>пр. Ленина, 8</name>
+    <url>16777218.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>Аптека №59</name>
+        <city>Магнитогорск</city>
+        <address>пр. Ленина, 8</address>
+        <coord>
+          <latitude>0.0</latitude>
+          <longitude>0.0</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>пр. Ленина, 90</name>
+    <url>16842754.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>Аптека №173</name>
+        <city>Магнитогорск</city>
+        <address>пр. Ленина, 90</address>
+        <coord>
+          <latitude>0.0</latitude>
+          <longitude>0.0</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>пр. Пушкина, 30</name>
+    <url>16908290.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>Аптека №58</name>
+        <city>Магнитогорск</city>
+        <address>пр. Пушкина, 30</address>
+        <coord>
+          <latitude>0.0</latitude>
+          <longitude>0.0</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>ул. Жукова, 3</name>
+    <url>16973826.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>Аптека №229</name>
+        <city>Магнитогорск</city>
+        <address>ул. Жукова, 3</address>
+        <coord>
+          <latitude>0.0</latitude>
+          <longitude>0.0</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>ул. Суворова, 132/3</name>
+    <url>17104898.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>Аптека №269</name>
+        <city>Магнитогорск</city>
+        <address>ул. Суворова, 132/3</address>
+        <coord>
+          <latitude>0.0</latitude>
+          <longitude>0.0</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>ул. Сталеваров, 26/4</name>
+    <url>17170434.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>Аптека №88</name>
+        <city>Магнитогорск</city>
+        <address>ул. Сталеваров, 26/4</address>
+        <coord>
+          <latitude>0.0</latitude>
+          <longitude>0.0</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>ул. Вокзальная, 110</name>
+    <url>17235970.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>Аптека №203</name>
+        <city>Магнитогорск</city>
+        <address>ул. Вокзальная, 110</address>
+        <coord>
+          <latitude>0.0</latitude>
+          <longitude>0.0</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>ул. Бахметьева, 2</name>
+    <url>17235973.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>АП г. Магнитогорск, ул. Бахметьева, 2 (*)</name>
+        <city>Магнитогорск</city>
+        <address>ул. Бахметьева, 2</address>
+        <coord>
+          <latitude>0.0</latitude>
+          <longitude>0.0</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>ул. Бурденко, 13</name>
+    <url>17235974.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>АП г. Магнитогорск, ул. Бурденко, 13 (*) (не работает с 01.03.12)</name>
+        <city>Магнитогорск</city>
+        <address>ул. Бурденко, 13</address>
+        <coord>
+          <latitude>0.0</latitude>
+          <longitude>0.0</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>ул. Ворошилова, 21</name>
+    <url>17301506.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>Аптека №54 г.Магнитогорск</name>
+        <city>Магнитогорск</city>
+        <address>ул. Ворошилова, 21</address>
+        <coord>
+          <latitude>0.0</latitude>
+          <longitude>0.0</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>пр. Ленина, 150</name>
+    <url>17301509.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>АП г. Магнитогорск, пр. Ленина, 150 (*)</name>
+        <city>Магнитогорск</city>
+        <address>пр. Ленина, 150</address>
+        <coord>
+          <latitude>0.0</latitude>
+          <longitude>0.0</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>пр. К. Маркса, 123</name>
+    <url>17367042.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>Аптека №256</name>
+        <city>Магнитогорск</city>
+        <address>пр. К. Маркса, 123</address>
+        <coord>
+          <latitude>0.0</latitude>
+          <longitude>0.0</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>ул. К. Маркса, 160</name>
+    <url>17367045.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>АП г. Магнитогорск, Поликлиника № 2 ГБ № 3 (*)</name>
+        <city>Магнитогорск</city>
+        <address>ул. К. Маркса, 160</address>
+        <coord>
+          <latitude>0.0</latitude>
+          <longitude>0.0</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>ул. Труда, 18</name>
+    <url>17432578.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>Аптека №53 г.Магнитогорск</name>
+        <city>Магнитогорск</city>
+        <address>ул. Труда, 18</address>
+        <coord>
+          <latitude>0.0</latitude>
+          <longitude>0.0</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>ул. Комсомольская, 18</name>
+    <url>17498114.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>Аптека №85</name>
+        <city>Магнитогорск</city>
+        <address>ул. Комсомольская, 18</address>
+        <coord>
+          <latitude>0.0</latitude>
+          <longitude>0.0</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>ул. Уральская, 48</name>
+    <url>17498117.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>АП г. Магнитогорск, Поликлиника ГБ № 2 (*)</name>
+        <city>Магнитогорск</city>
+        <address>ул. Уральская, 48</address>
+        <coord>
+          <latitude>0.0</latitude>
+          <longitude>0.0</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>ул. Комсомольская, 15/1</name>
+    <url>17498118.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>АП г. Магнитогорск, Детская поликлиника № 2 (*)</name>
+        <city>Магнитогорск</city>
+        <address>ул. Комсомольская, 15/1</address>
+        <coord>
+          <latitude>0.0</latitude>
+          <longitude>0.0</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>пр. К. Маркса, 184</name>
+    <url>17760258.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>Аптека №317</name>
+        <city>Магнитогорск</city>
+        <address>пр. К. Маркса, 184</address>
+        <coord>
+          <latitude>0.0</latitude>
+          <longitude>0.0</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>ул. Октябрьская, 50</name>
+    <url>18743298.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>Аптека №69</name>
+        <city>Карталы</city>
+        <address>ул. Октябрьская, 50</address>
+        <coord>
+          <latitude>0.0</latitude>
+          <longitude>0.0</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>ЗАТО п. Локомотивный, ул. Советская, 65</name>
+    <url>18743301.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>АП п.Локомотивный ЗАТО (бывш.апт.79)</name>
+        <city>Ульяновск</city>
+        <address>ЗАТО п. Локомотивный, ул. Советская, 65</address>
+        <coord>
+          <latitude>0.0</latitude>
+          <longitude>0.0</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>пер. З. Космодемьянской, 6а</name>
+    <url>18743303.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>286 - Аптека, г. Карталы (закрыт 25.11.10)</name>
+        <city>Карталы</city>
+        <address>пер. З. Космодемьянской, 6а</address>
+        <coord>
+          <latitude>0.0</latitude>
+          <longitude>0.0</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>ОГУП Областной аптечный склад</name>
+    <url>23003138.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>Аптека №54</name>
+        <city>Озерск</city>
+        <address>ул. Матросова, 34</address>
+        <coord>
+          <latitude>0.0</latitude>
+          <longitude>0.0</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+</pricelists>

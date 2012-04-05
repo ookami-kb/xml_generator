@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='cp1251'?>
+<pricelists>
+  <pricelist>
+    <name>Евтеева 3</name>
+    <url>price-772.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>Виленд</name>
+        <city>Челябинск</city>
+        <address>Евтеева 3</address>
+        <coord>
+          <latitude>55.1504059</latitude>
+          <longitude>61.4164578</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+</pricelists>
