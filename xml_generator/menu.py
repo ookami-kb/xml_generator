@@ -28,7 +28,8 @@ class CustomMenu(Menu):
             items.AppList(
                 _(u'Пользователи'),
                 models=('django.contrib.*',)
-            )
+            ),
+            items.MenuItem(_(u'Статистика'), reverse('xml_generator.analytics.admin_views.salepoints_stat')),
         ]
 
     def init_with_context(self, context):

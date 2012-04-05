@@ -115,7 +115,7 @@ moderate_salepoint.short_description = u"Привязать новые точк�
 
 class ProductAdmin(admin.ModelAdmin):
     list_display = ('title', 'title_extra', 'manufacturer', 'white_brand',
-              'source_code', 'source_type', 'is_new', 'country', 'is_redundant')
+              'is_new', 'is_redundant')
     list_filter = ('is_new', 'user', 'is_redundant',)
     actions = [moderate_product,]
     
@@ -123,12 +123,12 @@ admin.site.register(Product, ProductAdmin)
 
 class OfferAdmin(admin.ModelAdmin):
     list_display = ('product', 'salepoint', 'price', 'created', 'is_redundant')
-    list_filter = ('product__is_new','salepoint__user', 'salepoint')
+    list_filter = ('product__is_new','salepoint__user', 'is_redundant', 'salepoint')
 
 admin.site.register(Offer, OfferAdmin)
 
 class SalepointAdmin(admin.ModelAdmin):
-    list_display = ('name', 'address', 'organ', 'last_modified_time', 'user', 'city', 'is_new', 'is_redundant')
+    list_display = ('name', 'address', 'organ', 'last_modified_time', 'user', 'is_new', 'is_redundant', 'offers_count')
     list_filter = ('user', 'is_new', 'is_redundant','organ', )
     actions = [moderate_salepoint, ]
 

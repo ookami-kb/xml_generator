@@ -22,6 +22,8 @@ urlpatterns = patterns('',
     # Uncomment the admin/doc line below to enable admin documentation:
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 
+    (r'^admin/salepoint/stat/$', 'xml_generator.analytics.admin_views.salepoints_stat'),
+
     url(r'^admin/', include(admin.site.urls)),
     url(r'^api/', include(v1_api.urls)),
     url(r'^generate-xml/$', 'xml_generator.views.generate_xml'),

@@ -57,12 +57,12 @@ class SalepointResource(ModelResource):
         # если мы изменяем уже существующую торговую точку, то не надо
         # менять ее организацию
 
-        try:
-            bundle.obj.organ = Organization.objects.get(name=u'возьмите из названия')
-        except Exception as e:
-            _org = Organization(name=u'возьмите из названия')
-            _org.save()
-            bundle.obj.organ = _org
+#        try:
+#            bundle.obj.organ = Organization.objects.get(name=u'возьмите из названия')
+#        except Exception as e:
+#            _org = Organization(name=u'возьмите из названия')
+#            _org.save()
+#            bundle.obj.organ = _org
         try:
             _coords = bundle.data['coords']
             bundle.obj.longitude = float(_coords.split(',')[1])
@@ -199,13 +199,13 @@ class ProductResource(ModelResource):
         except:
             bundle.obj.user = None
 
-        try:
-            _man = Manufacturer.objects.get(name = u'введите название производителя из "названия"')
-            bundle.obj.manufacturer = _man
-        except Exception as e:
-            _man = Manufacturer(name = u'введите название производителя из "названия"')
-            _man.save()
-            bundle.obj.manufacturer = _man
+#        try:
+#            _man = Manufacturer.objects.get(name = u'введите название производителя из "названия"')
+#            bundle.obj.manufacturer = _man
+#        except Exception as e:
+#            _man = Manufacturer(name = u'введите название производителя из "названия"')
+#            _man.save()
+#            bundle.obj.manufacturer = _man
 
 
         return bundle

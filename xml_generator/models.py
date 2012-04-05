@@ -16,7 +16,8 @@ class WhiteBrand(models.Model):
         return self.name
 
     class Meta:
-        verbose_name = u"Белый бренд"
+        verbose_name = u"белый бренд"
+        verbose_name_plural = u'белые бренды'
 
 class Manufacturer(models.Model):
     name = models.CharField(u'Производитель', max_length=255, blank=True, null=True)
@@ -64,14 +65,15 @@ class Product(models.Model):
     source_type = models.CharField(max_length=255)
     manufacturer = models.ForeignKey(Manufacturer, verbose_name=u'Производитель',blank=True, null=True)
     country = models.ForeignKey(Country, verbose_name=u'Страна',blank=True, null=True)
-    white_brand = models.ForeignKey(WhiteBrand, blank=True, null=True, verbose_name="Белый бренд: лишь для съестных продуктов")
+    white_brand = models.ForeignKey(WhiteBrand, blank=True, null=True, verbose_name=u"категория")
     is_new = models.BooleanField(u'Новый', help_text='Этот продукт был создан пользователем и еще не прошел модерацию')
     user = models.ForeignKey(User, null=True, blank=True, help_text='Тот, кто добавил этот продукт')
     product_moderated = models.ForeignKey('self',null=True,blank=True, help_text='Ссылается на эталонный проверенный модератором продуктом, если не пусто')
     type = models.CharField(u'тип продукта', max_length=255, blank=True, null=True)
     is_redundant = models.BooleanField(u'не нужный', help_text='Этот продукт не нужен?', default=False)
     class Meta:
-        verbose_name = u"Продукт"
+        verbose_name = u"продукт"
+        verbose_name_plural = u'продукты'
 
     def __unicode__(self):
         return u'%s. %s (%s)' % (self.title, self.title_extra, self.manufacturer)
@@ -103,7 +105,11 @@ class Organization(models.Model):
 
     def __unicode__(self):
         return self.name
-
+    
+class OfferSalepointManager(models.Manager):
+    def get_query_set(self):
+        return super(OfferSalepointManager, self).get_query_set()\
+            .annotate(offers_count=models.Count('offer'))
 
 class Salepoint(models.Model):
     POINT_TYPE = (
@@ -130,7 +136,7 @@ class Salepoint(models.Model):
     variation = models.CharField(max_length=17, choices=VARIATION_TYPE, verbose_name="заправка\продукты", default=u"product",null=True, blank=True)
     is_new = models.BooleanField(u'Новая', help_text='Эта точка продаж была создана пользователем и еще не прошла модерацию')
     status = models.CharField(max_length=12, choices=STATUS, verbose_name="статус", default=u"on")
-    name = models.CharField(u'Название точки продаж', max_length=255)
+    name = models.CharField(u'Название', max_length=255)
     address = models.CharField(u'Адрес', max_length=255)
     latitude = models.FloatField(u'Широта', null=True, blank=True)
     longitude = models.FloatField(u'Долгота', null=True, blank=True)
@@ -139,15 +145,23 @@ class Salepoint(models.Model):
     pricelist_url = models.CharField(u'юрл прайслиста', max_length=255, default=u'введите url Прайслиста')
     user = models.ForeignKey(User, null=True, blank=True, verbose_name="сборщик предложений")
     city = models.CharField(u'Город', max_length=255, default=u"Челябинск")
-    last_modified_time = models.DateTimeField(null=True, blank=True, verbose_name="время обновления")
+    last_modified_time = models.DateTimeField(null=True, blank=True, verbose_name=u"обновлена")
     salepoint_moderated = models.ForeignKey('self',null=True,blank=True, verbose_name="отмодерированная точка продаж", help_text='Ссылается на эталонную проверенную модератором точку продаж, если не пусто')
     is_redundant = models.BooleanField(u'Не нужная', help_text='Этот точка продаж нужна?', default=False)
+    
+    with_offers = OfferSalepointManager()
+    objects = models.Manager()
 
     class Meta:
-        verbose_name = u"Точка продаж"
+        verbose_name = u"точка продаж"
+        verbose_name_plural = u'точки продаж'
 
     def __unicode__(self):
         return u'%s, %s' % (self.name, self.address)
+    
+    def offers_count(self):
+        return Offer.objects.filter(salepoint=self, is_redundant=False).count()
+    offers_count.short_description = u'предложений'
     
 class Offer(models.Model):
     product = models.ForeignKey(Product, verbose_name="Продукт")
@@ -157,7 +171,8 @@ class Offer(models.Model):
     is_redundant = models.BooleanField(u'Не нужно', help_text='Это предложение нужно?', default=False)
 
     class Meta:
-        verbose_name = u"Предложение"
+        verbose_name = u"предложение"
+        verbose_name_plural = u'предложения'
 
     def __unicode__(self):
         return u'%s в магазине %s' % (self.product, self.salepoint)
