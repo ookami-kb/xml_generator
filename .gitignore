@@ -15,3 +15,5 @@ xml_generator/templates/dashboard.html
 settings/data/*
 static/*
 
+settings/
+
