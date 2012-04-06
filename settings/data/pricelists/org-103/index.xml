@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='cp1251'?>
+<pricelists>
+  <pricelist>
+    <name>Ленина, 21</name>
+    <url>price-939.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>Виктория</name>
+        <city>Челябинск</city>
+        <address>Ленина, 21</address>
+        <coord>
+          <latitude>55.1604257</latitude>
+          <longitude>61.4248938</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+</pricelists>

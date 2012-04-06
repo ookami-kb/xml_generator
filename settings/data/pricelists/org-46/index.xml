@@ -1,0 +1,483 @@
+<?xml version='1.0' encoding='cp1251'?>
+<pricelists>
+  <pricelist>
+    <name>Комарова, 112</name>
+    <url>magnit.xml</url>
+    <shops>
+      <shop type="salon">
+        <name>Магнит</name>
+        <city>Челябинск</city>
+        <address>Комарова, 112</address>
+        <coord>
+          <latitude>55.1763682603</latitude>
+          <longitude>61.4564404706</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Комарова, 129а</name>
+    <url>magnit.xml</url>
+    <shops>
+      <shop type="salon">
+        <name>Магнит</name>
+        <city>Челябинск</city>
+        <address>Комарова, 129а</address>
+        <coord>
+          <latitude>55.1788014129</latitude>
+          <longitude>61.4612085501</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Тореза пер, 2</name>
+    <url>magnit.xml</url>
+    <shops>
+      <shop type="salon">
+        <name>Магнит</name>
+        <city>Челябинск</city>
+        <address>Тореза пер, 2</address>
+        <coord>
+          <latitude>55.1768120648</latitude>
+          <longitude>61.6177654462</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Комсомольский проспект, 32</name>
+    <url>magnit.xml</url>
+    <shops>
+      <shop type="salon">
+        <name>Магнит</name>
+        <city>Челябинск</city>
+        <address>Комсомольский проспект, 32</address>
+        <coord>
+          <latitude>55.1949896347</latitude>
+          <longitude>61.3470943844</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Танкистов, 181</name>
+    <url>magnit.xml</url>
+    <shops>
+      <shop type="salon">
+        <name>Магнит</name>
+        <city>Челябинск</city>
+        <address>Танкистов, 181</address>
+        <coord>
+          <latitude>55.1683298175</latitude>
+          <longitude>61.4708796426</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Героев Танкограда, 118</name>
+    <url>magnit.xml</url>
+    <shops>
+      <shop type="salon">
+        <name>Магнит</name>
+        <city>Челябинск</city>
+        <address>Героев Танкограда, 118</address>
+        <coord>
+          <latitude>55.1693423508</latitude>
+          <longitude>61.4517538043</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Академика Королёва, 3</name>
+    <url>magnit.xml</url>
+    <shops>
+      <shop type="salon">
+        <name>Магнит</name>
+        <city>Челябинск</city>
+        <address>Академика Королёва, 3</address>
+        <coord>
+          <latitude>55.1628373415</latitude>
+          <longitude>61.29944205</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Победы проспект, 382б</name>
+    <url>magnit.xml</url>
+    <shops>
+      <shop type="salon">
+        <name>Магнит</name>
+        <city>Челябинск</city>
+        <address>Победы проспект, 382б</address>
+        <coord>
+          <latitude>55.1867742796</latitude>
+          <longitude>61.3002856499</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Бейвеля, 1</name>
+    <url>magnit.xml</url>
+    <shops>
+      <shop type="salon">
+        <name>Магнит</name>
+        <city>Челябинск</city>
+        <address>Бейвеля, 1</address>
+        <coord>
+          <latitude>55.1915054218</latitude>
+          <longitude>61.2790248762</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Калинина, 5а</name>
+    <url>magnit.xml</url>
+    <shops>
+      <shop type="salon">
+        <name>Магнит</name>
+        <city>Челябинск</city>
+        <address>Калинина, 5а</address>
+        <coord>
+          <latitude>55.1793840485</latitude>
+          <longitude>61.4046226034</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>250 лет Челябинску, 12</name>
+    <url>magnit.xml</url>
+    <shops>
+      <shop type="salon">
+        <name>Магнит</name>
+        <city>Челябинск</city>
+        <address>250 лет Челябинску, 12</address>
+        <coord>
+          <latitude>55.1812009937</latitude>
+          <longitude>61.3043836007</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Аэропорт пос, 15а</name>
+    <url>magnit.xml</url>
+    <shops>
+      <shop type="salon">
+        <name>Магнит</name>
+        <city>Челябинск</city>
+        <address>Аэропорт пос, 15а</address>
+        <coord>
+          <latitude>55.2877921544</latitude>
+          <longitude>61.5151317562</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Хохрякова, 12б</name>
+    <url>magnit.xml</url>
+    <shops>
+      <shop type="salon">
+        <name>Магнит</name>
+        <city>Челябинск</city>
+        <address>Хохрякова, 12б</address>
+        <coord>
+          <latitude>55.1819036244</latitude>
+          <longitude>61.4858558569</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Румянцева, 33</name>
+    <url>magnit.xml</url>
+    <shops>
+      <shop type="salon">
+        <name>Магнит</name>
+        <city>Челябинск</city>
+        <address>Румянцева, 33</address>
+        <coord>
+          <latitude>55.2513356711</latitude>
+          <longitude>61.380488557</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Знаменская, 4</name>
+    <url>magnit.xml</url>
+    <shops>
+      <shop type="salon">
+        <name>Магнит</name>
+        <city>Челябинск</city>
+        <address>Знаменская, 4</address>
+        <coord>
+          <latitude>55.1233464501</latitude>
+          <longitude>61.369065631</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Копейское шоссе, 41</name>
+    <url>magnit.xml</url>
+    <shops>
+      <shop type="salon">
+        <name>Магнит</name>
+        <city>Челябинск</city>
+        <address>Копейское шоссе, 41</address>
+        <coord>
+          <latitude>55.141206344</latitude>
+          <longitude>61.4521650355</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Чернышевского, 15а</name>
+    <url>magnit.xml</url>
+    <shops>
+      <shop type="salon">
+        <name>Магнит</name>
+        <city>Челябинск</city>
+        <address>Чернышевского, 15а</address>
+        <coord>
+          <latitude>55.134307812</latitude>
+          <longitude>61.678306487</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Гагарина (Ленинский), 52</name>
+    <url>magnit.xml</url>
+    <shops>
+      <shop type="salon">
+        <name>Магнит</name>
+        <city>Челябинск</city>
+        <address>Гагарина (Ленинский), 52</address>
+        <coord>
+          <latitude>55.1224375773</latitude>
+          <longitude>61.4339435596</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>21 Партсъезда, 6</name>
+    <url>magnit.xml</url>
+    <shops>
+      <shop type="salon">
+        <name>Магнит</name>
+        <city>Челябинск</city>
+        <address>21 Партсъезда, 6</address>
+        <coord>
+          <latitude>55.0500965854</latitude>
+          <longitude>61.5977640955</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Южноуральская, 12а</name>
+    <url>magnit.xml</url>
+    <shops>
+      <shop type="salon">
+        <name>Магнит</name>
+        <city>Челябинск</city>
+        <address>Южноуральская, 12а</address>
+        <coord>
+          <latitude>55.1791276759</latitude>
+          <longitude>61.4656328638</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Мамина, 27</name>
+    <url>magnit.xml</url>
+    <shops>
+      <shop type="salon">
+        <name>Магнит</name>
+        <city>Челябинск</city>
+        <address>Мамина, 27</address>
+        <coord>
+          <latitude>55.17337056</latitude>
+          <longitude>61.4822963333</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Горького, 60</name>
+    <url>magnit.xml</url>
+    <shops>
+      <shop type="salon">
+        <name>Магнит</name>
+        <city>Челябинск</city>
+        <address>Горького, 60</address>
+        <coord>
+          <latitude>55.1820176603</latitude>
+          <longitude>61.4354983397</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Братьев Кашириных, 108</name>
+    <url>magnit.xml</url>
+    <shops>
+      <shop type="salon">
+        <name>Магнит</name>
+        <city>Челябинск</city>
+        <address>Братьев Кашириных, 108</address>
+        <coord>
+          <latitude>55.1782172859</latitude>
+          <longitude>61.3131034678</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Победы проспект, 168</name>
+    <url>magnit.xml</url>
+    <shops>
+      <shop type="salon">
+        <name>Магнит</name>
+        <city>Челябинск</city>
+        <address>Победы проспект, 168</address>
+        <coord>
+          <latitude>55.1849802393</latitude>
+          <longitude>61.3987210712</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Нахимова, 7 / Батумская, 2</name>
+    <url>magnit.xml</url>
+    <shops>
+      <shop type="salon">
+        <name>Магнит</name>
+        <city>Челябинск</city>
+        <address>Нахимова, 7 / Батумская, 2</address>
+        <coord>
+          <latitude>55.1227498188</latitude>
+          <longitude>61.4681938425</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Славы проспект, 5</name>
+    <url>magnit.xml</url>
+    <shops>
+      <shop type="salon">
+        <name>Магнит</name>
+        <city>Челябинск</city>
+        <address>Славы проспект, 5</address>
+        <coord>
+          <latitude>55.1144327341</latitude>
+          <longitude>61.6127678804</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Молодогвардейцев, 56д</name>
+    <url>magnit.xml</url>
+    <shops>
+      <shop type="salon">
+        <name>Магнит</name>
+        <city>Челябинск</city>
+        <address>Молодогвардейцев, 56д</address>
+        <coord>
+          <latitude>55.1856907703</latitude>
+          <longitude>61.3321308019</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Ленина, 51</name>
+    <url>magnit.xml</url>
+    <shops>
+      <shop type="salon">
+        <name>Магнит</name>
+        <city>Челябинск</city>
+        <address>Ленина, 51</address>
+        <coord>
+          <latitude>55.1126856497</latitude>
+          <longitude>61.6214436885</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Победы проспект, 350а</name>
+    <url>magnit.xml</url>
+    <shops>
+      <shop type="salon">
+        <name>Магнит</name>
+        <city>Челябинск</city>
+        <address>Победы проспект, 350а</address>
+        <coord>
+          <latitude>55.1894023827</latitude>
+          <longitude>61.3168104207</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Каслинская, 97б</name>
+    <url>price-751.xml</url>
+    <shops>
+      <shop type="salon">
+        <name>Магнит</name>
+        <city>Челябинск</city>
+        <address>Каслинская, 97б</address>
+        <coord>
+          <latitude>55.175993861</latitude>
+          <longitude>61.3970592695</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Труда, 185а</name>
+    <url>price-767.xml</url>
+    <shops>
+      <shop type="salon">
+        <name>Магнит</name>
+        <city>Челябинск</city>
+        <address>Труда, 185а</address>
+        <coord>
+          <latitude>55.167118</latitude>
+          <longitude>61.381623</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Комсомольский проспект, 50</name>
+    <url>price-949.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>Магнит</name>
+        <city>Челябинск</city>
+        <address>Комсомольский проспект, 50</address>
+        <coord>
+          <latitude>55.1950652</latitude>
+          <longitude>61.3305808</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+</pricelists>

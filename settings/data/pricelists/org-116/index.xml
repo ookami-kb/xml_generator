@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='cp1251'?>
+<pricelists>
+  <pricelist>
+    <name>Комаровского, 11</name>
+    <url>price-973.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>Новый век</name>
+        <city>Челябинск</city>
+        <address>Комаровского, 11</address>
+        <coord>
+          <latitude>55.240575</latitude>
+          <longitude>61.3740007</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+</pricelists>

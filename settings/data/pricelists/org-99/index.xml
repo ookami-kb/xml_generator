@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='cp1251'?>
+<pricelists>
+  <pricelist>
+    <name>Героев Танкограда 2д/1</name>
+    <url>price-943.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>Челябинскоблгаз</name>
+        <city>Челябинск</city>
+        <address>Героев Танкограда 2д/1</address>
+        <coord>
+          <latitude>55.2185383284</latitude>
+          <longitude>61.4321859445</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+</pricelists>

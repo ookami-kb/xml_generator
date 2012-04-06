@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='cp1251'?>
+<offers>
+  <offer>
+    <price>15.75</price>
+    <code source="neiron">282</code>
+  </offer>
+  <offer>
+    <price>16.3</price>
+    <code source="neiron">169</code>
+  </offer>
+  <offer>
+    <price>16.95</price>
+    <code source="neiron">121</code>
+  </offer>
+  <offer>
+    <price>8.45</price>
+    <code source="neiron">99</code>
+  </offer>
+  <offer>
+    <price>8.1</price>
+    <code source="neiron">51</code>
+  </offer>
+  <offer>
+    <price>9.7</price>
+    <code source="neiron">82</code>
+  </offer>
+  <offer>
+    <price>9.9</price>
+    <code source="neiron">114</code>
+  </offer>
+  <offer>
+    <price>33.55</price>
+    <code source="neiron">273</code>
+  </offer>
+  <offer>
+    <price>6.7</price>
+    <code source="neiron">115</code>
+  </offer>
+  <offer>
+    <price>29.85</price>
+    <code source="neiron">131</code>
+  </offer>
+  <offer>
+    <price>19.55</price>
+    <code source="neiron">123</code>
+  </offer>
+  <offer>
+    <price>52.95</price>
+    <code source="neiron">85</code>
+  </offer>
+  <offer>
+    <price>39.95</price>
+    <code source="neiron">269</code>
+  </offer>
+  <offer>
+    <price>56.95</price>
+    <code source="neiron">134</code>
+  </offer>
+  <offer>
+    <price>43.95</price>
+    <code source="neiron">68</code>
+  </offer>
+  <offer>
+    <price>39.75</price>
+    <code source="neiron">112</code>
+  </offer>
+  <offer>
+    <price>38.35</price>
+    <code source="neiron">203</code>
+  </offer>
+</offers>

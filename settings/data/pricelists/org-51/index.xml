@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='cp1251'?>
+<pricelists>
+  <pricelist>
+    <name>Победы, 160а</name>
+    <url>price-622.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>Гавань, универсам</name>
+        <city>Челябинск</city>
+        <address>Победы, 160а</address>
+        <coord>
+          <latitude>55.184923</latitude>
+          <longitude>61.4034505</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+</pricelists>

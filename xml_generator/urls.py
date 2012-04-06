@@ -1,17 +1,17 @@
-
-
 from django.contrib import admin
 from django.conf.urls import *
 from tastypie.api import Api
 from models import *
 from api import *
+from django.conf import settings
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 v1_api = Api(api_name = 'v1')
 v1_api.register(SalepointResource())
 v1_api.register(OfferResource())
 v1_api.register(ProductResource())
 v1_api.register(UserResource())
-
+v1_api.register(WhiteBrandResource())
 admin.autodiscover()
 
 urlpatterns = patterns('',
@@ -22,7 +22,17 @@ urlpatterns = patterns('',
     # Uncomment the admin/doc line below to enable admin documentation:
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 
+    (r'^admin/salepoint/stat/$', 'xml_generator.analytics.admin_views.salepoints_stat'),
+    (r'^admin/user/stat/$', 'xml_generator.analytics.admin_views.users_stat'),
+
     url(r'^admin/', include(admin.site.urls)),
     url(r'^api/', include(v1_api.urls)),
-    url(r'^generate-xml/$', 'xml_generator.views.generate_xml')
+    url(r'^generate-xml/$', 'xml_generator.views.generate_xml'),
+    url(r'^view-data/$', 'xml_generator.views.view_data'),
+    
+    url(r'^analytics/', include('xml_generator.analytics.urls')),
+    url(r'^admin_tools/', include('admin_tools.urls')),
 )
+
+# serve static content
+urlpatterns += staticfiles_urlpatterns()

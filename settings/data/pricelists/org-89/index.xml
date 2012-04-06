@@ -1,0 +1,108 @@
+<?xml version='1.0' encoding='cp1251'?>
+<pricelists>
+  <pricelist>
+    <name>Энгельса, 65</name>
+    <url>price-919.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>Проспект</name>
+        <city>Челябинск</city>
+        <address>Энгельса, 65</address>
+        <coord>
+          <latitude>55.1605668</latitude>
+          <longitude>61.3821182</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Кузнецова, 12</name>
+    <url>price-923.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>Проспект</name>
+        <city>Челябинск</city>
+        <address>Кузнецова, 12</address>
+        <coord>
+          <latitude>55.1149582</latitude>
+          <longitude>61.3470065</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Салютная, 10</name>
+    <url>price-925.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>Проспект</name>
+        <city>Челябинск</city>
+        <address>Салютная, 10</address>
+        <coord>
+          <latitude>55.1716673</latitude>
+          <longitude>61.4511948</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Мамина, 15</name>
+    <url>price-926.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>Проспект</name>
+        <city>Челябинск</city>
+        <address>Мамина, 15</address>
+        <coord>
+          <latitude>55.1944596</latitude>
+          <longitude>61.4812342</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Хохрякова, 21</name>
+    <url>price-928.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>Проспект</name>
+        <city>Челябинск</city>
+        <address>Хохрякова, 21</address>
+        <coord>
+          <latitude>55.1757494</latitude>
+          <longitude>61.4876802</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Комсомольский проспект, 74</name>
+    <url>price-934.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>Проспект</name>
+        <city>Челябинск</city>
+        <address>Комсомольский проспект, 74</address>
+        <coord>
+          <latitude>55.1951506</latitude>
+          <longitude>61.3140824</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Салютная, 27</name>
+    <url>price-936.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>Проспект</name>
+        <city>Челябинск</city>
+        <address>Салютная, 27</address>
+        <coord>
+          <latitude>55.1697309</latitude>
+          <longitude>61.4439142</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+</pricelists>

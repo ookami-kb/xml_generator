@@ -1,6 +1,7 @@
 .project
 .pydevproject
 xml_generator/settings/personal.py
+settings/personal.py
 db
 *.pyc
 .settings
@@ -9,4 +10,8 @@ xml_generator/settings/data/*
 logs/
 static/
 xml.wsgi
+xml_generator/static/*
+xml_generator/templates/dashboard.html
+settings/data/*
+static/*
 

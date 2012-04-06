@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='cp1251'?>
+<pricelists>
+  <pricelist>
+    <name>Мамина, 17а</name>
+    <url>price-927.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>Вега</name>
+        <city>Челябинск</city>
+        <address>Мамина, 17а</address>
+        <coord>
+          <latitude>55.1938657</latitude>
+          <longitude>61.4814768</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+</pricelists>

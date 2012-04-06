@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='cp1251'?>
+<pricelists>
+  <pricelist>
+    <name>Гагарина, 35</name>
+    <url>price-972.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>Вечерний Челябинск</name>
+        <city>Челябинск</city>
+        <address>Гагарина, 35</address>
+        <coord>
+          <latitude>55.1288423</latitude>
+          <longitude>61.435144</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+</pricelists>

@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='cp1251'?>
+<pricelists>
+  <pricelist>
+    <name>Ленина 2б</name>
+    <url>price-930.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>Уралавто</name>
+        <city>Челябинск</city>
+        <address>Ленина 2б</address>
+        <coord>
+          <latitude>55.1640723362</latitude>
+          <longitude>61.4664962586</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+</pricelists>

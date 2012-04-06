@@ -1,0 +1,46 @@
+{% extends 'admin/change_list.html' %}
+
+{% load adminmedia %}
+
+{% block breadcrumbs %}{% endblock %}
+
+{% block extrahead %}
+{{ block.super }}
+<script type="text/javascript" src="/static/admin/js/jquery.js"></script>
+<script type="text/javascript" src="/static/admin/js/jquery.init.js"></script>
+<script type="text/javascript" src="/static/admin/js/actions.js"></script>
+<script type="text/javascript" src="/static/admin/js/core.js"></script>
+<script type="text/javascript" src="/admin/jsi18n/"></script>
+{{date_range.media}}
+{% endblock %}
+
+{% block title %}Статистика для торговых точек{% endblock %}
+
+{% block content %}
+<div id="content-main">
+	<form method="get">
+		{{date_range.as_p}}
+		<input type="submit" value="Фильтровать" />
+	</form>
+	<div id="changelist" class="module">
+		<div class="results">
+			<table>
+				<thead>
+					<th scope="col"><div class="text"><span>Пользователь</span></div></th>
+					<th scope="col"><div class="text"><span>Кол-во предложений</span></div></th>
+					<th scope="col"><div class="text"><span>Кол-во ТТ</span></div></th>
+				</thead>
+				<tbody>
+				{% for u in users %}
+					<tr class="row{% cycle 1 2 %}">
+						<td>{{u}}</td>
+						<td>{{u.offers_count}}</td>
+						<td><a href="/admin/salepoint/stat/?user={{u.id}}&start={{date_range.start.value|default:''}}&stop={{date_range.stop.value|default:''}}">{{u.salepoints_count}}</a></td>
+					</tr>
+				{% endfor %}
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+{% endblock %}

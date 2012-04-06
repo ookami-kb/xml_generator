@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='cp1251'?>
+<pricelists>
+  <pricelist>
+    <name>Братьев Кашириных, 99а</name>
+    <url>price-947.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>Перекресток</name>
+        <city>Челябинск</city>
+        <address>Братьев Кашириных, 99а</address>
+        <coord>
+          <latitude>55.177942</latitude>
+          <longitude>61.3478091</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+</pricelists>

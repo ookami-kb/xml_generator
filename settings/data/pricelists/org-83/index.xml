@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='cp1251'?>
+<pricelists>
+  <pricelist>
+    <name>Овчиникова 25</name>
+    <url>price-769.xml</url>
+    <shops>
+      <shop type="salon">
+        <name>Метрополис</name>
+        <city>Челябинск</city>
+        <address>Овчиникова 25</address>
+        <coord>
+          <latitude>55.1433103</latitude>
+          <longitude>61.4061417</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+</pricelists>

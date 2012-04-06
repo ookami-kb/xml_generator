@@ -1,0 +1,15 @@
+{% extends "admin/base_site.html" %}
+
+{% block extrahead %}
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"></script>
+    <script type="text/javascript">
+    	swfobject.embedSWF(
+    	  "/static/open-flash-chart.swf", "chart_demo",
+    	  "100%", "400", "9.0.0", "/static/expressInstall.swf",
+    	  {"data-file":"/analytics/offers/data/"} );
+    </script>
+{% endblock %}
+
+{% block content %}
+	<div class="chart" id="chart_demo"></div>
+{% endblock %}

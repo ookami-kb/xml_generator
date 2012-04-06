@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='cp1251'?>
+<pricelists>
+  <pricelist>
+    <name>40 лет победы, 45</name>
+    <url>price-931.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>Славянский</name>
+        <city>Челябинск</city>
+        <address>40 лет Победы, 45</address>
+        <coord>
+          <latitude>55.1785851</latitude>
+          <longitude>61.3087786</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+</pricelists>

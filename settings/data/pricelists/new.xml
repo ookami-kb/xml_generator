@@ -1,0 +1,907 @@
+<?xml version='1.0' encoding='cp1251'?>
+<source data_source_name="new">
+  <product name="Яйца куриные" id="16"/>
+  <product name="АИ-80" id="1"/>
+  <product name="АИ-92" id="2"/>
+  <product name="Капуста белокочанная" id="115"/>
+  <product name="Масло сливочное" id="162"/>
+  <product name="Макароны" id="148"/>
+  <product name="Чай черный" id="102"/>
+  <product name="Хлеб ржаной" id="120"/>
+  <product name="Чай черный" id="106"/>
+  <product name="Чай черный" id="104"/>
+  <product name="Рис" id="136"/>
+  <product name="Крупа гречневая" id="142"/>
+  <product name="Масло подсолнечное" id="72"/>
+  <product name="Крупа гречневая" id="143"/>
+  <product name="Пшено" id="76"/>
+  <product name="Мука пшеничная, вс." id="113"/>
+  <product name="Лук репчатый" id="114"/>
+  <product name="Яйцо куриное, йодированное" id="164"/>
+  <product name="Сахар-песок" id="154"/>
+  <product name="хлеб пшеничный" id="171"/>
+  <product name="Чай черный" id="100"/>
+  <product name="Цыпленок бройлер" id="116"/>
+  <product name="Макароны" id="152"/>
+  <product name="Соль" id="98"/>
+  <product name="Макароны" id="151"/>
+  <product name="Крупа гречневая" id="140"/>
+  <product name="Мука пшеничная, вс." id="111"/>
+  <product name="хлеб пшеничный" id="168"/>
+  <product name="Крупа гречневая" id="139"/>
+  <product name="Сахар-песок" id="156"/>
+  <product name="Молоко" id="125"/>
+  <product name="Пшено" id="81"/>
+  <product name="Сахар-песок" id="155"/>
+  <product name="Молоко" id="124"/>
+  <product name="Яблоки" id="86"/>
+  <product name="Яблоки" id="88"/>
+  <product name="Морковь" id="82"/>
+  <product name="Масло подсолнечное" id="64"/>
+  <product name="Масло подсолнечное" id="66"/>
+  <product name="Пшено" id="75"/>
+  <product name="Крупа гречневая" id="145"/>
+  <product name="Морковь" id="84"/>
+  <product name="Рис" id="135"/>
+  <product name="Яблоки" id="91"/>
+  <product name="Яблоки" id="87"/>
+  <product name="Масло сливочное" id="161"/>
+  <product name="Рис" id="131"/>
+  <product name="Макароны" id="147"/>
+  <product name="Чай черный" id="105"/>
+  <product name="Пшено" id="79"/>
+  <product name="Рис" id="137"/>
+  <product name="Яйцо куриное, 2 категория" id="167"/>
+  <product name="Хлеб ржаной" id="121"/>
+  <product name="Масло подсолнечное" id="65"/>
+  <product name="Масло сливочное" id="160"/>
+  <product name="Крупа гречневая" id="138"/>
+  <product name="Молоко" id="128"/>
+  <product name="Молоко" id="126"/>
+  <product name="Масло подсолнечное" id="71"/>
+  <product name="Масло подсолнечное" id="174"/>
+  <product name="Пшено" id="175"/>
+  <product name="Пшено" id="176"/>
+  <product name="Яблоки" id="177"/>
+  <product name="Яблоки" id="178"/>
+  <product name="Яблоки" id="179"/>
+  <product name="Яблоки" id="180"/>
+  <product name="Треска " id="182"/>
+  <product name="Судак" id="185"/>
+  <product name="Лемонема" id="187"/>
+  <product name="Соль" id="189"/>
+  <product name="Соль" id="190"/>
+  <product name="Чай черный" id="194"/>
+  <product name="Чай черный" id="195"/>
+  <product name="Четверть курицы" id="201"/>
+  <product name="Молоко" id="202"/>
+  <product name="Молоко" id="205"/>
+  <product name="Молоко" id="208"/>
+  <product name="Молоко" id="210"/>
+  <product name="Молоко" id="211"/>
+  <product name="Молоко" id="214"/>
+  <product name="Молоко" id="215"/>
+  <product name="Рис" id="217"/>
+  <product name="Крупа гречневая" id="220"/>
+  <product name="Макароны" id="221"/>
+  <product name="Макароны" id="222"/>
+  <product name="хлеб пшеничный" id="229"/>
+  <product name="Пшено" id="232"/>
+  <product name="Картофель" id="247"/>
+  <product name="Рыба" id="248"/>
+  <product name="Рыба" id="249"/>
+  <product name="Рыба" id="253"/>
+  <product name="Соль" id="255"/>
+  <product name="Мука пшеничная" id="257"/>
+  <product name="Мука пшеничная" id="259"/>
+  <product name="Мука пшеничная" id="261"/>
+  <product name="Хлеб ржаной" id="262"/>
+  <product name="Масло подсолнечное" id="264"/>
+  <product name="Масло подсолнечное" id="265"/>
+  <product name="Рис" id="267"/>
+  <product name="Макароны" id="271"/>
+  <product name="Сахар-песок" id="273"/>
+  <product name="Масло сливочное" id="277"/>
+  <product name="Масло сливочное" id="278"/>
+  <product name="Масло сливочное" id="279"/>
+  <product name="Яйцо куриное, отборное" id="280"/>
+  <product name="Масло сливочное" id="286"/>
+  <product name="Рис" id="287"/>
+  <product name="Пшено" id="289"/>
+  <product name="Яблоки" id="290"/>
+  <product name="Картофель" id="52"/>
+  <product name="Картофель" id="51"/>
+  <product name="АИ-95" id="3"/>
+  <product name="АИ-98" id="4"/>
+  <product name="ДТ" id="5"/>
+  <product name="Пшено" id="77"/>
+  <product name="Пшено" id="80"/>
+  <product name="Макароны" id="149"/>
+  <product name="Молоко" id="129"/>
+  <product name="Крупа гречневая" id="144"/>
+  <product name="Яйцо куриное, столовое" id="165"/>
+  <product name="Масло подсолнечное" id="69"/>
+  <product name="Чай черный" id="103"/>
+  <product name="Масло сливочное" id="157"/>
+  <product name="Яблоки" id="92"/>
+  <product name="Яйцо куриное, деревенское" id="163"/>
+  <product name="Хлеб ржаной" id="123"/>
+  <product name="Яблоки" id="93"/>
+  <product name="Рис" id="133"/>
+  <product name="Рыба" id="95"/>
+  <product name="Цыпленок бройлер" id="118"/>
+  <product name="Масло подсолнечное" id="68"/>
+  <product name="Рыба" id="94"/>
+  <product name="Макароны" id="146"/>
+  <product name="Масло подсолнечное" id="73"/>
+  <product name="Хлеб ржаной" id="122"/>
+  <product name="Соль" id="99"/>
+  <product name="Яблоки" id="85"/>
+  <product name="Мука пшеничная, вс." id="112"/>
+  <product name="Чай черный" id="107"/>
+  <product name="Мука пшеничная, вс." id="109"/>
+  <product name="Яйцо куриное, домашнее" id="166"/>
+  <product name="Масло подсолнечное" id="67"/>
+  <product name="Крупа гречневая" id="141"/>
+  <product name="Рис" id="134"/>
+  <product name="Цыпленок бройлер" id="119"/>
+  <product name="Цыпленок бройлер" id="117"/>
+  <product name="Чай черный" id="108"/>
+  <product name="Масло подсолнечное" id="70"/>
+  <product name="Масло сливочное" id="159"/>
+  <product name="Мука пшеничная, вс." id="110"/>
+  <product name="Пшено" id="78"/>
+  <product name="Яблоки" id="89"/>
+  <product name="Макароны" id="150"/>
+  <product name="Макароны" id="153"/>
+  <product name="Рыба" id="96"/>
+  <product name="Чай черный" id="101"/>
+  <product name="Рис" id="130"/>
+  <product name="Пшено" id="74"/>
+  <product name="хлеб пшеничный" id="169"/>
+  <product name="Соль" id="97"/>
+  <product name="Яблоки" id="90"/>
+  <product name="Морковь" id="83"/>
+  <product name="Масло сливочное" id="158"/>
+  <product name="Рис" id="132"/>
+  <product name="Молоко" id="127"/>
+  <product name="Масло подсолнечное" id="172"/>
+  <product name="Масло подсолнечное" id="173"/>
+  <product name="Морковь" id="230"/>
+  <product name="Треска" id="181"/>
+  <product name="Тунец" id="183"/>
+  <product name="Минтай" id="184"/>
+  <product name="Терпуг" id="186"/>
+  <product name="Соль" id="191"/>
+  <product name="Соль" id="192"/>
+  <product name="Соль" id="193"/>
+  <product name="Мука пшеничная" id="196"/>
+  <product name="Лук репчатый" id="197"/>
+  <product name="Филе куриное" id="198"/>
+  <product name="Четверть курицы" id="199"/>
+  <product name="Четверть курицы" id="200"/>
+  <product name="Молоко" id="203"/>
+  <product name="Молоко " id="204"/>
+  <product name="Молоко" id="206"/>
+  <product name="Молоко" id="207"/>
+  <product name="Молоко" id="209"/>
+  <product name="Молоко" id="212"/>
+  <product name="Молоко" id="213"/>
+  <product name="Молоко" id="216"/>
+  <product name="Крупа гречневая" id="218"/>
+  <product name="Крупа гречневая" id="219"/>
+  <product name="Сахар-песок" id="223"/>
+  <product name="Сахар-песок" id="224"/>
+  <product name="Сахар-песок" id="225"/>
+  <product name="Масло сливочное" id="226"/>
+  <product name="Масло сливочное" id="227"/>
+  <product name="Масло сливочное" id="228"/>
+  <product name="Говядина" id="231"/>
+  <product name="Пшено" id="242"/>
+  <product name="Яблоки" id="243"/>
+  <product name="Свинина" id="244"/>
+  <product name="Картофель" id="245"/>
+  <product name="Картофель" id="246"/>
+  <product name="Рыба" id="250"/>
+  <product name="Рыба" id="251"/>
+  <product name="Рыба" id="252"/>
+  <product name="Рыба" id="254"/>
+  <product name="Соль" id="256"/>
+  <product name="Мука пшеничная" id="258"/>
+  <product name="Мука пшеничная" id="260"/>
+  <product name="Рис" id="266"/>
+  <product name="Рис" id="268"/>
+  <product name="Крупа гречневая" id="269"/>
+  <product name="Крупа гречневая" id="270"/>
+  <product name="Сахар-песок" id="272"/>
+  <product name="Масло сливочное" id="274"/>
+  <product name="Масло сливочное" id="275"/>
+  <product name="Масло сливочное" id="276"/>
+  <product name="хлеб пшеничный" id="281"/>
+  <product name="хлеб пшеничный" id="282"/>
+  <product name="Яблоки" id="283"/>
+  <product name="Яблоки" id="284"/>
+  <product name="Задняя часть" id="285"/>
+  <product name="Крупа гречневая" id="288"/>
+  <product name="Макароны" id="291"/>
+  <product name="хлеб пшеничный" id="170"/>
+  <product name="gtrgr" id="1333614467"/>
+  <country name="Россия" id="1"/>
+  <country name="Россия" id="2"/>
+  <country name="Россия" id="3"/>
+  <country name="Россия" id="4"/>
+  <country name="Россия" id="5"/>
+  <country name="Россия" id="6"/>
+  <country name="Россия" id="7"/>
+  <country name="Россия" id="8"/>
+  <country name="Россия" id="9"/>
+  <country name="Россия" id="10"/>
+  <country name="Россия" id="11"/>
+  <country name="Россия" id="12"/>
+  <country name="Россия" id="13"/>
+  <country name="Россия" id="14"/>
+  <country name="Россия" id="15"/>
+  <country name="Россия" id="16"/>
+  <country name="Россия" id="17"/>
+  <country name="Россия" id="18"/>
+  <country name="Россия" id="19"/>
+  <country name="Россия" id="20"/>
+  <country name="Россия" id="21"/>
+  <country name="Россия" id="22"/>
+  <country name="Россия" id="23"/>
+  <country name="Россия" id="24"/>
+  <country name="Россия" id="25"/>
+  <country name="Россия" id="26"/>
+  <country name="Россия" id="27"/>
+  <country name="Россия" id="28"/>
+  <country name="Россия" id="29"/>
+  <country name="Россия" id="30"/>
+  <country name="Россия" id="31"/>
+  <country name="Россия" id="32"/>
+  <country name="Россия" id="33"/>
+  <country name="Россия" id="34"/>
+  <country name="Россия" id="35"/>
+  <country name="Россия" id="36"/>
+  <country name="Россия" id="37"/>
+  <country name="Россия" id="38"/>
+  <country name="Россия" id="39"/>
+  <country name="Россия" id="40"/>
+  <country name="Россия" id="41"/>
+  <country name="Россия" id="42"/>
+  <country name="Россия" id="43"/>
+  <country name="Россия" id="44"/>
+  <country name="Россия" id="45"/>
+  <country name="Россия" id="46"/>
+  <country name="Россия" id="47"/>
+  <country name="Россия" id="48"/>
+  <country name="Россия" id="49"/>
+  <country name="Россия" id="50"/>
+  <country name="Россия" id="51"/>
+  <country name="Россия" id="52"/>
+  <country name="Россия" id="53"/>
+  <country name="Россия" id="54"/>
+  <country name="Россия" id="55"/>
+  <country name="Россия" id="56"/>
+  <country name="Россия" id="57"/>
+  <country name="Россия" id="58"/>
+  <country name="Россия" id="59"/>
+  <country name="Россия" id="60"/>
+  <country name="Россия" id="61"/>
+  <country name="Россия" id="62"/>
+  <country name="Россия" id="63"/>
+  <country name="Россия" id="64"/>
+  <country name="Россия" id="65"/>
+  <country name="Россия" id="66"/>
+  <country name="Россия" id="67"/>
+  <country name="Россия" id="68"/>
+  <country name="Россия" id="69"/>
+  <country name="Россия" id="70"/>
+  <country name="Россия" id="71"/>
+  <country name="Россия" id="72"/>
+  <country name="Россия" id="73"/>
+  <country name="Россия" id="74"/>
+  <country name="Россия" id="75"/>
+  <country name="Россия" id="76"/>
+  <country name="Россия" id="77"/>
+  <country name="Россия" id="78"/>
+  <country name="Россия" id="79"/>
+  <country name="Россия" id="80"/>
+  <country name="Россия" id="81"/>
+  <country name="Россия" id="82"/>
+  <country name="Россия" id="83"/>
+  <country name="Россия" id="84"/>
+  <country name="Россия" id="85"/>
+  <country name="Россия" id="86"/>
+  <country name="Россия" id="87"/>
+  <country name="Россия" id="88"/>
+  <country name="Россия" id="89"/>
+  <country name="Россия" id="90"/>
+  <country name="Россия" id="91"/>
+  <country name="Россия" id="92"/>
+  <country name="Россия" id="93"/>
+  <country name="Россия" id="94"/>
+  <country name="Россия" id="95"/>
+  <country name="Россия" id="96"/>
+  <country name="Россия" id="97"/>
+  <country name="Россия" id="98"/>
+  <country name="Россия" id="99"/>
+  <country name="Россия" id="100"/>
+  <country name="Россия" id="101"/>
+  <country name="Россия" id="102"/>
+  <country name="Россия" id="103"/>
+  <country name="Россия" id="104"/>
+  <country name="Россия" id="105"/>
+  <country name="Россия" id="106"/>
+  <country name="Россия" id="107"/>
+  <country name="Россия" id="108"/>
+  <country name="Россия" id="109"/>
+  <country name="Россия" id="110"/>
+  <country name="Россия" id="111"/>
+  <country name="Россия" id="112"/>
+  <country name="Россия" id="113"/>
+  <country name="Россия" id="114"/>
+  <country name="Россия" id="115"/>
+  <country name="Россия" id="116"/>
+  <country name="Россия" id="117"/>
+  <country name="Россия" id="118"/>
+  <country name="Россия" id="119"/>
+  <country name="Россия" id="120"/>
+  <country name="Россия" id="121"/>
+  <country name="Россия" id="122"/>
+  <country name="Россия" id="123"/>
+  <country name="Россия" id="124"/>
+  <country name="Россия" id="125"/>
+  <country name="Россия" id="126"/>
+  <country name="Россия" id="127"/>
+  <country name="Россия" id="128"/>
+  <country name="Россия" id="129"/>
+  <country name="Россия" id="130"/>
+  <country name="Россия" id="131"/>
+  <country name="Россия" id="132"/>
+  <country name="Россия" id="133"/>
+  <country name="Россия" id="134"/>
+  <country name="Россия" id="135"/>
+  <country name="Россия" id="136"/>
+  <country name="Россия" id="137"/>
+  <country name="Россия" id="138"/>
+  <country name="Россия" id="139"/>
+  <country name="Россия" id="140"/>
+  <country name="Россия" id="141"/>
+  <country name="Россия" id="142"/>
+  <country name="Россия" id="143"/>
+  <country name="Россия" id="144"/>
+  <country name="Россия" id="145"/>
+  <country name="Россия" id="146"/>
+  <country name="Россия" id="147"/>
+  <country name="Россия" id="148"/>
+  <country name="Россия" id="149"/>
+  <country name="Россия" id="150"/>
+  <country name="Россия" id="151"/>
+  <country name="Россия" id="152"/>
+  <country name="Россия" id="153"/>
+  <country name="Россия" id="154"/>
+  <country name="Россия" id="155"/>
+  <country name="Россия" id="156"/>
+  <country name="Россия" id="157"/>
+  <country name="Россия" id="158"/>
+  <country name="Россия" id="159"/>
+  <country name="Россия" id="160"/>
+  <country name="Россия" id="161"/>
+  <country name="Россия" id="162"/>
+  <country name="Россия" id="163"/>
+  <country name="Россия" id="164"/>
+  <country name="Россия" id="165"/>
+  <country name="Россия" id="166"/>
+  <country name="Россия" id="167"/>
+  <country name="Россия" id="168"/>
+  <country name="Россия" id="169"/>
+  <country name="Россия" id="170"/>
+  <country name="Россия" id="171"/>
+  <country name="Россия" id="172"/>
+  <country name="Россия" id="173"/>
+  <country name="Россия" id="174"/>
+  <country name="Россия" id="175"/>
+  <country name="Россия" id="176"/>
+  <country name="Россия" id="177"/>
+  <country name="Россия" id="178"/>
+  <country name="Россия" id="179"/>
+  <country name="Россия" id="180"/>
+  <country name="Россия" id="181"/>
+  <country name="Россия" id="182"/>
+  <country name="Россия" id="183"/>
+  <country name="Россия" id="184"/>
+  <country name="Россия" id="185"/>
+  <country name="Россия" id="186"/>
+  <country name="Россия" id="187"/>
+  <country name="Россия" id="188"/>
+  <country name="Россия" id="189"/>
+  <country name="Россия" id="190"/>
+  <country name="Россия" id="191"/>
+  <country name="Россия" id="192"/>
+  <country name="Россия" id="193"/>
+  <country name="Россия" id="194"/>
+  <country name="Россия" id="195"/>
+  <country name="Россия" id="196"/>
+  <country name="Россия" id="197"/>
+  <country name="Россия" id="198"/>
+  <country name="Россия" id="199"/>
+  <country name="Россия" id="200"/>
+  <country name="Россия" id="201"/>
+  <country name="Россия" id="202"/>
+  <country name="Россия" id="203"/>
+  <country name="Россия" id="204"/>
+  <country name="Россия" id="205"/>
+  <country name="Россия" id="206"/>
+  <country name="Россия" id="207"/>
+  <country name="Россия" id="208"/>
+  <country name="Россия" id="209"/>
+  <country name="Россия" id="210"/>
+  <country name="Россия" id="211"/>
+  <country name="Россия" id="212"/>
+  <country name="Россия" id="213"/>
+  <country name="Россия" id="214"/>
+  <country name="Россия" id="215"/>
+  <country name="Россия" id="216"/>
+  <country name="Россия" id="217"/>
+  <country name="Россия" id="218"/>
+  <country name="Россия" id="219"/>
+  <country name="Россия" id="220"/>
+  <country name="Россия" id="221"/>
+  <country name="Россия" id="222"/>
+  <country name="Россия" id="223"/>
+  <country name="Россия" id="224"/>
+  <country name="Россия" id="225"/>
+  <country name="Россия" id="226"/>
+  <manufacturer name="Красный фасованный" id="1"/>
+  <manufacturer name="Чепфа" id="2"/>
+  <manufacturer name="" id="3"/>
+  <manufacturer name="" id="4"/>
+  <manufacturer name="Россия" id="5"/>
+  <manufacturer name="Первый вкус" id="6"/>
+  <manufacturer name="Макфа" id="7"/>
+  <manufacturer name="Нури" id="8"/>
+  <manufacturer name="Южноуральский" id="9"/>
+  <manufacturer name="Tess" id="10"/>
+  <manufacturer name="Акбар" id="11"/>
+  <manufacturer name="Пассим" id="12"/>
+  <manufacturer name="Увелка" id="13"/>
+  <manufacturer name="Золотая семечка" id="14"/>
+  <manufacturer name="Пассим" id="15"/>
+  <manufacturer name="Макиз" id="16"/>
+  <manufacturer name="Южноуральский" id="17"/>
+  <manufacturer name="Репчатый" id="18"/>
+  <manufacturer name="Чепфа" id="19"/>
+  <manufacturer name="Юбилейная" id="20"/>
+  <manufacturer name="Хлебпром" id="21"/>
+  <manufacturer name="Riston" id="22"/>
+  <manufacturer name="Аргаяшская птицефабрика" id="23"/>
+  <manufacturer name="Союзпищепром" id="24"/>
+  <manufacturer name="Экстра" id="25"/>
+  <manufacturer name="Союзпищепром" id="26"/>
+  <manufacturer name="Царь" id="27"/>
+  <manufacturer name="Алтайская сказка" id="28"/>
+  <manufacturer name="Союзпищепром" id="29"/>
+  <manufacturer name="Макиз" id="30"/>
+  <manufacturer name="Русский сахар" id="31"/>
+  <manufacturer name="Простоквашино" id="32"/>
+  <manufacturer name="Пассим" id="33"/>
+  <manufacturer name="ООО Новоинвест" id="34"/>
+  <manufacturer name="Золотые луга" id="35"/>
+  <manufacturer name="Джонатан голд" id="36"/>
+  <manufacturer name="Гренни" id="37"/>
+  <manufacturer name="Россия" id="38"/>
+  <manufacturer name="Олейна" id="39"/>
+  <manufacturer name="Корона изобилия" id="40"/>
+  <manufacturer name="Агроальянс" id="41"/>
+  <manufacturer name="Garnish" id="42"/>
+  <manufacturer name="Импорт" id="43"/>
+  <manufacturer name="Царь" id="44"/>
+  <manufacturer name="Брайбурн" id="45"/>
+  <manufacturer name="Голден" id="46"/>
+  <manufacturer name="Valio" id="47"/>
+  <manufacturer name="Макиз" id="48"/>
+  <manufacturer name="Царь" id="49"/>
+  <manufacturer name="Липтон" id="50"/>
+  <manufacturer name="Чудесный край" id="51"/>
+  <manufacturer name="Россия" id="52"/>
+  <manufacturer name="Чепфа" id="53"/>
+  <manufacturer name="Хлебпром" id="54"/>
+  <manufacturer name="Слобода" id="55"/>
+  <manufacturer name="Веселое утро" id="56"/>
+  <manufacturer name="Garnish" id="57"/>
+  <manufacturer name="Домик в деревне" id="58"/>
+  <manufacturer name="Чебаркульское" id="59"/>
+  <manufacturer name="Altero" id="60"/>
+  <manufacturer name="Янтарная семечка" id="61"/>
+  <manufacturer name="Княжий стол" id="62"/>
+  <manufacturer name="Полтавская" id="63"/>
+  <manufacturer name="Польские" id="64"/>
+  <manufacturer name="Ройял галла" id="65"/>
+  <manufacturer name="Редчиф" id="66"/>
+  <manufacturer name="Грушовка" id="67"/>
+  <manufacturer name="Треска Бухта изобилия " id="68"/>
+  <manufacturer name="Судак Бухта изобилия" id="69"/>
+  <manufacturer name="Лемонема" id="70"/>
+  <manufacturer name="метал, каменная, молотая" id="71"/>
+  <manufacturer name="Зимушка краса" id="72"/>
+  <manufacturer name="Нури" id="73"/>
+  <manufacturer name="Липтон" id="74"/>
+  <manufacturer name="Равис" id="75"/>
+  <manufacturer name="Простоквашино" id="76"/>
+  <manufacturer name="Чебаркульское" id="77"/>
+  <manufacturer name="Первый вкус" id="78"/>
+  <manufacturer name="Лактел" id="79"/>
+  <manufacturer name="Лактел" id="80"/>
+  <manufacturer name="ГМЗ" id="81"/>
+  <manufacturer name="ГМЗ" id="82"/>
+  <manufacturer name="Мистраль" id="83"/>
+  <manufacturer name="Парус" id="84"/>
+  <manufacturer name="AGNESI ELIOCHE" id="85"/>
+  <manufacturer name="Увелка" id="86"/>
+  <manufacturer name="Первый хлебокомбинат" id="87"/>
+  <manufacturer name="Зернышко к зернышку" id="88"/>
+  <manufacturer name="Импорт" id="89"/>
+  <manufacturer name="Горбуша" id="90"/>
+  <manufacturer name="Хек" id="91"/>
+  <manufacturer name="Скумбрия" id="92"/>
+  <manufacturer name="Полесье экстра" id="93"/>
+  <manufacturer name="Макфа" id="94"/>
+  <manufacturer name="Ржаные узоры" id="95"/>
+  <manufacturer name="Первая мельница" id="96"/>
+  <manufacturer name="Мэри" id="97"/>
+  <manufacturer name="Златолей" id="98"/>
+  <manufacturer name="Чудесная семечка" id="99"/>
+  <manufacturer name="Зернышко к зернышку" id="100"/>
+  <manufacturer name="Молния" id="101"/>
+  <manufacturer name="Весовой" id="102"/>
+  <manufacturer name="Анкор" id="103"/>
+  <manufacturer name="Крестьянское" id="104"/>
+  <manufacturer name="Экомилка" id="105"/>
+  <manufacturer name="Чепфа" id="106"/>
+  <manufacturer name="Чебаркульское" id="107"/>
+  <manufacturer name="Весовой" id="108"/>
+  <manufacturer name="Весовой" id="109"/>
+  <manufacturer name="Молдавские" id="110"/>
+  <manufacturer name="Продовольственная" id="111"/>
+  <manufacturer name="Россия" id="112"/>
+  <manufacturer name="" id="113"/>
+  <manufacturer name="" id="114"/>
+  <manufacturer name="" id="115"/>
+  <manufacturer name="Проальянс" id="116"/>
+  <manufacturer name="Пассим" id="117"/>
+  <manufacturer name="Союзпищепром" id="118"/>
+  <manufacturer name="Молния" id="119"/>
+  <manufacturer name="Алтайская сказка" id="120"/>
+  <manufacturer name="Чепфа" id="121"/>
+  <manufacturer name="Россиянка" id="122"/>
+  <manufacturer name="Ахмад" id="123"/>
+  <manufacturer name="Сулимовское" id="124"/>
+  <manufacturer name="Фуджи" id="125"/>
+  <manufacturer name="Чепфа" id="126"/>
+  <manufacturer name="Первый хлебокомбинат" id="127"/>
+  <manufacturer name="Ред делишес" id="128"/>
+  <manufacturer name="Агроальянс" id="129"/>
+  <manufacturer name="Камбала" id="130"/>
+  <manufacturer name="Равис" id="131"/>
+  <manufacturer name="Светлица" id="132"/>
+  <manufacturer name="Минтай" id="133"/>
+  <manufacturer name="Красная цена" id="134"/>
+  <manufacturer name="Ideal" id="135"/>
+  <manufacturer name="Молния" id="136"/>
+  <manufacturer name="Илецкая" id="137"/>
+  <manufacturer name="Айдаред" id="138"/>
+  <manufacturer name="Увелка" id="139"/>
+  <manufacturer name="Ахмад Лондон" id="140"/>
+  <manufacturer name="Царь" id="141"/>
+  <manufacturer name="Чепфа" id="142"/>
+  <manufacturer name="Злато" id="143"/>
+  <manufacturer name="Княжий стол" id="144"/>
+  <manufacturer name="Юбилейная" id="145"/>
+  <manufacturer name="Оренбургский" id="146"/>
+  <manufacturer name="Чепфа" id="147"/>
+  <manufacturer name="Акбар голд" id="148"/>
+  <manufacturer name="Благо" id="149"/>
+  <manufacturer name="Башкирское" id="150"/>
+  <manufacturer name="Россия" id="151"/>
+  <manufacturer name="Увелка" id="152"/>
+  <manufacturer name="Свежий урожай" id="153"/>
+  <manufacturer name="Союзпищепром" id="154"/>
+  <manufacturer name="Pasta Zara" id="155"/>
+  <manufacturer name="Ламинелла" id="156"/>
+  <manufacturer name="Майский" id="157"/>
+  <manufacturer name="Garnish" id="158"/>
+  <manufacturer name="Юбилейная" id="159"/>
+  <manufacturer name="Союзпищепром" id="160"/>
+  <manufacturer name="Мозырьсоль" id="161"/>
+  <manufacturer name="Глостер" id="162"/>
+  <manufacturer name="Упакованная" id="163"/>
+  <manufacturer name="Простоквашино" id="164"/>
+  <manufacturer name="Увелка" id="165"/>
+  <manufacturer name="Первый вкус" id="166"/>
+  <manufacturer name="Аведов" id="167"/>
+  <manufacturer name="Altero" id="168"/>
+  <manufacturer name="Израильская" id="169"/>
+  <manufacturer name="Треска AGAMA " id="170"/>
+  <manufacturer name="Тунец AGAMA " id="171"/>
+  <manufacturer name="Минтай Бухта изобилия" id="172"/>
+  <manufacturer name="Терпуг" id="173"/>
+  <manufacturer name="Полесье" id="174"/>
+  <manufacturer name="Зимушка краса" id="175"/>
+  <manufacturer name="Белоснежка" id="176"/>
+  <manufacturer name="Molino rossetto " id="177"/>
+  <manufacturer name="Красный" id="178"/>
+  <manufacturer name="Чепфа" id="179"/>
+  <manufacturer name="Аргаяшская птицефабрика" id="180"/>
+  <manufacturer name="Чепфа" id="181"/>
+  <manufacturer name="Простоквашино" id="182"/>
+  <manufacturer name="Простоквашино" id="183"/>
+  <manufacturer name="Чебаркульское" id="184"/>
+  <manufacturer name="Первый вкус" id="185"/>
+  <manufacturer name="Весёлый молочник" id="186"/>
+  <manufacturer name="Президент" id="187"/>
+  <manufacturer name="Президент" id="188"/>
+  <manufacturer name="ГМЗ" id="189"/>
+  <manufacturer name="Макфа" id="190"/>
+  <manufacturer name="Мистраль" id="191"/>
+  <manufacturer name="Юбилейная" id="192"/>
+  <manufacturer name="Белый парус" id="193"/>
+  <manufacturer name="ГОСТ" id="194"/>
+  <manufacturer name="Чебаркульское" id="195"/>
+  <manufacturer name="ГМЗ" id="196"/>
+  <manufacturer name="Президент" id="197"/>
+  <manufacturer name="Россия" id="198"/>
+  <manufacturer name="Алтайская сказка" id="199"/>
+  <manufacturer name="Эконом" id="200"/>
+  <manufacturer name="Россия" id="201"/>
+  <manufacturer name="Белый" id="202"/>
+  <manufacturer name="Мытый упакованный" id="203"/>
+  <manufacturer name="Палантаус" id="204"/>
+  <manufacturer name="Панагасиус" id="205"/>
+  <manufacturer name="Путассу" id="206"/>
+  <manufacturer name="Сельдь" id="207"/>
+  <manufacturer name="Мариман" id="208"/>
+  <manufacturer name="Царь" id="209"/>
+  <manufacturer name="Стопудовъ" id="210"/>
+  <manufacturer name="Макфа" id="211"/>
+  <manufacturer name="Алтайская сказка" id="212"/>
+  <manufacturer name="Юбилейная" id="213"/>
+  <manufacturer name="Зернышко к зернышку" id="214"/>
+  <manufacturer name="Макиз" id="215"/>
+  <manufacturer name="Сулимовское" id="216"/>
+  <manufacturer name="Золотые луга" id="217"/>
+  <manufacturer name="Эконом" id="218"/>
+  <manufacturer name="Еманжелинский" id="219"/>
+  <manufacturer name="Новый" id="220"/>
+  <manufacturer name="Семеринка" id="221"/>
+  <manufacturer name="Ред классик" id="222"/>
+  <manufacturer name="Россия" id="223"/>
+  <manufacturer name="Весовой" id="224"/>
+  <manufacturer name="Весовой" id="225"/>
+  <manufacturer name="Еманжелинский" id="226"/>
+  <modification id="2" title="Яйца куриные" title_extra="10 шт" product_id="16" country_id="2" manufacturer_id="2" type="food" wb_id="26" wb_key="amount" wb_value="10.0"/>
+  <modification id="3" title="АИ-80" title_extra="" product_id="1" country_id="3" manufacturer_id="3" type="fuel"/>
+  <modification id="4" title="АИ-92" title_extra="" product_id="2" country_id="4" manufacturer_id="4" type="fuel"/>
+  <modification id="5" title="Капуста белокочанная" title_extra="1 кг" product_id="115" country_id="5" manufacturer_id="5" type="food" wb_id="16" wb_key="weight" wb_value="1.0"/>
+  <modification id="6" title="Масло сливочное" title_extra="180 гр" product_id="162" country_id="6" manufacturer_id="6" type="food" wb_id="25" wb_key="weight" wb_value="1.0"/>
+  <modification id="7" title="Макароны" title_extra="450 гр" product_id="148" country_id="7" manufacturer_id="7" type="food" wb_id="23" wb_key="weight" wb_value="1.0"/>
+  <modification id="8" title="Чай черный" title_extra="250 гр" product_id="102" country_id="8" manufacturer_id="8" type="food" wb_id="13" wb_key="weight" wb_value="1.0"/>
+  <modification id="9" title="Хлеб ржаной" title_extra="500 гр" product_id="120" country_id="9" manufacturer_id="9" type="food" wb_id="18" wb_key="weight" wb_value="1.0"/>
+  <modification id="10" title="Чай черный" title_extra="100 гр" product_id="106" country_id="10" manufacturer_id="10" type="food" wb_id="13" wb_key="weight" wb_value="1.0"/>
+  <modification id="11" title="Чай черный" title_extra="100 гр" product_id="104" country_id="11" manufacturer_id="11" type="food" wb_id="13" wb_key="weight" wb_value="1.0"/>
+  <modification id="12" title="Рис" title_extra="900 гр" product_id="136" country_id="12" manufacturer_id="12" type="food" wb_id="21" wb_key="weight" wb_value="1.0"/>
+  <modification id="13" title="Крупа гречневая" title_extra="800 гр" product_id="142" country_id="13" manufacturer_id="13" type="food" wb_id="22" wb_key="weight" wb_value="1.0"/>
+  <modification id="14" title="Масло подсолнечное" title_extra="0.9 л" product_id="72" country_id="14" manufacturer_id="14" type="food" wb_id="2" wb_key="volume" wb_value="1.0"/>
+  <modification id="15" title="Крупа гречневая" title_extra="800 гр" product_id="143" country_id="15" manufacturer_id="15" type="food" wb_id="22" wb_key="weight" wb_value="1.0"/>
+  <modification id="16" title="Пшено" title_extra="0.9 кг" product_id="76" country_id="16" manufacturer_id="16" type="food" wb_id="6" wb_key="weight" wb_value="1.0"/>
+  <modification id="17" title="Мука пшеничная, вс." title_extra="2 кг" product_id="113" country_id="17" manufacturer_id="17" type="food" wb_id="14" wb_key="weight" wb_value="1.0"/>
+  <modification id="18" title="Лук репчатый" title_extra="1 кг" product_id="114" country_id="18" manufacturer_id="18" type="food" wb_id="15" wb_key="weight" wb_value="1.0"/>
+  <modification id="19" title="Яйцо куриное, йодированное" title_extra="10 шт" product_id="164" country_id="19" manufacturer_id="19" type="food" wb_id="26" wb_key="amount" wb_value="10.0"/>
+  <modification id="20" title="Сахар-песок" title_extra="1 кг" product_id="154" country_id="20" manufacturer_id="20" type="food" wb_id="24" wb_key="weight" wb_value="1.0"/>
+  <modification id="21" title="хлеб пшеничный" title_extra="400 гр" product_id="171" country_id="21" manufacturer_id="21" type="food" wb_id="28" wb_key="weight" wb_value="1.0"/>
+  <modification id="22" title="Чай черный" title_extra="200 гр" product_id="100" country_id="22" manufacturer_id="22" type="food" wb_id="13" wb_key="weight" wb_value="1.0"/>
+  <modification id="23" title="Цыпленок бройлер" title_extra="1 кг" product_id="116" country_id="23" manufacturer_id="23" type="food" wb_id="17" wb_key="weight" wb_value="1.0"/>
+  <modification id="24" title="Макароны" title_extra="450 гр" product_id="152" country_id="24" manufacturer_id="24" type="food" wb_id="23" wb_key="weight" wb_value="1.0"/>
+  <modification id="25" title="Соль" title_extra="1 кг" product_id="98" country_id="25" manufacturer_id="25" type="food" wb_id="12" wb_key="weight" wb_value="1.0"/>
+  <modification id="26" title="Макароны" title_extra="400 гр" product_id="151" country_id="26" manufacturer_id="26" type="food" wb_id="23" wb_key="weight" wb_value="1.0"/>
+  <modification id="27" title="Крупа гречневая" title_extra="800 гр" product_id="140" country_id="27" manufacturer_id="27" type="food" wb_id="22" wb_key="weight" wb_value="1.0"/>
+  <modification id="28" title="Мука пшеничная, вс." title_extra="2 кг" product_id="111" country_id="28" manufacturer_id="28" type="food" wb_id="14" wb_key="weight" wb_value="1.0"/>
+  <modification id="29" title="хлеб пшеничный" title_extra="550 гр" product_id="168" country_id="29" manufacturer_id="29" type="food" wb_id="28" wb_key="weight" wb_value="1.0"/>
+  <modification id="30" title="Крупа гречневая" title_extra="800 гр" product_id="139" country_id="30" manufacturer_id="30" type="food" wb_id="22" wb_key="weight" wb_value="1.0"/>
+  <modification id="31" title="Сахар-песок" title_extra="1 кг" product_id="156" country_id="31" manufacturer_id="31" type="food" wb_id="24" wb_key="weight" wb_value="1.0"/>
+  <modification id="32" title="Молоко" title_extra="930 гр, 2,5%" product_id="125" country_id="32" manufacturer_id="32" type="food" wb_id="19" wb_key="volume" wb_value="1.0"/>
+  <modification id="33" title="Пшено" title_extra="1 кг" product_id="81" country_id="33" manufacturer_id="33" type="food" wb_id="6" wb_key="weight" wb_value="1.0"/>
+  <modification id="34" title="Сахар-песок" title_extra="1 кг" product_id="155" country_id="34" manufacturer_id="34" type="food" wb_id="24" wb_key="weight" wb_value="1.0"/>
+  <modification id="35" title="Молоко" title_extra="950 гр" product_id="124" country_id="35" manufacturer_id="35" type="food" wb_id="19" wb_key="volume" wb_value="1.0"/>
+  <modification id="36" title="Яблоки" title_extra="1 кг" product_id="86" country_id="36" manufacturer_id="36" type="food" wb_id="9" wb_key="weight" wb_value="1.0"/>
+  <modification id="37" title="Яблоки" title_extra="1 кг" product_id="88" country_id="37" manufacturer_id="37" type="food" wb_id="9" wb_key="weight" wb_value="1.0"/>
+  <modification id="38" title="Морковь" title_extra="1 кг" product_id="82" country_id="38" manufacturer_id="38" type="food" wb_id="7" wb_key="weight" wb_value="1.0"/>
+  <modification id="39" title="Масло подсолнечное" title_extra="1 л" product_id="64" country_id="39" manufacturer_id="39" type="food" wb_id="2" wb_key="volume" wb_value="1.0"/>
+  <modification id="40" title="Масло подсолнечное" title_extra="0.8 л" product_id="66" country_id="40" manufacturer_id="40" type="food" wb_id="2" wb_key="volume" wb_value="1.0"/>
+  <modification id="41" title="Пшено" title_extra="4х125 гр" product_id="75" country_id="41" manufacturer_id="41" type="food" wb_id="6" wb_key="weight" wb_value="1.0"/>
+  <modification id="42" title="Крупа гречневая" title_extra="800 гр" product_id="145" country_id="42" manufacturer_id="42" type="food" wb_id="22" wb_key="weight" wb_value="1.0"/>
+  <modification id="43" title="Морковь" title_extra="1 кг" product_id="84" country_id="43" manufacturer_id="43" type="food" wb_id="7" wb_key="weight" wb_value="1.0"/>
+  <modification id="44" title="Рис" title_extra="800 гр" product_id="135" country_id="44" manufacturer_id="44" type="food" wb_id="21" wb_key="weight" wb_value="1.0"/>
+  <modification id="45" title="Яблоки" title_extra="1 кг" product_id="91" country_id="45" manufacturer_id="45" type="food" wb_id="9" wb_key="weight" wb_value="1.0"/>
+  <modification id="46" title="Яблоки" title_extra="1 кг" product_id="87" country_id="46" manufacturer_id="46" type="food" wb_id="9" wb_key="weight" wb_value="1.0"/>
+  <modification id="47" title="Масло сливочное" title_extra="180 гр" product_id="161" country_id="47" manufacturer_id="47" type="food" wb_id="25" wb_key="weight" wb_value="1.0"/>
+  <modification id="48" title="Рис" title_extra="800 гр" product_id="131" country_id="48" manufacturer_id="48" type="food" wb_id="21" wb_key="weight" wb_value="1.0"/>
+  <modification id="49" title="Макароны" title_extra="450 гр" product_id="147" country_id="49" manufacturer_id="49" type="food" wb_id="23" wb_key="weight" wb_value="1.0"/>
+  <modification id="50" title="Чай черный" title_extra="100 гр" product_id="105" country_id="50" manufacturer_id="50" type="food" wb_id="13" wb_key="weight" wb_value="1.0"/>
+  <modification id="51" title="Пшено" title_extra="0.9 кг" product_id="79" country_id="51" manufacturer_id="51" type="food" wb_id="6" wb_key="weight" wb_value="1.0"/>
+  <modification id="52" title="Рис" title_extra="900 гр" product_id="137" country_id="52" manufacturer_id="52" type="food" wb_id="21" wb_key="weight" wb_value="1.0"/>
+  <modification id="53" title="Яйцо куриное, 2 категория" title_extra="10 шт" product_id="167" country_id="53" manufacturer_id="53" type="food" wb_id="26" wb_key="amount" wb_value="10.0"/>
+  <modification id="54" title="Хлеб ржаной" title_extra="600 гр" product_id="121" country_id="54" manufacturer_id="54" type="food" wb_id="18" wb_key="weight" wb_value="1.0"/>
+  <modification id="55" title="Масло подсолнечное" title_extra="1 л" product_id="65" country_id="55" manufacturer_id="55" type="food" wb_id="2" wb_key="volume" wb_value="1.0"/>
+  <modification id="56" title="Масло сливочное" title_extra="180 гр" product_id="160" country_id="56" manufacturer_id="56" type="food" wb_id="25" wb_key="weight" wb_value="1.0"/>
+  <modification id="57" title="Крупа гречневая" title_extra="900 гр" product_id="138" country_id="57" manufacturer_id="57" type="food" wb_id="22" wb_key="weight" wb_value="1.0"/>
+  <modification id="58" title="Молоко" title_extra="950 гр" product_id="128" country_id="58" manufacturer_id="58" type="food" wb_id="19" wb_key="volume" wb_value="1.0"/>
+  <modification id="59" title="Молоко" title_extra="1 л, 2,5%" product_id="126" country_id="59" manufacturer_id="59" type="food" wb_id="19" wb_key="volume" wb_value="1.0"/>
+  <modification id="60" title="Масло подсолнечное" title_extra="0.81 л" product_id="71" country_id="60" manufacturer_id="60" type="food" wb_id="2" wb_key="volume" wb_value="1.0"/>
+  <modification id="61" title="Масло подсолнечное" title_extra="1 л" product_id="174" country_id="61" manufacturer_id="61" type="food" wb_id="2" wb_key="volume" wb_value="1.0"/>
+  <modification id="62" title="Пшено" title_extra="700 гр" product_id="175" country_id="62" manufacturer_id="62" type="food" wb_id="6" wb_key="weight" wb_value="1.0"/>
+  <modification id="63" title="Пшено" title_extra="600 гр" product_id="176" country_id="63" manufacturer_id="63" type="food" wb_id="6" wb_key="weight" wb_value="1.0"/>
+  <modification id="64" title="Яблоки" title_extra="1 кг" product_id="177" country_id="64" manufacturer_id="64" type="food" wb_id="9" wb_key="weight" wb_value="1.0"/>
+  <modification id="65" title="Яблоки" title_extra="1 кг" product_id="178" country_id="65" manufacturer_id="65" type="food" wb_id="9" wb_key="weight" wb_value="1.0"/>
+  <modification id="66" title="Яблоки" title_extra="1 кг" product_id="179" country_id="66" manufacturer_id="66" type="food" wb_id="9" wb_key="weight" wb_value="1.0"/>
+  <modification id="67" title="Яблоки" title_extra="1 кг" product_id="180" country_id="67" manufacturer_id="67" type="food" wb_id="9" wb_key="weight" wb_value="1.0"/>
+  <modification id="68" title="Треска " title_extra="филе, 400 гр" product_id="182" country_id="68" manufacturer_id="68" type="food" wb_id="11" wb_key="weight" wb_value="1.0"/>
+  <modification id="69" title="Судак" title_extra="филе, 400 гр" product_id="185" country_id="69" manufacturer_id="69" type="food" wb_id="11" wb_key="weight" wb_value="1.0"/>
+  <modification id="70" title="Лемонема" title_extra="1 кг" product_id="187" country_id="70" manufacturer_id="70" type="food" wb_id="11" wb_key="weight" wb_value="1.0"/>
+  <modification id="71" title="Соль" title_extra="1 кг" product_id="189" country_id="71" manufacturer_id="71" type="food" wb_id="12" wb_key="weight" wb_value="1.0"/>
+  <modification id="72" title="Соль" title_extra="1 кг" product_id="190" country_id="72" manufacturer_id="72" type="food" wb_id="12" wb_key="weight" wb_value="1.0"/>
+  <modification id="73" title="Чай черный" title_extra="100 гр" product_id="194" country_id="73" manufacturer_id="73" type="food" wb_id="13" wb_key="weight" wb_value="1.0"/>
+  <modification id="74" title="Чай черный" title_extra="245 гр" product_id="195" country_id="74" manufacturer_id="74" type="food" wb_id="13" wb_key="weight" wb_value="1.0"/>
+  <modification id="75" title="Четверть курицы" title_extra="1 кг" product_id="201" country_id="75" manufacturer_id="75" type="food" wb_id="17" wb_key="weight" wb_value="1.0"/>
+  <modification id="76" title="Молоко" title_extra="930 гр, 3,2%" product_id="202" country_id="76" manufacturer_id="76" type="food" wb_id="19" wb_key="volume" wb_value="1.0"/>
+  <modification id="77" title="Молоко" title_extra="1 л, 3,2%" product_id="205" country_id="77" manufacturer_id="77" type="food" wb_id="19" wb_key="volume" wb_value="1.0"/>
+  <modification id="78" title="Молоко" title_extra="1 л, 3,9%" product_id="208" country_id="78" manufacturer_id="78" type="food" wb_id="19" wb_key="volume" wb_value="1.0"/>
+  <modification id="79" title="Молоко" title_extra="1 л, 3,6%" product_id="210" country_id="79" manufacturer_id="79" type="food" wb_id="19" wb_key="volume" wb_value="1.0"/>
+  <modification id="80" title="Молоко" title_extra="1 л, 1,5%" product_id="211" country_id="80" manufacturer_id="80" type="food" wb_id="19" wb_key="volume" wb_value="1.0"/>
+  <modification id="81" title="Молоко" title_extra="1 л, 2,5%" product_id="214" country_id="81" manufacturer_id="81" type="food" wb_id="19" wb_key="volume" wb_value="1.0"/>
+  <modification id="82" title="Молоко" title_extra="1 л, 3,2%" product_id="215" country_id="82" manufacturer_id="82" type="food" wb_id="19" wb_key="volume" wb_value="1.0"/>
+  <modification id="83" title="Рис" title_extra="1 кг" product_id="217" country_id="83" manufacturer_id="83" type="food" wb_id="21" wb_key="weight" wb_value="1.0"/>
+  <modification id="84" title="Крупа гречневая" title_extra="1 кг" product_id="220" country_id="84" manufacturer_id="84" type="food" wb_id="22" wb_key="weight" wb_value="1.0"/>
+  <modification id="85" title="Макароны" title_extra="500 гр" product_id="221" country_id="85" manufacturer_id="85" type="food" wb_id="23" wb_key="weight" wb_value="1.0"/>
+  <modification id="86" title="Макароны" title_extra="450 гр" product_id="222" country_id="86" manufacturer_id="86" type="food" wb_id="23" wb_key="weight" wb_value="1.0"/>
+  <modification id="87" title="хлеб пшеничный" title_extra="600 гр" product_id="229" country_id="87" manufacturer_id="87" type="food" wb_id="28" wb_key="weight" wb_value="1.0"/>
+  <modification id="88" title="Пшено" title_extra="0.8 кг" product_id="232" country_id="88" manufacturer_id="88" type="food" wb_id="6" wb_key="weight" wb_value="1.0"/>
+  <modification id="89" title="Картофель" title_extra="1 кг" product_id="247" country_id="89" manufacturer_id="89" type="food" wb_id="10" wb_key="weight" wb_value="1.0"/>
+  <modification id="90" title="Рыба" title_extra="1 кг" product_id="248" country_id="90" manufacturer_id="90" type="food" wb_id="11" wb_key="weight" wb_value="1.0"/>
+  <modification id="91" title="Рыба" title_extra="1 кг" product_id="249" country_id="91" manufacturer_id="91" type="food" wb_id="11" wb_key="weight" wb_value="1.0"/>
+  <modification id="92" title="Рыба" title_extra="1 кг" product_id="253" country_id="92" manufacturer_id="92" type="food" wb_id="11" wb_key="weight" wb_value="1.0"/>
+  <modification id="93" title="Соль" title_extra="1 кг" product_id="255" country_id="93" manufacturer_id="93" type="food" wb_id="12" wb_key="weight" wb_value="1.0"/>
+  <modification id="94" title="Мука пшеничная" title_extra="2 кг" product_id="257" country_id="94" manufacturer_id="94" type="food" wb_id="14" wb_key="weight" wb_value="1.0"/>
+  <modification id="95" title="Мука пшеничная" title_extra="1.6 кг" product_id="259" country_id="95" manufacturer_id="95" type="food" wb_id="14" wb_key="weight" wb_value="1.0"/>
+  <modification id="96" title="Мука пшеничная" title_extra="2 кг" product_id="261" country_id="96" manufacturer_id="96" type="food" wb_id="14" wb_key="weight" wb_value="1.0"/>
+  <modification id="97" title="Хлеб ржаной" title_extra="550 гр" product_id="262" country_id="97" manufacturer_id="97" type="food" wb_id="18" wb_key="weight" wb_value="1.0"/>
+  <modification id="98" title="Масло подсолнечное" title_extra="0.9 л" product_id="264" country_id="98" manufacturer_id="98" type="food" wb_id="2" wb_key="volume" wb_value="1.0"/>
+  <modification id="99" title="Масло подсолнечное" title_extra="0.9 л" product_id="265" country_id="99" manufacturer_id="99" type="food" wb_id="2" wb_key="volume" wb_value="1.0"/>
+  <modification id="100" title="Рис" title_extra="900 гр" product_id="267" country_id="100" manufacturer_id="100" type="food" wb_id="21" wb_key="weight" wb_value="1.0"/>
+  <modification id="101" title="Макароны" title_extra="900 гр" product_id="271" country_id="101" manufacturer_id="101" type="food" wb_id="23" wb_key="weight" wb_value="1.0"/>
+  <modification id="102" title="Сахар-песок" title_extra="1 кг" product_id="273" country_id="102" manufacturer_id="102" type="food" wb_id="24" wb_key="weight" wb_value="1.0"/>
+  <modification id="103" title="Масло сливочное" title_extra="180 гр" product_id="277" country_id="103" manufacturer_id="103" type="food" wb_id="25" wb_key="weight" wb_value="1.0"/>
+  <modification id="104" title="Масло сливочное" title_extra="180 гр" product_id="278" country_id="104" manufacturer_id="104" type="food" wb_id="25" wb_key="weight" wb_value="1.0"/>
+  <modification id="105" title="Масло сливочное" title_extra="180 гр" product_id="279" country_id="105" manufacturer_id="105" type="food" wb_id="25" wb_key="weight" wb_value="1.0"/>
+  <modification id="106" title="Яйцо куриное, отборное" title_extra="10 шт" product_id="280" country_id="106" manufacturer_id="106" type="food" wb_id="26" wb_key="amount" wb_value="10.0"/>
+  <modification id="107" title="Масло сливочное" title_extra="180 гр" product_id="286" country_id="107" manufacturer_id="107" type="food" wb_id="25" wb_key="weight" wb_value="1.0"/>
+  <modification id="108" title="Рис" title_extra="1 кг" product_id="287" country_id="108" manufacturer_id="108" type="food" wb_id="21" wb_key="weight" wb_value="1.0"/>
+  <modification id="109" title="Пшено" title_extra="1 кг" product_id="289" country_id="109" manufacturer_id="109" type="food" wb_id="6" wb_key="weight" wb_value="1.0"/>
+  <modification id="110" title="Яблоки" title_extra="1 кг" product_id="290" country_id="110" manufacturer_id="110" type="food" wb_id="9" wb_key="weight" wb_value="1.0"/>
+  <modification id="111" title="Картофель" title_extra="1 кг" product_id="52" country_id="111" manufacturer_id="111" type="food" wb_id="10" wb_key="weight" wb_value="1.0"/>
+  <modification id="112" title="Картофель" title_extra="1 кг" product_id="51" country_id="112" manufacturer_id="112" type="food" wb_id="10" wb_key="weight" wb_value="1.0"/>
+  <modification id="113" title="АИ-95" title_extra="" product_id="3" country_id="113" manufacturer_id="113" type="fuel"/>
+  <modification id="114" title="АИ-98" title_extra="" product_id="4" country_id="114" manufacturer_id="114" type="fuel"/>
+  <modification id="115" title="ДТ" title_extra="" product_id="5" country_id="115" manufacturer_id="115" type="fuel"/>
+  <modification id="116" title="Пшено" title_extra="0.9 кг" product_id="77" country_id="116" manufacturer_id="116" type="food" wb_id="6" wb_key="weight" wb_value="1.0"/>
+  <modification id="117" title="Пшено" title_extra="0.8 кг" product_id="80" country_id="117" manufacturer_id="117" type="food" wb_id="6" wb_key="weight" wb_value="1.0"/>
+  <modification id="118" title="Макароны" title_extra="500 гр" product_id="149" country_id="118" manufacturer_id="118" type="food" wb_id="23" wb_key="weight" wb_value="1.0"/>
+  <modification id="119" title="Молоко" title_extra="1 л" product_id="129" country_id="119" manufacturer_id="119" type="food" wb_id="19" wb_key="volume" wb_value="1.0"/>
+  <modification id="120" title="Крупа гречневая" title_extra="800 гр" product_id="144" country_id="120" manufacturer_id="120" type="food" wb_id="22" wb_key="weight" wb_value="1.0"/>
+  <modification id="121" title="Яйцо куриное, столовое" title_extra="10 шт" product_id="165" country_id="121" manufacturer_id="121" type="food" wb_id="26" wb_key="amount" wb_value="10.0"/>
+  <modification id="122" title="Масло подсолнечное" title_extra="1 л" product_id="69" country_id="122" manufacturer_id="122" type="food" wb_id="2" wb_key="volume" wb_value="1.0"/>
+  <modification id="123" title="Чай черный" title_extra="250 гр" product_id="103" country_id="123" manufacturer_id="123" type="food" wb_id="13" wb_key="weight" wb_value="1.0"/>
+  <modification id="124" title="Масло сливочное" title_extra="200 гр" product_id="157" country_id="124" manufacturer_id="124" type="food" wb_id="25" wb_key="weight" wb_value="1.0"/>
+  <modification id="125" title="Яблоки" title_extra="1 кг" product_id="92" country_id="125" manufacturer_id="125" type="food" wb_id="9" wb_key="weight" wb_value="1.0"/>
+  <modification id="126" title="Яйцо куриное, деревенское" title_extra="10 шт" product_id="163" country_id="126" manufacturer_id="126" type="food" wb_id="26" wb_key="amount" wb_value="10.0"/>
+  <modification id="127" title="Хлеб ржаной" title_extra="600 гр" product_id="123" country_id="127" manufacturer_id="127" type="food" wb_id="18" wb_key="weight" wb_value="1.0"/>
+  <modification id="128" title="Яблоки" title_extra="1 кг" product_id="93" country_id="128" manufacturer_id="128" type="food" wb_id="9" wb_key="weight" wb_value="1.0"/>
+  <modification id="129" title="Рис" title_extra="900 гр" product_id="133" country_id="129" manufacturer_id="129" type="food" wb_id="21" wb_key="weight" wb_value="1.0"/>
+  <modification id="130" title="Рыба" title_extra="1 кг" product_id="95" country_id="130" manufacturer_id="130" type="food" wb_id="11" wb_key="weight" wb_value="1.0"/>
+  <modification id="131" title="Цыпленок бройлер" title_extra="1 кг" product_id="118" country_id="131" manufacturer_id="131" type="food" wb_id="17" wb_key="weight" wb_value="1.0"/>
+  <modification id="132" title="Масло подсолнечное" title_extra="0.9 л" product_id="68" country_id="132" manufacturer_id="132" type="food" wb_id="2" wb_key="volume" wb_value="1.0"/>
+  <modification id="133" title="Рыба" title_extra="1 кг" product_id="94" country_id="133" manufacturer_id="133" type="food" wb_id="11" wb_key="weight" wb_value="1.0"/>
+  <modification id="134" title="Макароны" title_extra="400 гр" product_id="146" country_id="134" manufacturer_id="134" type="food" wb_id="23" wb_key="weight" wb_value="1.0"/>
+  <modification id="135" title="Масло подсолнечное" title_extra="1 л" product_id="73" country_id="135" manufacturer_id="135" type="food" wb_id="2" wb_key="volume" wb_value="1.0"/>
+  <modification id="136" title="Хлеб ржаной" title_extra="600 гр" product_id="122" country_id="136" manufacturer_id="136" type="food" wb_id="18" wb_key="weight" wb_value="1.0"/>
+  <modification id="137" title="Соль" title_extra="1 кг" product_id="99" country_id="137" manufacturer_id="137" type="food" wb_id="12" wb_key="weight" wb_value="1.0"/>
+  <modification id="138" title="Яблоки" title_extra="1 кг" product_id="85" country_id="138" manufacturer_id="138" type="food" wb_id="9" wb_key="weight" wb_value="1.0"/>
+  <modification id="139" title="Мука пшеничная, вс." title_extra="2 кг" product_id="112" country_id="139" manufacturer_id="139" type="food" wb_id="14" wb_key="weight" wb_value="1.0"/>
+  <modification id="140" title="Чай черный" title_extra="100 гр" product_id="107" country_id="140" manufacturer_id="140" type="food" wb_id="13" wb_key="weight" wb_value="1.0"/>
+  <modification id="141" title="Мука пшеничная, вс." title_extra="2 кг" product_id="109" country_id="141" manufacturer_id="141" type="food" wb_id="14" wb_key="weight" wb_value="1.0"/>
+  <modification id="142" title="Яйцо куриное, домашнее" title_extra="10 шт" product_id="166" country_id="142" manufacturer_id="142" type="food" wb_id="26" wb_key="amount" wb_value="10.0"/>
+  <modification id="143" title="Масло подсолнечное" title_extra="1 л" product_id="67" country_id="143" manufacturer_id="143" type="food" wb_id="2" wb_key="volume" wb_value="1.0"/>
+  <modification id="144" title="Крупа гречневая" title_extra="900 гр" product_id="141" country_id="144" manufacturer_id="144" type="food" wb_id="22" wb_key="weight" wb_value="1.0"/>
+  <modification id="145" title="Рис" title_extra="900 гр" product_id="134" country_id="145" manufacturer_id="145" type="food" wb_id="21" wb_key="weight" wb_value="1.0"/>
+  <modification id="146" title="Цыпленок бройлер" title_extra="1 кг" product_id="119" country_id="146" manufacturer_id="146" type="food" wb_id="17" wb_key="weight" wb_value="1.0"/>
+  <modification id="147" title="Цыпленок бройлер" title_extra="1 кг" product_id="117" country_id="147" manufacturer_id="147" type="food" wb_id="17" wb_key="weight" wb_value="1.0"/>
+  <modification id="148" title="Чай черный" title_extra="100 гр" product_id="108" country_id="148" manufacturer_id="148" type="food" wb_id="13" wb_key="weight" wb_value="1.0"/>
+  <modification id="149" title="Масло подсолнечное" title_extra="1 л" product_id="70" country_id="149" manufacturer_id="149" type="food" wb_id="2" wb_key="volume" wb_value="1.0"/>
+  <modification id="150" title="Масло сливочное" title_extra="180 гр" product_id="159" country_id="150" manufacturer_id="150" type="food" wb_id="25" wb_key="weight" wb_value="1.0"/>
+  <modification id="151" title="Мука пшеничная, вс." title_extra="2 кг" product_id="110" country_id="151" manufacturer_id="151" type="food" wb_id="14" wb_key="weight" wb_value="1.0"/>
+  <modification id="152" title="Пшено" title_extra="0.8 кг" product_id="78" country_id="152" manufacturer_id="152" type="food" wb_id="6" wb_key="weight" wb_value="1.0"/>
+  <modification id="153" title="Яблоки" title_extra="1 кг" product_id="89" country_id="153" manufacturer_id="153" type="food" wb_id="9" wb_key="weight" wb_value="1.0"/>
+  <modification id="154" title="Макароны" title_extra="900 гр" product_id="150" country_id="154" manufacturer_id="154" type="food" wb_id="23" wb_key="weight" wb_value="1.0"/>
+  <modification id="155" title="Макароны" title_extra="500 гр" product_id="153" country_id="155" manufacturer_id="155" type="food" wb_id="23" wb_key="weight" wb_value="1.0"/>
+  <modification id="156" title="Рыба" title_extra="1 кг" product_id="96" country_id="156" manufacturer_id="156" type="food" wb_id="11" wb_key="weight" wb_value="1.0"/>
+  <modification id="157" title="Чай черный" title_extra="200 гр" product_id="101" country_id="157" manufacturer_id="157" type="food" wb_id="13" wb_key="weight" wb_value="1.0"/>
+  <modification id="158" title="Рис" title_extra="900 гр" product_id="130" country_id="158" manufacturer_id="158" type="food" wb_id="21" wb_key="weight" wb_value="1.0"/>
+  <modification id="159" title="Пшено" title_extra="0.9 кг" product_id="74" country_id="159" manufacturer_id="159" type="food" wb_id="6" wb_key="weight" wb_value="1.0"/>
+  <modification id="160" title="хлеб пшеничный" title_extra="600 гр" product_id="169" country_id="160" manufacturer_id="160" type="food" wb_id="28" wb_key="weight" wb_value="1.0"/>
+  <modification id="161" title="Соль" title_extra="1 кг" product_id="97" country_id="161" manufacturer_id="161" type="food" wb_id="12" wb_key="weight" wb_value="1.0"/>
+  <modification id="162" title="Яблоки" title_extra="1 кг" product_id="90" country_id="162" manufacturer_id="162" type="food" wb_id="9" wb_key="weight" wb_value="1.0"/>
+  <modification id="163" title="Морковь" title_extra="1 кг" product_id="83" country_id="163" manufacturer_id="163" type="food" wb_id="7" wb_key="weight" wb_value="1.0"/>
+  <modification id="164" title="Масло сливочное" title_extra="180 гр" product_id="158" country_id="164" manufacturer_id="164" type="food" wb_id="25" wb_key="weight" wb_value="1.0"/>
+  <modification id="165" title="Рис" title_extra="900 гр" product_id="132" country_id="165" manufacturer_id="165" type="food" wb_id="21" wb_key="weight" wb_value="1.0"/>
+  <modification id="166" title="Молоко" title_extra="1 л" product_id="127" country_id="166" manufacturer_id="166" type="food" wb_id="19" wb_key="volume" wb_value="1.0"/>
+  <modification id="167" title="Масло подсолнечное" title_extra="1 л" product_id="172" country_id="167" manufacturer_id="167" type="food" wb_id="2" wb_key="volume" wb_value="1.0"/>
+  <modification id="168" title="Масло подсолнечное" title_extra="1 л" product_id="173" country_id="168" manufacturer_id="168" type="food" wb_id="2" wb_key="volume" wb_value="1.0"/>
+  <modification id="169" title="Морковь" title_extra="1 кг" product_id="230" country_id="169" manufacturer_id="169" type="food" wb_id="7" wb_key="weight" wb_value="1.0"/>
+  <modification id="170" title="Треска" title_extra="филе, 500 гр" product_id="181" country_id="170" manufacturer_id="170" type="food" wb_id="11" wb_key="weight" wb_value="1.0"/>
+  <modification id="171" title="Тунец" title_extra="500 гр" product_id="183" country_id="171" manufacturer_id="171" type="food" wb_id="11" wb_key="weight" wb_value="1.0"/>
+  <modification id="172" title="Минтай" title_extra="500 гр" product_id="184" country_id="172" manufacturer_id="172" type="food" wb_id="11" wb_key="weight" wb_value="1.0"/>
+  <modification id="173" title="Терпуг" title_extra="1 кг" product_id="186" country_id="173" manufacturer_id="173" type="food" wb_id="11" wb_key="weight" wb_value="1.0"/>
+  <modification id="174" title="Соль" title_extra="1 кг" product_id="191" country_id="174" manufacturer_id="174" type="food" wb_id="12" wb_key="weight" wb_value="1.0"/>
+  <modification id="175" title="Соль" title_extra="500 гр" product_id="192" country_id="175" manufacturer_id="175" type="food" wb_id="12" wb_key="weight" wb_value="1.0"/>
+  <modification id="176" title="Соль" title_extra="1 кг" product_id="193" country_id="176" manufacturer_id="176" type="food" wb_id="12" wb_key="weight" wb_value="1.0"/>
+  <modification id="177" title="Мука пшеничная" title_extra="1 кг" product_id="196" country_id="177" manufacturer_id="177" type="food" wb_id="14" wb_key="weight" wb_value="1.0"/>
+  <modification id="178" title="Лук репчатый" title_extra="1 кг" product_id="197" country_id="178" manufacturer_id="178" type="food" wb_id="15" wb_key="weight" wb_value="1.0"/>
+  <modification id="179" title="Филе куриное" title_extra="1 кг" product_id="198" country_id="179" manufacturer_id="179" type="food" wb_id="17" wb_key="weight" wb_value="1.0"/>
+  <modification id="180" title="Четверть курицы" title_extra="1 кг" product_id="199" country_id="180" manufacturer_id="180" type="food" wb_id="17" wb_key="weight" wb_value="1.0"/>
+  <modification id="181" title="Четверть курицы" title_extra="1 кг" product_id="200" country_id="181" manufacturer_id="181" type="food" wb_id="17" wb_key="weight" wb_value="1.0"/>
+  <modification id="182" title="Молоко" title_extra="930 гр, 3,5%" product_id="203" country_id="182" manufacturer_id="182" type="food" wb_id="19" wb_key="volume" wb_value="1.0"/>
+  <modification id="183" title="Молоко " title_extra="930 гр, 6%" product_id="204" country_id="183" manufacturer_id="183" type="food" wb_id="19" wb_key="volume" wb_value="1.0"/>
+  <modification id="184" title="Молоко" title_extra="1 л, 3,8%" product_id="206" country_id="184" manufacturer_id="184" type="food" wb_id="19" wb_key="volume" wb_value="1.0"/>
+  <modification id="185" title="Молоко" title_extra="1 л, 3,2%" product_id="207" country_id="185" manufacturer_id="185" type="food" wb_id="19" wb_key="volume" wb_value="1.0"/>
+  <modification id="186" title="Молоко" title_extra="930 гр, 2,5%" product_id="209" country_id="186" manufacturer_id="186" type="food" wb_id="19" wb_key="volume" wb_value="1.0"/>
+  <modification id="187" title="Молоко" title_extra="1 л, полужирн." product_id="212" country_id="187" manufacturer_id="187" type="food" wb_id="19" wb_key="volume" wb_value="1.0"/>
+  <modification id="188" title="Молоко" title_extra="1 л, жирн." product_id="213" country_id="188" manufacturer_id="188" type="food" wb_id="19" wb_key="volume" wb_value="1.0"/>
+  <modification id="189" title="Молоко" title_extra="1 л, 3,9%" product_id="216" country_id="189" manufacturer_id="189" type="food" wb_id="19" wb_key="volume" wb_value="1.0"/>
+  <modification id="190" title="Крупа гречневая" title_extra="800 гр" product_id="218" country_id="190" manufacturer_id="190" type="food" wb_id="22" wb_key="weight" wb_value="1.0"/>
+  <modification id="191" title="Крупа гречневая" title_extra="900 гр" product_id="219" country_id="191" manufacturer_id="191" type="food" wb_id="22" wb_key="weight" wb_value="1.0"/>
+  <modification id="192" title="Сахар-песок" title_extra="800 гр" product_id="223" country_id="192" manufacturer_id="192" type="food" wb_id="24" wb_key="weight" wb_value="1.0"/>
+  <modification id="193" title="Сахар-песок" title_extra="1 кг" product_id="224" country_id="193" manufacturer_id="193" type="food" wb_id="24" wb_key="weight" wb_value="1.0"/>
+  <modification id="194" title="Сахар-песок" title_extra="800 гр" product_id="225" country_id="194" manufacturer_id="194" type="food" wb_id="24" wb_key="weight" wb_value="1.0"/>
+  <modification id="195" title="Масло сливочное" title_extra="200 гр" product_id="226" country_id="195" manufacturer_id="195" type="food" wb_id="25" wb_key="weight" wb_value="1.0"/>
+  <modification id="196" title="Масло сливочное" title_extra="180 гр" product_id="227" country_id="196" manufacturer_id="196" type="food" wb_id="25" wb_key="weight" wb_value="1.0"/>
+  <modification id="197" title="Масло сливочное" title_extra="250 гр" product_id="228" country_id="197" manufacturer_id="197" type="food" wb_id="25" wb_key="weight" wb_value="1.0"/>
+  <modification id="198" title="Говядина" title_extra="Грудинка, 1 кг" product_id="231" country_id="198" manufacturer_id="198" type="food" wb_id="1" wb_key="weight" wb_value="1.0"/>
+  <modification id="199" title="Пшено" title_extra="0.8 кг" product_id="242" country_id="199" manufacturer_id="199" type="food" wb_id="6" wb_key="weight" wb_value="1.0"/>
+  <modification id="200" title="Яблоки" title_extra="1 кг" product_id="243" country_id="200" manufacturer_id="200" type="food" wb_id="9" wb_key="weight" wb_value="1.0"/>
+  <modification id="201" title="Свинина" title_extra="1 кг" product_id="244" country_id="201" manufacturer_id="201" type="food" wb_id="27" wb_key="weight" wb_value="1.0"/>
+  <modification id="202" title="Картофель" title_extra="1 кг" product_id="245" country_id="202" manufacturer_id="202" type="food" wb_id="10" wb_key="weight" wb_value="1.0"/>
+  <modification id="203" title="Картофель" title_extra="1 кг" product_id="246" country_id="203" manufacturer_id="203" type="food" wb_id="10" wb_key="weight" wb_value="1.0"/>
+  <modification id="204" title="Рыба" title_extra="1 кг" product_id="250" country_id="204" manufacturer_id="204" type="food" wb_id="11" wb_key="weight" wb_value="1.0"/>
+  <modification id="205" title="Рыба" title_extra="1 кг" product_id="251" country_id="205" manufacturer_id="205" type="food" wb_id="11" wb_key="weight" wb_value="1.0"/>
+  <modification id="206" title="Рыба" title_extra="1 кг" product_id="252" country_id="206" manufacturer_id="206" type="food" wb_id="11" wb_key="weight" wb_value="1.0"/>
+  <modification id="207" title="Рыба" title_extra="1 кг" product_id="254" country_id="207" manufacturer_id="207" type="food" wb_id="11" wb_key="weight" wb_value="1.0"/>
+  <modification id="208" title="Соль" title_extra="1 кг" product_id="256" country_id="208" manufacturer_id="208" type="food" wb_id="12" wb_key="weight" wb_value="1.0"/>
+  <modification id="209" title="Мука пшеничная" title_extra="1 кг" product_id="258" country_id="209" manufacturer_id="209" type="food" wb_id="14" wb_key="weight" wb_value="1.0"/>
+  <modification id="210" title="Мука пшеничная" title_extra="1 кг" product_id="260" country_id="210" manufacturer_id="210" type="food" wb_id="14" wb_key="weight" wb_value="1.0"/>
+  <modification id="211" title="Рис" title_extra="800 гр" product_id="266" country_id="211" manufacturer_id="211" type="food" wb_id="21" wb_key="weight" wb_value="1.0"/>
+  <modification id="212" title="Рис" title_extra="800 гр" product_id="268" country_id="212" manufacturer_id="212" type="food" wb_id="21" wb_key="weight" wb_value="1.0"/>
+  <modification id="213" title="Крупа гречневая" title_extra="900 гр" product_id="269" country_id="213" manufacturer_id="213" type="food" wb_id="22" wb_key="weight" wb_value="1.0"/>
+  <modification id="214" title="Крупа гречневая" title_extra="900 гр" product_id="270" country_id="214" manufacturer_id="214" type="food" wb_id="22" wb_key="weight" wb_value="1.0"/>
+  <modification id="215" title="Сахар-песок" title_extra="900 гр" product_id="272" country_id="215" manufacturer_id="215" type="food" wb_id="24" wb_key="weight" wb_value="1.0"/>
+  <modification id="216" title="Масло сливочное" title_extra="180 гр" product_id="274" country_id="216" manufacturer_id="216" type="food" wb_id="25" wb_key="weight" wb_value="1.0"/>
+  <modification id="217" title="Масло сливочное" title_extra="180 гр" product_id="275" country_id="217" manufacturer_id="217" type="food" wb_id="25" wb_key="weight" wb_value="1.0"/>
+  <modification id="218" title="Масло сливочное" title_extra="180 гр" product_id="276" country_id="218" manufacturer_id="218" type="food" wb_id="25" wb_key="weight" wb_value="1.0"/>
+  <modification id="219" title="хлеб пшеничный" title_extra="600 гр" product_id="281" country_id="219" manufacturer_id="219" type="food" wb_id="28" wb_key="weight" wb_value="1.0"/>
+  <modification id="220" title="хлеб пшеничный" title_extra="600 гр" product_id="282" country_id="220" manufacturer_id="220" type="food" wb_id="28" wb_key="weight" wb_value="1.0"/>
+  <modification id="221" title="Яблоки" title_extra="1 кг" product_id="283" country_id="221" manufacturer_id="221" type="food" wb_id="9" wb_key="weight" wb_value="1.0"/>
+  <modification id="222" title="Яблоки" title_extra="1 кг" product_id="284" country_id="222" manufacturer_id="222" type="food" wb_id="9" wb_key="weight" wb_value="1.0"/>
+  <modification id="223" title="Задняя часть" title_extra="1 кг" product_id="285" country_id="223" manufacturer_id="223" type="food" wb_id="8" wb_key="weight" wb_value="1.0"/>
+  <modification id="224" title="Крупа гречневая" title_extra="1 кг" product_id="288" country_id="224" manufacturer_id="224" type="food" wb_id="22" wb_key="weight" wb_value="1.0"/>
+  <modification id="225" title="Макароны" title_extra="1 кг" product_id="291" country_id="225" manufacturer_id="225" type="food" wb_id="23" wb_key="weight" wb_value="1.0"/>
+  <modification id="226" title="хлеб пшеничный" title_extra="400 гр" product_id="170" country_id="226" manufacturer_id="226" type="food" wb_id="28" wb_key="weight" wb_value="1.0"/>
+  <modification id="227" title="gtrgr" title_extra="tgrtgrt" product_id="1333614467" country_id="3" manufacturer_id="5" type="fuel" wb_id="1" wb_key="weight" wb_value="1.0"/>
+</source>
