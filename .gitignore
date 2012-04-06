@@ -6,3 +6,7 @@ db
 .settings
 .idea
 xml_generator/settings/data/*
+logs/
+static/
+xml.wsgi
+
