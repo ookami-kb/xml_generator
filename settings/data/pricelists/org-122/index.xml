@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='cp1251'?>
+<pricelists>
+  <pricelist>
+    <name>Чичерина, 8</name>
+    <url>price-981.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>777</name>
+        <city>Челябинск</city>
+        <address>Чичерина, 8</address>
+        <coord>
+          <latitude>55.1876734</latitude>
+          <longitude>61.2830736</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+</pricelists>

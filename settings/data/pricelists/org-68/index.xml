@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='cp1251'?>
+<pricelists>
+  <pricelist>
+    <name>Городская, 1/1</name>
+    <url>price1.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>Прайс</name>
+        <city>Челябинск</city>
+        <address>Городская, 1/1</address>
+        <coord>
+          <latitude>55.1794333333</latitude>
+          <longitude>61.2827333333</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Бажова, 35/1</name>
+    <url>price-956.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>АЗС, ООО Прайс, №15</name>
+        <city>Челябинск</city>
+        <address>Бажова, 35/1</address>
+        <coord>
+          <latitude>55.1894618764</latitude>
+          <longitude>61.4648454624</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Меридиан, 1/1</name>
+    <url>price-957.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>АЗС, ООО Прайс, №5</name>
+        <city>Челябинск</city>
+        <address>Меридиан, 1/1</address>
+        <coord>
+          <latitude>55.1634800714</latitude>
+          <longitude>61.4277765202</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Копейское шоссе, 36/2</name>
+    <url>price-963.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>АЗС, ООО Прайс, №27</name>
+        <city>Челябинск</city>
+        <address>Копейское шоссе, 36/2</address>
+        <coord>
+          <latitude>55.1268050404</latitude>
+          <longitude>61.4919377692</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+</pricelists>

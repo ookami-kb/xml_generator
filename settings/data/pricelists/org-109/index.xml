@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='cp1251'?>
+<pricelists>
+  <pricelist>
+    <name>Пионерская, 7</name>
+    <url>price-948.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>Океан</name>
+        <city>Челябинск</city>
+        <address>Пионерская, 7</address>
+        <coord>
+          <latitude>55.1916185</latitude>
+          <longitude>61.3487221</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+</pricelists>

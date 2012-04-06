@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='cp1251'?>
+<pricelists>
+  <pricelist>
+    <name>Героев Танкограда 62п</name>
+    <url>price-989.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>АЗС ООО "Инкерман"</name>
+        <city>Челябинск</city>
+        <address>Героев Танкограда 62п</address>
+        <coord>
+          <latitude>55.175257</latitude>
+          <longitude>61.4498142</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+</pricelists>

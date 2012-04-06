@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='cp1251'?>
+<pricelists>
+  <pricelist>
+    <name>Копейское шоссе, 54/1</name>
+    <url>price1.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>ООО Бедит</name>
+        <city>Челябинск</city>
+        <address>Копейское шоссе, 54/1</address>
+        <coord>
+          <latitude>55.1413333333</latitude>
+          <longitude>61.45445</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+</pricelists>

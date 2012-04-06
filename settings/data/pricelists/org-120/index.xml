@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='cp1251'?>
+<pricelists>
+  <pricelist>
+    <name>Академика Сахарова, 12</name>
+    <url>price-979.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>Хуторок</name>
+        <city>Челябинск</city>
+        <address>Академика Сахарова, 12</address>
+        <coord>
+          <latitude>55.201612</latitude>
+          <longitude>61.43839</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+</pricelists>

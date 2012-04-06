@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='cp1251'?>
+<pricelists>
+  <pricelist>
+    <name>Героев Танкограда 2д/2</name>
+    <url>price-944.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>НОВАТЭК</name>
+        <city>Челябинск</city>
+        <address>Героев Танкограда 2д/2</address>
+        <coord>
+          <latitude>55.2184720209</latitude>
+          <longitude>61.4312302952</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Бродокалмакский тракт 1/3</name>
+    <url>price-953.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>Бродокалмакский тракт 1/3</name>
+        <city>Челябинск</city>
+        <address>Бродокалмакский тракт 1/3</address>
+        <coord>
+          <latitude>55.2279254092</latitude>
+          <longitude>61.5004670454</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Свердловский тракт, 18а/1</name>
+    <url>price-971.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>АЗС, ООО НОВАТЭК-АЗК</name>
+        <city>Челябинск</city>
+        <address>Свердловский тракт, 18а/1</address>
+        <coord>
+          <latitude>55.2193411021</latitude>
+          <longitude>61.3779449503</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+</pricelists>

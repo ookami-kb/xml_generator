@@ -9,6 +9,6 @@ db
 xml_generator/settings/data/*
 xml_generator/static/*
 xml_generator/templates/dashboard.html
-
+settings/data/*
 static/*
 

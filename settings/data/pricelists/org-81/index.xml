@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='cp1251'?>
+<pricelists>
+  <pricelist>
+    <name>Труда 203</name>
+    <url>price-744.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>АШАН</name>
+        <city>Челябинск</city>
+        <address>Труда 203</address>
+        <coord>
+          <latitude>55.167735</latitude>
+          <longitude>61.392385</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+</pricelists>

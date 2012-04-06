@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='cp1251'?>
+<pricelists>
+  <pricelist>
+    <name>Молодогвардейцев, 62</name>
+    <url>price-748.xml</url>
+    <shops>
+      <shop type="salon">
+        <name>Копейка</name>
+        <city>Челябинск</city>
+        <address>Молодогвардейцев, 62</address>
+        <coord>
+          <latitude>55.18287</latitude>
+          <longitude>61.33165</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Островского, 64</name>
+    <url>price-749.xml</url>
+    <shops>
+      <shop type="salon">
+        <name>Копейка</name>
+        <city>Челябинск</city>
+        <address>Островского, 64</address>
+        <coord>
+          <latitude>55.159889</latitude>
+          <longitude>61.40258</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+</pricelists>

@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='cp1251'?>
+<pricelists>
+  <pricelist>
+    <name>Магазин Мой новый Магазин</name>
+    <url>price1.xml</url>
+    <shops>
+      <shop type="salon">
+        <name>Мой новый Магазин</name>
+        <city>Челябинск</city>
+        <address>Братьев Кашириных</address>
+        <coord>
+          <latitude>0.0</latitude>
+          <longitude>0.0</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Магазин Мой старый Магазин</name>
+    <url>price2.xml</url>
+    <shops>
+      <shop type="release">
+        <name>Мой старый Магазин</name>
+        <city>Челябинск</city>
+        <address>Братьев Кашириных</address>
+        <coord>
+          <latitude>0.0</latitude>
+          <longitude>0.0</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+</pricelists>

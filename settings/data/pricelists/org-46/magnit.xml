@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='cp1251'?>
+<offers>
+  <offer>
+    <price>49.7</price>
+    <code source="neiron">157</code>
+  </offer>
+  <offer>
+    <price>42.2</price>
+    <code source="neiron">165</code>
+  </offer>
+  <offer>
+    <price>7.2</price>
+    <code source="neiron">115</code>
+  </offer>
+  <offer>
+    <price>45.8</price>
+    <code source="neiron">88</code>
+  </offer>
+  <offer>
+    <price>64.1</price>
+    <code source="neiron">64</code>
+  </offer>
+  <offer>
+    <price>59.4</price>
+    <code source="neiron">108</code>
+  </offer>
+  <offer>
+    <price>37.6</price>
+    <code source="neiron">207</code>
+  </offer>
+  <offer>
+    <price>49.59</price>
+    <code source="neiron">159</code>
+  </offer>
+</offers>

@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='cp1251'?>
+<pricelists>
+  <pricelist>
+    <name>Бродокалмакский тракт 1/2</name>
+    <url>price-952.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>Бродокалмакский тракт 1/2</name>
+        <city>Челябинск</city>
+        <address>Бродокалмакский тракт 1/2</address>
+        <coord>
+          <latitude>55.2293021149</latitude>
+          <longitude>61.5009391142</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Бажова 33/1</name>
+    <url>price-955.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>АГЗС ЧелСГ-Транс</name>
+        <city>Челябинск</city>
+        <address>Бажова, 33/1</address>
+        <coord>
+          <latitude>55.1914320719</latitude>
+          <longitude>61.4646983396</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+</pricelists>

@@ -1,0 +1,318 @@
+<?xml version='1.0' encoding='cp1251'?>
+<pricelists>
+  <pricelist>
+    <name>Моховая, 7</name>
+    <url>molnia.xml</url>
+    <shops>
+      <shop type="salon">
+        <name>Молния</name>
+        <city>Челябинск</city>
+        <address>Моховая, 7</address>
+        <coord>
+          <latitude>55.1685498678</latitude>
+          <longitude>61.4746827114</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Российская, 194</name>
+    <url>price-567.xml</url>
+    <shops>
+      <shop type="salon">
+        <name>Молния в ТК Радуга</name>
+        <city>Челябинск</city>
+        <address>Российская, 194</address>
+        <coord>
+          <latitude>55.1635711965</latitude>
+          <longitude>61.4148023589</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Славы проспект, 8</name>
+    <url>molnia.xml</url>
+    <shops>
+      <shop type="salon">
+        <name>Молния</name>
+        <city>Челябинск</city>
+        <address>Славы проспект, 8</address>
+        <coord>
+          <latitude>55.1129614229</latitude>
+          <longitude>61.611324721</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Сталеваров, 5</name>
+    <url>molnia.xml</url>
+    <shops>
+      <shop type="salon">
+        <name>Молния</name>
+        <city>Челябинск</city>
+        <address>Сталеваров, 5</address>
+        <coord>
+          <latitude>55.2635037689</latitude>
+          <longitude>61.4038900786</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Рылеева, 18</name>
+    <url>molnia.xml</url>
+    <shops>
+      <shop type="salon">
+        <name>Молния</name>
+        <city>Челябинск</city>
+        <address>Рылеева, 18</address>
+        <coord>
+          <latitude>55.1264374528</latitude>
+          <longitude>61.3831969725</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Кирова, 27</name>
+    <url>price-571.xml</url>
+    <shops>
+      <shop type="salon">
+        <name>Молния на набережной</name>
+        <city>Челябинск</city>
+        <address>Кирова, 27</address>
+        <coord>
+          <latitude>55.1715301732</latitude>
+          <longitude>61.4016072213</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Труда, 166</name>
+    <url>price-618.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>Молния на Труда</name>
+        <city>Челябинск</city>
+        <address>Труда, 166</address>
+        <coord>
+          <latitude>55.1704590347</latitude>
+          <longitude>61.374059899</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Дзержинского, 130</name>
+    <url>price-619.xml</url>
+    <shops>
+      <shop type="salon_and_release">
+        <name>Молния Экспресс на Дзержинского</name>
+        <city>Челябинск</city>
+        <address>Дзержинского, 130</address>
+        <coord>
+          <latitude>55.1340545</latitude>
+          <longitude>61.4254422</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Гагарина, 40</name>
+    <url>price-750.xml</url>
+    <shops>
+      <shop type="salon">
+        <name>Молния</name>
+        <city>Челябинск</city>
+        <address>Гагарина, 40</address>
+        <coord>
+          <latitude>55.128434</latitude>
+          <longitude>61.433438</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Блюхера, 81</name>
+    <url>price-752.xml</url>
+    <shops>
+      <shop type="salon">
+        <name>Молния</name>
+        <city>Челябинск</city>
+        <address>Блюхера, 81</address>
+        <coord>
+          <latitude>55.123796</latitude>
+          <longitude>61.36451</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Комсомольский проспект, 70а</name>
+    <url>price-753.xml</url>
+    <shops>
+      <shop type="salon">
+        <name>Молния</name>
+        <city>Челябинск</city>
+        <address>Комсомольский проспект, 70а</address>
+        <coord>
+          <latitude>55.195082</latitude>
+          <longitude>61.318435</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>50 лет ВЛКСМ, 17</name>
+    <url>price-754.xml</url>
+    <shops>
+      <shop type="salon">
+        <name>Молния</name>
+        <city>Челябинск</city>
+        <address>50 лет ВЛКСМ, 17</address>
+        <coord>
+          <latitude>55.241396</latitude>
+          <longitude>61.384471</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Молодогвардейцев, 7</name>
+    <url>price-755.xml</url>
+    <shops>
+      <shop type="salon">
+        <name>Молния</name>
+        <city>Челябинск</city>
+        <address>Молодогвардейцев, 7</address>
+        <coord>
+          <latitude>55.204957</latitude>
+          <longitude>61.328191</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Братьев Кашириных, 91а</name>
+    <url>price-756.xml</url>
+    <shops>
+      <shop type="salon">
+        <name>Молния</name>
+        <city>Челябинск</city>
+        <address>Братьев Кашириных, 91а</address>
+        <coord>
+          <latitude>55.1781</latitude>
+          <longitude>61.365624</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Братьев Кашириных, 133</name>
+    <url>price-757.xml</url>
+    <shops>
+      <shop type="salon">
+        <name>Молния</name>
+        <city>Челябинск</city>
+        <address>Братьев Кашириных, 133</address>
+        <coord>
+          <latitude>55.172044</latitude>
+          <longitude>61.304826</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Ворошилова, 35</name>
+    <url>price-758.xml</url>
+    <shops>
+      <shop type="salon">
+        <name>Молния</name>
+        <city>Челябинск</city>
+        <address>Ворошилова, 35</address>
+        <coord>
+          <latitude>55.191788</latitude>
+          <longitude>61.322523</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Энергетиков, 21б</name>
+    <url>price-759.xml</url>
+    <shops>
+      <shop type="salon">
+        <name>Молния</name>
+        <city>Челябинск</city>
+        <address>Энергетиков, 21б</address>
+        <coord>
+          <latitude>55.135958</latitude>
+          <longitude>61.455132</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Сталеваров, 66</name>
+    <url>price-760.xml</url>
+    <shops>
+      <shop type="salon">
+        <name>Молния</name>
+        <city>Челябинск</city>
+        <address>Сталеваров, 66</address>
+        <coord>
+          <latitude>55.251562</latitude>
+          <longitude>61.402347</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Жукова, 8</name>
+    <url>price-762.xml</url>
+    <shops>
+      <shop type="salon">
+        <name>Молния</name>
+        <city>Челябинск</city>
+        <address>Жукова, 8</address>
+        <coord>
+          <latitude>55.257873</latitude>
+          <longitude>61.389744</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Машиностроителей, 12а</name>
+    <url>price-764.xml</url>
+    <shops>
+      <shop type="salon">
+        <name>Молния</name>
+        <city>Челябинск</city>
+        <address>Машиностроителей, 12а</address>
+        <coord>
+          <latitude>55.123548</latitude>
+          <longitude>61.472344</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+  <pricelist>
+    <name>Свободы, 157</name>
+    <url>price-766.xml</url>
+    <shops>
+      <shop type="salon">
+        <name>Молния</name>
+        <city>Челябинск</city>
+        <address>Свободы, 157</address>
+        <coord>
+          <latitude>55.152017</latitude>
+          <longitude>61.415319</longitude>
+        </coord>
+      </shop>
+    </shops>
+  </pricelist>
+</pricelists>
