@@ -23,6 +23,7 @@ urlpatterns = patterns('',
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 
     (r'^admin/salepoint/stat/$', 'xml_generator.analytics.admin_views.salepoints_stat'),
+    (r'^admin/user/stat/$', 'xml_generator.analytics.admin_views.users_stat'),
 
     url(r'^admin/', include(admin.site.urls)),
     url(r'^api/', include(v1_api.urls)),

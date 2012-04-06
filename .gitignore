@@ -7,8 +7,14 @@ db
 .settings
 .idea
 xml_generator/settings/data/*
+logs/
+static/
+xml.wsgi
 xml_generator/static/*
 xml_generator/templates/dashboard.html
 settings/data/*
 static/*
 
+settings/
+
+settings.py
