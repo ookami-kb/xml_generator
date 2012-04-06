@@ -12,4 +12,4 @@ class UserSelect(forms.Form):
     USERS = [(u.id, u.username) for u in users]
     USERS.insert(0, ('', u'-- все --'))
     
-    user = forms.ChoiceField(choices=USERS, required=False, label=u'Пользователь')
+    user = forms.ModelChoiceField(queryset=User.objects.all(), required=False, label=u'Пользователь')
