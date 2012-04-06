@@ -102,18 +102,22 @@ class OfferResource(ModelResource):
         resource_name = 'offer'
         authentication = MyAuthentication()
         authorization = DjangoAuthorization()
+        
+    def __init__(self, *args, **kwargs):
+        super(OfferResource, self).__init__(*args, **kwargs)
+        self.trashed_sp = []
             
-    def patch_list(self, request, **kwargs):
-        username = request.GET.get('username', None)
-        if username:
-            try:
-                user = User.objects.get(username=username)
-                for obj in Offer.objects.filter(salepoint__user=user):
-                    obj.is_redundant=True
-                    obj.save()
-            except User.DoesNotExist:
-                pass
-        super(OfferResource, self).patch_list(request, **kwargs)
+#    def patch_list(self, request, **kwargs):
+#        username = request.GET.get('username', None)
+#        if username:
+#            try:
+#                user = User.objects.get(username=username)
+#                for obj in Offer.objects.filter(salepoint__user=user):
+#                    obj.is_redundant=True
+#                    obj.save()
+#            except User.DoesNotExist:
+#                pass
+#        super(OfferResource, self).patch_list(request, **kwargs)
         
 #    def alter_deserialized_list_data(self, request, data):
 #        print 'alter_deserialized_list_data'
@@ -149,7 +153,13 @@ class OfferResource(ModelResource):
             bundle.obj.created = datetime.date.fromtimestamp(int(bundle.data['timestamp']))
         except:
             bundle.obj.created = self.created
-        bundle.obj.salepoint = Salepoint.objects.get(pk=bundle.data['salepoint_id'])
+            
+        salepoint = Salepoint.objects.get(pk=bundle.data['salepoint_id'])
+        bundle.obj.salepoint = salepoint
+        
+        if salepoint not in self.trashed_sp:
+            self.trashed_sp.append(salepoint)
+            Offer.objects.filter(salepoint=salepoint).update(is_redundant=True)
 
         #если продукт отмодерирован и есть эталонный(дрйгой), то предложение переназначается на него
         try:
