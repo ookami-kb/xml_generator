@@ -145,6 +145,7 @@ class OfferResource(ModelResource):
                           country=Country.objects.get(name=u'Россия'),
                           white_brand=WhiteBrand.objects.get(pk=bundle.data['white_brand']) or None,
                           user=user,
+                          title=bundle.data['title']
                           )
             _pr.save()
             
