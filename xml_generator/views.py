@@ -38,10 +38,11 @@ def generate_xml(request):
             for sp in orgs:
                 pricelist = etree.SubElement(NOL, 'pricelist')
                 pr_name = etree.SubElement(pricelist, 'name')
-                pr_name.text = sp.pricelist_name
+                pr_name.text = sp.name
                 pr_url = etree.SubElement(pricelist, 'url')
                 #pr_url.text = sp.pricelist_url
-                pr_url.text = (sp.pricelist_url.split('/')[-1].split('.')[0] + '.xml') if sp.pricelist_url else 'price-' + str(sp.pk) + '.xml'
+                #pr_url.text = (sp.pricelist_url.split('/')[-1].split('.')[0] + '.xml') if sp.pricelist_url else 'price-' + str(sp.pk) + '.xml'
+                pr_url.text = 'price-' + str(sp.pk) + '.xml'
                 #pr_ishop = etree.SubElement(pricelist, 'ishop')
                 #pr_ishop.text = u"http://seller.ru/"
                 pr_shops = etree.SubElement(pricelist, 'shops')
@@ -73,7 +74,7 @@ def generate_xml(request):
                     code.set('source', _offer.product.source_type)
                     code.text = unicode(_offer.product.source_code)
 
-                structureXml2 = open(outDir + pr_url.text, 'w')#pr_name.text +'.xml', "w")
+                structureXml2 = open(outDir + 'price-' + str(sp.pk) + '.xml', 'w')#pr_name.text +'.xml', "w")
                 #print NPL
                 structureXml2.write(etree.tostring(NPL, pretty_print=True, encoding="cp1251", xml_declaration=True))
                 structureXml2.close()
