@@ -46,23 +46,12 @@ class SalepointResource(ModelResource):
     def obj_create(self, bundle, request=None, **kwargs):
         return super(SalepointResource, self).obj_create(bundle, request, user=request.user)
 
-
-    
     def hydrate(self, bundle):
         try:
             bundle.obj.id = int(bundle.data['salepoint_id'])
         except:
             pass
         
-        # если мы изменяем уже существующую торговую точку, то не надо
-        # менять ее организацию
-
-#        try:
-#            bundle.obj.organ = Organization.objects.get(name=u'возьмите из названия')
-#        except Exception as e:
-#            _org = Organization(name=u'возьмите из названия')
-#            _org.save()
-#            bundle.obj.organ = _org
         try:
             _coords = bundle.data['coords']
             bundle.obj.longitude = float(_coords.split(',')[1])
@@ -94,37 +83,17 @@ class SalepointResource(ModelResource):
         authentication = MyAuthentication()
         authorization = DjangoAuthorization()
 
-
-
 class OfferResource(ModelResource):
     class Meta:
         queryset = Offer.objects.all()
         resource_name = 'offer'
         authentication = MyAuthentication()
         authorization = DjangoAuthorization()
-            
-    def patch_list(self, request, **kwargs):
-        username = request.GET.get('username', None)
-        if username:
-            try:
-                user = User.objects.get(username=username)
-                for obj in Offer.objects.filter(salepoint__user=user):
-                    obj.is_redundant=True
-                    obj.save()
-            except User.DoesNotExist:
-                pass
-        super(OfferResource, self).patch_list(request, **kwargs)
         
-#    def alter_deserialized_list_data(self, request, data):
-#        print 'alter_deserialized_list_data'
-#        return data
-#        
-#    def alter_deserialized_detail_data(self, request, data):
-#        print 'alter_deserialized_detail_data'
-#        print data
-#        print request.GET.get('username', None)
-#        return data
-
+    def __init__(self, *args, **kwargs):
+        super(OfferResource, self).__init__(*args, **kwargs)
+        self.trashed_sp = []
+            
     def dehydrate(self, bundle):
         bundle.data['salepoint_id'] = bundle.obj.salepoint.id
         bundle.data['source_code'] = bundle.obj.product.source_code
@@ -139,24 +108,47 @@ class OfferResource(ModelResource):
 
 
     def dispatch(self, request_type, request, **kwargs):
-        #username = kwargs.pop('username')
-        #kwargs['user'] = get_object_or_404(User, username=username)
         self.created = datetime.datetime.now()
         return super(OfferResource, self).dispatch(request_type, request, **kwargs)
 
     def hydrate(self, bundle):
         try:
+            user = User.objects.get(username=bundle.data['username'])
+        except:
+            user = None
+            
+        try:
             bundle.obj.created = datetime.date.fromtimestamp(int(bundle.data['timestamp']))
         except:
             bundle.obj.created = self.created
-        bundle.obj.salepoint = Salepoint.objects.get(pk=bundle.data['salepoint_id'])
-
-        #если продукт отмодерирован и есть эталонный(дрйгой), то предложение переназначается на него
+            
+        salepoint = Salepoint.objects.get(pk=bundle.data['salepoint_id'])
+        bundle.obj.salepoint = salepoint
+        
+        if salepoint not in self.trashed_sp:
+            self.trashed_sp.append(salepoint)
+            Offer.objects.filter(salepoint=salepoint).update(is_redundant=True)
+            
+        #если продукт отмодерирован и есть эталонный(другой), то предложение переназначается на него
         try:
             _pr = Product.objects.get(source_code=bundle.data['source_code'],
-            source_type=bundle.data['source_type'], is_redundant=False)
+            source_type=bundle.data['source_type'])
+            
+            # если продукт помечен как удаленный, не сохраняем на него предложения
+            if _pr.is_redundant:
+                return None
         except:
-            return None
+            # если такого продукта нет, то создаем его
+            _pr = Product(source_code=bundle.data['source_code'],
+                          source_type=bundle.data['source_type'],
+                          is_new=True,
+                          country=Country.objects.get(name=u'Россия'),
+                          white_brand=WhiteBrand.objects.get(pk=bundle.data['white_brand']) or None,
+                          user=user,
+                          title=bundle.data['title']
+                          )
+            _pr.save()
+            
         bundle.obj.product = _pr
         if not _pr.is_new:
             if _pr.product_moderated:
@@ -180,7 +172,6 @@ class ProductResource(ModelResource):
         resource_name = 'product'
         authorization = DjangoAuthorization()
         authentication = MyAuthentication()
-        #authorization = Authorization()
 
     def dehydrate(self, bundle):
         bundle.data['manufacturer'] = bundle.obj.manufacturer.name if bundle.obj.manufacturer else u''
@@ -199,31 +190,9 @@ class ProductResource(ModelResource):
         except:
             bundle.obj.user = None
 
-#        try:
-#            _man = Manufacturer.objects.get(name = u'введите название производителя из "названия"')
-#            bundle.obj.manufacturer = _man
-#        except Exception as e:
-#            _man = Manufacturer(name = u'введите название производителя из "названия"')
-#            _man.save()
-#            bundle.obj.manufacturer = _man
-
         bundle.obj.country = Country.objects.get(name=u'Россия')
         return bundle
-
-    #def dehydrate(self, bundle):
-    #    pass
 
     def get_object_list(self, request, *args, **kwargs):
         #Отмодерированные продукты выгружаются всем. Неотмодерированные - только создавшим их пользователям.
         return Product.objects.filter(((Q(user=request.user) & Q(is_new=True)) & Q(is_redundant=False)) | (Q(is_new=False) & Q(product_moderated=None) & Q(is_redundant=False) ))
-
-
-def generate_analytics():
-    o = Offer.objects.filter(salepoint__user__username='user3').values('created').annotate(ncount=Count('pk'))
-    '''[{'ncount': 3, 'created': datetime.datetime(2012, 4, 3, 5, 0, tzinfo=<UTC>)}, {'ncount': 1, 'created': datetime.datetime(2012, 4, 3, 6, 5, 33, 660143, tzinfo=<UTC>)}, {'ncount': 1, 'created': datetime.datetime(2012, 4, 3, 6, 5, 33, 668199, tzinfo=<UTC>)}, {'ncount': 1, 'created': datetime.datetime(2012, 4, 3, 6, 10, 19, 766095, tzinfo=<UTC>)}, {'ncount': 1, 'created': datetime.datetime(2012, 4, 3, 6, 16, 38, 460653, tzinfo=<UTC>)}]
-
-        '''
-
-    _sps = Salepoint.objects.filter(user__username='user3')
-    for sp in _sps:
-        o = Offer.objects.filter(salepoint=sp).values('created').annotate(ncount=Count('pk'))

@@ -32,7 +32,7 @@ def salepoints_stat(request):
     if stop:
         filters['created__lte'] = stop + datetime.timedelta(days=1)
     if uid:
-        filters['salepoint__user__id'] = uid
+        filters['salepoint__user'] = uid
     
     if filters:
         offers = offers.filter(**filters)
