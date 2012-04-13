@@ -152,5 +152,8 @@ def view_data(request):
     context = {}
 
     return TemplateResponse(request, template_name, context)
+    
+    
+
 
 
