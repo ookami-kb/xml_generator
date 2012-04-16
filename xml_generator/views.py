@@ -86,6 +86,10 @@ def generate_xml(request):
                 part = etree.SubElement(AU, 'part')
                 part_a = etree.SubElement(part, 'address')
                 part_a.text = sp.address
+                part_n = etree.SubElement(part, 'name')
+                part_n.text = sp.name
+                part_pk = etree.SubElement(part, 'id')
+                part_pk.text = unicode(sp.pk)
                 part_u = etree.SubElement(part, 'url')
                 part_u.text = 'ftp://upload.v-zabote.ru/data/pricelists/'+ ('org-%s/' %  org.pk) + 'price-' + str(sp.pk) + '.xml'
                 acsv.writerow([unicode(sp.address).encode('utf-8'), 'ftp://upload.v-zabote.ru/data/pricelists/'+ ('org-%s/' %  org.pk) + 'price-' + str(sp.pk) + '.xml'])
