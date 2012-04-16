@@ -5,7 +5,7 @@ from django.utils import simplejson
 from django.http import HttpResponse
 import os, shutil
 from lxml import etree
-
+import csv
 
 from django.conf import settings
 global_path = settings.GLOBAL_PATH
@@ -32,11 +32,30 @@ class Command(BaseCommand):
                 shutil.rmtree(user_path)
             os.makedirs(user_path)
 
+            AU = etree.Element('au')
+            OU = etree.Element('ou')
+            ofile = open(user_path +'ocsv.csv', 'wb')
+            ocsv = csv.writer(ofile, delimiter=',')
+            afile = open(user_path +'acsv.csv', 'wb')
+            acsv = csv.writer(afile, delimiter=',')
+
             for org in organs:
+                if org.pk == 1:
+                    continue
                 outDir = user_path + 'org-%s/' %  org.pk
                 if os.path.exists(outDir):
                     shutil.rmtree(outDir)
                 os.makedirs(outDir)
+
+                part2 = etree.SubElement(OU, 'part')
+                part_a2 = etree.SubElement(part2, 'name')
+                part_a2.text = org.name
+                part_u2 = etree.SubElement(part2, 'url')
+                part_u2.text = 'ftp://upload.v-zabote.ru/data/pricelists/'+ ('org-%s/' %  org.pk) + 'index.xml'
+                ocsv.writerow([unicode(org.name).encode('utf-8'), 'ftp://upload.v-zabote.ru/data/pricelists/'+ ('org-%s/' %  org.pk) + 'index.xml'])
+
+
+
 
                 NOL = etree.Element('pricelists')
                 orgs = org.salepoint_set.filter(is_redundant=False, is_new=False)
@@ -68,6 +87,20 @@ class Command(BaseCommand):
                     sh_lon = etree.SubElement(sh_coord, 'longitude')
                     sh_lon.text = unicode(sp.longitude)
 
+                    part = etree.SubElement(AU, 'part')
+                    part_a = etree.SubElement(part, 'address')
+                    part_a.text = sp.address
+                    part_n = etree.SubElement(part, 'name')
+                    part_n.text = sp.name
+                    part_pk = etree.SubElement(part, 'id')
+                    part_pk.text = unicode(sp.pk)
+                    part_u = etree.SubElement(part, 'url')
+                    part_u.text = 'ftp://upload.v-zabote.ru/data/pricelists/'+ ('org-%s/' %  org.pk) + 'price-' + str(sp.pk) + '.xml'
+                    acsv.writerow([unicode(sp.address).encode('utf-8'), 'ftp://upload.v-zabote.ru/data/pricelists/'+ ('org-%s/' %  org.pk) + 'price-' + str(sp.pk) + '.xml'])
+
+
+
+
                     NPL = etree.Element('offers')
                     _offers = Offer.objects.filter(salepoint=sp, product__is_new=False, price__gt=0, product__is_redundant=False, is_redundant=False)
                     for _offer in _offers:
@@ -90,7 +123,17 @@ class Command(BaseCommand):
                 structureXml = open(outDir + 'index.xml', "w")
                 structureXml.write(etree.tostring(NOL, pretty_print=True, encoding="cp1251", xml_declaration=True))
                 structureXml.close()
-                #NNPL: notation new product language
+
+            structureXml = open(user_path + 'au.xml', 'w')#pr_name.text +'.xml', "w")
+            structureXml.write(etree.tostring(AU, pretty_print=True, encoding="cp1251", xml_declaration=True))
+            structureXml.close()
+
+
+            structureXml = open(user_path + 'ou.xml', 'w')#pr_name.text +'.xml', "w")
+            structureXml.write(etree.tostring(OU, pretty_print=True, encoding="cp1251", xml_declaration=True))
+            structureXml.close()
+
+            #NNPL: notation new product language
             NNPL =  etree.Element('source')
             NNPL.set('data_source_name', 'agents')
             prs = Product.objects.filter(is_new=False, is_redundant=False)
@@ -134,6 +177,8 @@ class Command(BaseCommand):
             structureXml.write(etree.tostring(NNPL, pretty_print=True, encoding="cp1251", xml_declaration=True))
             structureXml.close()
 
+            ofile.close()
+            afile.close()
             self.stdout.write('Successfully generated xml ')
         except Exception as e:
             raise CommandError('Some error detected: "%s" ' % str(e))

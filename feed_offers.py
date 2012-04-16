@@ -7,8 +7,8 @@ from datetime import datetime
 
 i = 0
 j = 200
-while i < 1800:
-    _url = "http://127.0.0.1:8800/api/v1/products_offers/?format=json&limit=" + str(j) +"&offset=" + str(i)
+while i < 8200:
+    _url = "http://v-zabote.ru/api/v1/products_offers/?format=json&limit=" + str(j) +"&offset=" + str(i)
     req = urllib2.Request(_url, None, {'user-agent':'syncstream/vimeo'})
     opener = urllib2.build_opener()
     f = opener.open(req)
