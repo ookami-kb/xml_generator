@@ -52,7 +52,7 @@ class Command(BaseCommand):
                 part_a2.text = org.name
                 part_u2 = etree.SubElement(part2, 'url')
                 part_u2.text = 'ftp://upload.v-zabote.ru/data/pricelists/'+ ('org-%s/' %  org.pk) + 'index.xml'
-                ocsv.writerow([unicode(org.name).encode('utf-8'), 'ftp://upload.v-zabote.ru/data/pricelists/'+ ('org-%s/' %  org.pk) + 'index.xml'])
+                ocsv.writerow([unicode(org.name).encode('utf-8'),unicode(org.pk).encode('utf-8'), 'ftp://upload.v-zabote.ru/data/pricelists/'+ ('org-%s/' %  org.pk) + 'index.xml'])
 
 
 
@@ -96,7 +96,7 @@ class Command(BaseCommand):
                     part_pk.text = unicode(sp.pk)
                     part_u = etree.SubElement(part, 'url')
                     part_u.text = 'ftp://upload.v-zabote.ru/data/pricelists/'+ ('org-%s/' %  org.pk) + 'price-' + str(sp.pk) + '.xml'
-                    acsv.writerow([unicode(sp.address).encode('utf-8'), 'ftp://upload.v-zabote.ru/data/pricelists/'+ ('org-%s/' %  org.pk) + 'price-' + str(sp.pk) + '.xml'])
+                    acsv.writerow([unicode(sp.address).encode('utf-8'),unicode(sp.name).encode('utf-8'),unicode(sp.pk).encode('utf-8'), 'ftp://upload.v-zabote.ru/data/pricelists/'+ ('org-%s/' %  org.pk) + 'price-' + str(sp.pk) + '.xml'])
 
 
 
