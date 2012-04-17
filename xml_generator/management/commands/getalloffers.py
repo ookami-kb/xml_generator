@@ -121,6 +121,6 @@ class Command(BaseCommand):
                         print str(e)
                 print str(i)
                 #print str(j)
-            i += 400
+                i += 400
         except Exception as e:
             raise CommandError('Some error detected: "%s" ' % str(e))
