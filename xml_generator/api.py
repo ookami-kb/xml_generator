@@ -78,7 +78,7 @@ class SalepointResource(ModelResource):
         return Salepoint.objects.filter(((Q(user=request.user) & Q(is_new=True)) & Q(is_redundant=False)) | (Q(user=request.user) & Q(is_new=False) & Q(is_redundant=False) ))
 
     class Meta:
-        queryset = Salepoint.objects.all()
+        queryset = Salepoint.objects.all().order_by('pk')
         resource_name = 'salepoint'
         authentication = MyAuthentication()
         authorization = DjangoAuthorization()
