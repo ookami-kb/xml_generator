@@ -11,7 +11,10 @@ v1_api.register(SalepointResource())
 v1_api.register(OfferResource())
 v1_api.register(ProductResource())
 v1_api.register(UserResource())
+
 v1_api.register(WhiteBrandResource())
+v1_api.register(FuelResource())
+v1_api.register(FuelProductResource())
 admin.autodiscover()
 
 urlpatterns = patterns('',
