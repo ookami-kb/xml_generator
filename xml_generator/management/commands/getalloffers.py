@@ -90,12 +90,12 @@ class Command(BaseCommand):
                     except:
                         wb = None
 
-                    manfuck = Manufacturer(name=obj['manufacturer'])
-                    manfuck.save()
-                    cunt = Country(name=obj['country'])
-                    cunt.save()
+                    manuf = Manufacturer(name=obj['manufacturer'])
+                    manuf.save()
+                    _count = Country(name=obj['country'])
+                    _count.save()
                     pr = Product(title = obj['title'], title_extra = obj['title_extra'], source_code = obj['source_code'], source_type = obj['source_type'],
-                        manufacturer = manfuck, country = cunt, type=obj['type'], white_brand = wb, is_new = False, is_redundant=False)
+                        manufacturer = manuf, country = _count, type=obj['type'], white_brand = wb, is_new = False, is_redundant=False)
                     pr.save()
                     #print pr.pk
                 except Exception as e:
@@ -121,6 +121,6 @@ class Command(BaseCommand):
                         print str(e)
                 print str(i)
                 #print str(j)
-            i += 400
+                i += 400
         except Exception as e:
             raise CommandError('Some error detected: "%s" ' % str(e))

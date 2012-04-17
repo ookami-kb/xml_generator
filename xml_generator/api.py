@@ -37,7 +37,7 @@ class UserResource(ModelResource):
 
 class WhiteBrandResource(ModelResource):
     class Meta:
-        queryset = WhiteBrand.objects.all()
+        queryset = WhiteBrand.objects.all().order_by('pk')
         authentication = MyAuthentication()
         authorization = DjangoAuthorization()
         resource_name = 'whitebrand'
@@ -83,9 +83,34 @@ class SalepointResource(ModelResource):
         authentication = MyAuthentication()
         authorization = DjangoAuthorization()
 
+
+class FuelResource(ModelResource):
+    class Meta:
+        queryset = Offer.objects.all().order_by('pk')
+        resource_name = 'fuel'
+        authentication = MyAuthentication()
+        authorization = DjangoAuthorization()
+
+    def __init__(self, *args, **kwargs):
+        super(FuelResource, self).__init__(*args, **kwargs)
+
+    def dehydrate(self, bundle):
+        bundle.data['salepoint_id'] = bundle.obj.salepoint.id
+        bundle.data['source_code'] = bundle.obj.product.source_code
+        bundle.data['source_type'] = bundle.obj.product.source_type
+        bundle.data['title'] = bundle.obj.product.title
+        try:
+            bundle.data['timestamp'] = time.mktime(bundle.obj.created.timetuple())
+        except:
+            pass
+        return bundle
+
+    def get_object_list(self, request, *args, **kwargs):
+        return Offer.objects.filter(salepoint__user=request.user, product__type=u'fuel')
+
 class OfferResource(ModelResource):
     class Meta:
-        queryset = Offer.objects.all()
+        queryset = Offer.objects.all().order_by('pk')
         resource_name = 'offer'
         authentication = MyAuthentication()
         authorization = DjangoAuthorization()
@@ -167,7 +192,7 @@ class OfferResource(ModelResource):
 
 class ProductResource(ModelResource):
     class Meta:
-        queryset = Product.objects.all()
+        queryset = Product.objects.all().order_by('pk')
         excludes = ['id', 'is_new', 'is_redundant',]
         resource_name = 'product'
         authorization = DjangoAuthorization()
@@ -196,3 +221,36 @@ class ProductResource(ModelResource):
     def get_object_list(self, request, *args, **kwargs):
         #Отмодерированные продукты выгружаются всем. Неотмодерированные - только создавшим их пользователям.
         return Product.objects.filter(((Q(user=request.user) & Q(is_new=True)) & Q(is_redundant=False)) | (Q(is_new=False) & Q(product_moderated=None) & Q(is_redundant=False) ))
+
+
+class FuelProductResource(ModelResource):
+    class Meta:
+        queryset = Product.objects.all().order_by('pk')
+        excludes = ['id', 'is_new', 'is_redundant',]
+        resource_name = 'fuel_product'
+        authorization = DjangoAuthorization()
+        authentication = MyAuthentication()
+
+    def dehydrate(self, bundle):
+        bundle.data['manufacturer'] = bundle.obj.manufacturer.name if bundle.obj.manufacturer else u''
+        bundle.data['whitebrand_id'] = bundle.obj.white_brand.pk if  bundle.obj.white_brand else 0
+        return bundle
+
+    def hydrate(self, bundle):
+        if int(bundle.data['white_brand']) == 0:
+            bundle.obj.white_brand = None
+        else:
+            bundle.obj.white_brand = WhiteBrand.objects.get(pk=bundle.data['white_brand'])
+        bundle.obj.is_new = True
+        bundle.obj.is_redundant = False
+        try:
+            bundle.obj.user = User.objects.get(username=bundle.data['username'])
+        except:
+            bundle.obj.user = None
+
+        bundle.obj.country = Country.objects.get(name=u'Россия')
+        return bundle
+
+    def get_object_list(self, request, *args, **kwargs):
+        #Отмодерированные продукты выгружаются всем. Неотмодерированные - только создавшим их пользователям.
+        return Product.objects.filter((((Q(user=request.user) & Q(is_new=True)) & Q(is_redundant=False)) | (Q(is_new=False) & Q(product_moderated=None) & Q(is_redundant=False) ))&Q(type=u'fuel'))
