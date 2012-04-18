@@ -139,7 +139,7 @@ class Command(BaseCommand):
 
             #NNPL: notation new product language
             NNPL =  etree.Element('source')
-            NNPL.set('data_source_name', 'agents')
+            NNPL.set('data_source_name', 'neiron')
             prs = Product.objects.filter(is_new=False, is_redundant=False)
             for product in prs:
                 _pr = etree.SubElement(NNPL, 'product')
