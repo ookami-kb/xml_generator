@@ -46,9 +46,38 @@ class SalepointResource(ModelResource):
     def obj_create(self, bundle, request=None, **kwargs):
         return super(SalepointResource, self).obj_create(bundle, request, user=request.user)
 
+    def dispatch(self, request_type, request, **kwargs):
+        '''
+        tasks = Task.objects.filter(user=request.user, date_to_execute__day=datetime.datetime.now().day)
+        self.sp_list = []
+        for task in tasks:
+            _l = []
+            for sp in task.salepoint.filter(is_new=False, is_redundant=False):
+                _l.append(sp.pk)
+            self.sp_list.append({task.pk : _l})
+            '''
+        self.sp_list = []
+        try:
+            task = Task.objects.get(user=request.user, date_to_execute__day=datetime.datetime.now().day)
+            self.task_pk = task.pk
+            for sp in task.salepoint.filter(is_new=False, is_redundant=False):
+                self.sp_list.append(sp.pk)
+        except:
+            pass
+
+        return super(SalepointResource, self).dispatch(request_type, request, **kwargs)
+
     def hydrate(self, bundle):
         try:
             bundle.obj.id = int(bundle.data['salepoint_id'])
+            #пришелоффер на точку --- удаляем ее изс писка, удалили все тп --- зад ание выполнено
+            self.sp_list.remove(bundle.obj.id)
+            if len(self.sp_list) == 0:
+                his_task = Task.objects.get(pk=self.task_pk)
+                his_task.accomplished = True
+                his_task.save()
+
+
         except:
             pass
         
@@ -74,8 +103,16 @@ class SalepointResource(ModelResource):
             bundle.data['coords'] = unicode(bundle.obj.latitude) + u',' + unicode(bundle.obj.longitude)
         return bundle
 
+    #def get_object_list(self, request, *args, **kwargs):
+    #    return Salepoint.objects.filter(((Q(user=request.user) & Q(is_new=True)) & Q(is_redundant=False)) | (Q(user=request.user) & Q(is_new=False) & Q(is_redundant=False) ))
     def get_object_list(self, request, *args, **kwargs):
-        return Salepoint.objects.filter(((Q(user=request.user) & Q(is_new=True)) & Q(is_redundant=False)) | (Q(user=request.user) & Q(is_new=False) & Q(is_redundant=False) ))
+        tasks = Task.objects.filter(user=request.user, date_to_execute__day=datetime.datetime.now().day)
+        sp_list = []
+        for task in tasks:
+            for sp in task.salepoint.filter(is_new=False, is_redundant=False):
+                sp_list.append(sp.pk)
+
+        return Salepoint.objects.filter(pk__in=sp_list)
 
     class Meta:
         queryset = Salepoint.objects.all().order_by('pk')
@@ -254,3 +291,4 @@ class FuelProductResource(ModelResource):
     def get_object_list(self, request, *args, **kwargs):
         #Отмодерированные продукты выгружаются всем. Неотмодерированные - только создавшим их пользователям.
         return Product.objects.filter((((Q(user=request.user) & Q(is_new=True)) & Q(is_redundant=False)) | (Q(is_new=False) & Q(product_moderated=None) & Q(is_redundant=False) ))&Q(type=u'fuel'))
+
