@@ -151,5 +151,9 @@ admin.site.register(User, MyUserAdmin)
 
 class TaskAdmin(admin.ModelAdmin):
     filter_horizontal = ('salepoint',)
+    class Media:
+        css = {
+            "all": ("brrr.css",)
+        }
 
 admin.site.register(Task, TaskAdmin)
