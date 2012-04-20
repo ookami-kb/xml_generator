@@ -134,11 +134,11 @@ class Salepoint(models.Model):
         (u"on", u"Включен"),
         )
 
-    point_type = models.CharField(max_length=17, choices=POINT_TYPE, verbose_name="Тип точки", default=u"salon_and_release")
+    point_type = models.CharField(max_length=17, choices=POINT_TYPE, verbose_name=u"Тип точки", default=u"salon_and_release")
 
-    variation = models.CharField(max_length=17, choices=VARIATION_TYPE, verbose_name="заправка\продукты", default=u"product",null=True, blank=True)
-    is_new = models.BooleanField(u'Новая', help_text='Эта точка продаж была создана пользователем и еще не прошла модерацию')
-    status = models.CharField(max_length=12, choices=STATUS, verbose_name="статус", default=u"on")
+    variation = models.CharField(max_length=17, choices=VARIATION_TYPE, verbose_name=u"заправка\продукты", default=u"product",null=True, blank=True)
+    is_new = models.BooleanField(u'Новая', help_text=u'Эта точка продаж была создана пользователем и еще не прошла модерацию')
+    status = models.CharField(max_length=12, choices=STATUS, verbose_name=u"статус", default=u"on")
     name = models.CharField(u'Название', max_length=255)
     address = models.CharField(u'Адрес', max_length=255)
     latitude = models.FloatField(u'Широта', null=True, blank=True)
@@ -146,11 +146,11 @@ class Salepoint(models.Model):
     organ     = models.ForeignKey(Organization, verbose_name="организация", null=True, blank=True)
     #pricelist_name = models.CharField(u'Название прайслиста', max_length=255, default=u"введите название прайслиста")
     #pricelist_url = models.CharField(u'uрл прайслиста', max_length=255, default=u'введите url Прайслиста')
-    user = models.ForeignKey(User, null=True, blank=True, verbose_name="сборщик предложений")
+    user = models.ForeignKey(User, null=True, blank=True, verbose_name=u"сборщик предложений")
     city = models.CharField(u'Город', max_length=255, default=u"Челябинск")
     last_modified_time = models.DateTimeField(null=True, blank=True, verbose_name=u"обновлена")
     #salepoint_moderated = models.ForeignKey('self',null=True,blank=True, verbose_name="отмодерированная точка продаж", help_text='Ссылается на эталонную проверенную модератором точку продаж, если не пусто')
-    is_redundant = models.BooleanField(u'Не нужная', help_text='Этот точка продаж нужна?', default=False)
+    is_redundant = models.BooleanField(u'Не нужная', help_text=u'Этот точка продаж нужна?', default=False)
     
     with_offers = OfferSalepointManager()
     objects = models.Manager()
@@ -167,11 +167,11 @@ class Salepoint(models.Model):
     offers_count.short_description = u'предложений'
     
 class Offer(models.Model):
-    product = models.ForeignKey(Product, verbose_name="Продукт")
-    salepoint = models.ForeignKey(Salepoint, verbose_name="Точка продаж")
+    product = models.ForeignKey(Product, verbose_name=u"Продукт")
+    salepoint = models.ForeignKey(Salepoint, verbose_name=u"Точка продаж")
     price = models.FloatField(u'Цена')
-    created = models.DateTimeField(verbose_name="время создания")
-    is_redundant = models.BooleanField(u'Не нужно', help_text='Это предложение нужно?', default=False)
+    created = models.DateTimeField(verbose_name=u"время создания")
+    is_redundant = models.BooleanField(u'Не нужно', help_text=u'Это предложение нужно?', default=False)
 
     class Meta:
         verbose_name = u"предложение"
@@ -182,8 +182,8 @@ class Offer(models.Model):
 
 
 class Task(models.Model):
-    user   = models.ForeignKey(User, null=True, blank=True, verbose_name="сборщик предложений")
-    salepoint = models.ManyToManyField(Salepoint, null=True, blank=True, verbose_name="Точка продаж")
+    user   = models.ForeignKey(User, null=True, blank=True, verbose_name=u"сборщик предложений")
+    salepoint = models.ManyToManyField(Salepoint, null=True, blank=True, verbose_name=u"Точки продаж")
     period = models.IntegerField(null=True, blank=True, verbose_name=u'периодичность')
     #date_start_for_period = models.DateTimeField(null=True, blank=True, verbose_name=u"время создания для периодличности")
     date_to_execute = models.DateTimeField(null=True, blank=True, verbose_name=u"дата выполнения")

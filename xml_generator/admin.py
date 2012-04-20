@@ -149,20 +149,7 @@ class MyUserAdmin(UserAdmin):
 admin.site.unregister(User)
 admin.site.register(User, MyUserAdmin)
 
-class TaskAdminForm(forms.ModelForm):
-    salepoint = forms.ModelMultipleChoiceField(queryset=Salepoint.objects.order_by('organ__name', 'name'))
-
-    class Meta:
-        model = Task
-
-from django.forms import TypedMultipleChoiceField, models, MultiWidget
-
 class TaskAdmin(admin.ModelAdmin):
-    form = TaskAdminForm
-    #formfield_overrides = {
-    #    models.ModelMultipleChoiceField: {'widget': MultipleHiddenInput(attrs={'size':'400'})},
-    #    }
-
-
+    filter_horizontal = ('salepoint',)
 
 admin.site.register(Task, TaskAdmin)
