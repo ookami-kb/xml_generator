@@ -182,11 +182,11 @@ class Offer(models.Model):
 
 
 class Task(models.Model):
-    user   = models.ForeignKey(User, null=True, blank=True, verbose_name=u"сборщик предложений")
-    salepoint = models.ManyToManyField(Salepoint, null=True, blank=True, verbose_name=u"Точки продаж")
+    user   = models.ForeignKey(User, null=True, blank=False, verbose_name=u"сборщик предложений")
+    salepoint = models.ManyToManyField(Salepoint, null=True, blank=False, verbose_name=u"Точки продаж")
     period = models.IntegerField(null=True, blank=True, verbose_name=u'периодичность')
     #date_start_for_period = models.DateTimeField(null=True, blank=True, verbose_name=u"время создания для периодличности")
-    date_to_execute = models.DateTimeField(null=True, blank=True, verbose_name=u"дата выполнения")
+    date_to_execute = models.DateTimeField(null=True, blank=False, verbose_name=u"дата выполнения")
     accomplished = models.BooleanField(u'выполнено ли', default=False)
     comment = models.TextField(null=True, blank=True, verbose_name=u'комментарии сборщика по заданию, причина не выполения')
 
