@@ -160,7 +160,7 @@ class Salepoint(models.Model):
         verbose_name_plural = u'точки продаж'
 
     def __unicode__(self):
-        return u'%s, %s' % (self.name, self.address)
+        return u'%s, %s, %s' % (self.organ.name, self.name, self.address)
     
     def offers_count(self):
         return Offer.objects.filter(salepoint=self, is_redundant=False).count()
@@ -194,6 +194,6 @@ class Task(models.Model):
     class Meta:
         verbose_name = u"задание"
         verbose_name_plural = u'задания'
-
+        #ordering = ['salepoint__organ__name',]
     def __unicode__(self):
         return u'задание номер %s для %s' % (self.pk, self.user.username)
