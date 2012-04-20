@@ -8,12 +8,10 @@ db
 .idea
 xml_generator/settings/data/*
 logs/
-static/
-xml.wsgi
 
+xml.wsgi
 xml_generator/templates/dashboard.html
 settings/data/*
-static/*
 
 settings/
 
