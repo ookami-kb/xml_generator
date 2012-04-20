@@ -1,19 +1,18 @@
 .selector {
-    width: 780px;
+    width: 1100px;
     height: 780px;
     float: left;
 }
 
 .selector select {
-    width: 370px;
-
-    height: 780px;
+    width: 500px;
+    height: 730px;
 }
 
 .selector-available, .selector-chosen {
     float: left;
-    width: 370px;
-    height: 780px;
+    width: 500px;
+    height: 730px;
     text-align: center;
     margin-bottom: 5px;
 }
