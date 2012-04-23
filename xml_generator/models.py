@@ -160,7 +160,7 @@ class Salepoint(models.Model):
         verbose_name_plural = u'точки продаж'
 
     def __unicode__(self):
-        return u'%s, %s, %s' % (self.organ.name, self.name, self.address)
+        return u'%s, %s, %s, %s' % (self.organ.name, self.name, self.city, self.address)
     
     def offers_count(self):
         return Offer.objects.filter(salepoint=self, is_redundant=False).count()

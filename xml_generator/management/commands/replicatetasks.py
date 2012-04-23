@@ -31,7 +31,7 @@ class Command(BaseCommand):
             for task in tasks:
                 _date = task.date_to_execute
                 repl_date = deepcopy(_date)
-                while (repl_date - _date).days < limit:
+                while (repl_date - datetime.utcnow()).days < limit:
                     repl_date += timedelta(days=task.period)
                     if repl_date.replace(tzinfo=None) > datetime.utcnow():
                         try:
