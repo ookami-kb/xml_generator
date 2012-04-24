@@ -20,9 +20,12 @@ class Command(BaseCommand):
                 for of in ofs:
                     if of.product.type == u'fuel':
                         contains_fuel = True
+                        break
                 if contains_fuel:
+                    print sp.name + ' ' + u'fuel'
                     sp.variation = u'fuel'
                 else:
+                    print sp.name + ' ' + u'product'
                     sp.variation = u'product'
                 sp.save()
 
