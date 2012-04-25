@@ -127,7 +127,17 @@ class OfferAdmin(admin.ModelAdmin):
 
 admin.site.register(Offer, OfferAdmin)
 
+from widgets import GoogleMapsWidget
+class SalepointForm(forms.ModelForm):
+    latitude = forms.CharField(label=u'Координаты', widget = GoogleMapsWidget(
+        attrs={'width': 800, 'height': 400, 'longitude_id':'id_longitude'}),
+        error_messages={'required': 'Please select point from the map.'})
+    longitude = forms.CharField(widget = forms.HiddenInput())
+
+
+
 class SalepointAdmin(admin.ModelAdmin):
+    form = SalepointForm
     list_display = ('name', 'address', 'organ', 'last_modified_time', 'user', 'is_new', 'is_redundant', 'offers_count')
     list_filter = ('user', 'is_new', 'is_redundant','organ', )
     #actions = [moderate_salepoint, ]
