@@ -45,7 +45,8 @@ class GoogleMapsWidget(forms.HiddenInput):
                     });
                     $('#%(longitude)s').parent().parent().hide();
                 });
-                
+
+                var _long = null, _lat = null;
                 function codeAddress(){
                     var address = $('#address').val() + ', ' + $('#city_country').val();
                     geocoder.geocode( { 'address': address}, function(results, status) {
@@ -62,6 +63,8 @@ class GoogleMapsWidget(forms.HiddenInput):
                                     address_location.lng() + ')">' +
                                     results[i].formatted_address +
                                     '</div>';
+                                _lat = address_location.lat();
+                                _long = address_location.lng();
                             }
                             $('#search_results').html(results_table.join(''));
                         } else {
@@ -69,7 +72,14 @@ class GoogleMapsWidget(forms.HiddenInput):
                         }
                     });
                 }
-                
+
+                function assumeAddress(){
+                    if (_lat != null && _long != null){
+                        $('#%(latitude)s').val(_lat);
+                        $('#%(longitude)s').val(_long);
+                    }
+                }
+
                 function set_center(lat, lng){
                     latlng = new google.maps.LatLng(lat, lng);
                     my_point.setPosition(latlng)
@@ -87,6 +97,7 @@ class GoogleMapsWidget(forms.HiddenInput):
                 <input id="city_country" type="text" value="%(country_city)s" style="float: left; width: 200px;" />
                 <input id="address" type="text" value="" style="float: left; width: 120px; height: 15px; margin-right: 10px;" />
                 <input type="button" value="Искать" style="float: left; width: 60px; height: 21px;" onclick="codeAddress()" />
+                <input type="button" value="Принять" style="float: left; width: 60px; height: 21px;" onclick="assumeAddress()" />
                 <br stlye="clear: both" />
                 <div id="search_results">
                 </div>
