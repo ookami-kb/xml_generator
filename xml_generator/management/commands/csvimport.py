@@ -23,7 +23,7 @@ class CSV2Offer(object):
             raise Exception(u"Ошибка при проверке файла: %s" % e)
         for row_index, row in enumerate(reader):
             if row_index == 0:
-                self.prepare_pricelists(row)
+                self.prepare_salepoints(row)
             else:
                 self.parse_row(row)
         self.file.close()
