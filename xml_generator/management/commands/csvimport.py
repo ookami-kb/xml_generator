@@ -57,11 +57,13 @@ class CSV2Offer(object):
         # get modification
         try:
             product = Product.objects.get(source_code = source_code)
+            #insert prices
+            self.save_prices(prices, product)
         except Product.DoesNotExist:
             print u'Product with source code %s does not exists' % source_code
             pass
-        #insert prices
-        self.save_prices(prices, product)
+        
+        
 
 
 class Command(BaseCommand):
