@@ -113,10 +113,16 @@ def moderate_salepoint(modeladmin, request, queryset):
 
 moderate_salepoint.short_description = u"Привязать новые точки продаж от сборщиков к имеющейся точке продаж в базе данных или создать ее"
 '''
+
+
+
 class ProductAdmin(admin.ModelAdmin):
     list_display = ('title', 'title_extra', 'manufacturer', 'white_brand', 'is_new', 'sort_weight')
     list_filter = ('white_brand', 'is_new', 'user', )
     actions = [moderate_product,]
+    list_editable = [
+        'sort_weight',
+        ]
     
 admin.site.register(Product, ProductAdmin)
 
