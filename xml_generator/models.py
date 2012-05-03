@@ -60,6 +60,11 @@ class Country(models.Model):
     #    help_text=u'PK страны в системе Neiron',
     #    primary_key=True)
     
+class ProductManager(models.Manager):
+    def get_query_set(self):
+        return super(ProductManager, self).get_query_set()\
+            .select_related('manufacturer', 'white_brand').filter(is_redundant=False)
+
 class Product(models.Model):
     title = models.CharField(verbose_name=u'Название', max_length=255)
     title_extra = models.CharField(u'Доп. название', max_length=255, blank=True, null=True)
@@ -73,12 +78,13 @@ class Product(models.Model):
     product_moderated = models.ForeignKey('self',null=True,blank=True, help_text='Ссылается на эталонный проверенный модератором продуктом, если не пусто')
     type = models.CharField(u'тип продукта', max_length=255, blank=True, null=True)
     is_redundant = models.BooleanField(u'не нужный', help_text='Этот продукт не нужен?', default=False)
+    objects = ProductManager()
     class Meta:
         verbose_name = u"продукт"
         verbose_name_plural = u'продукты'
 
     def __unicode__(self):
-        return u'%s. %s (%s)' % (self.title, self.title_extra, self.manufacturer)
+        return u'%s. %s (%s)' % (self.title, self.title_extra, self.manufacturer.name)
 
     def clean(self):
         # надо удостовериться, что есть только один продукт с таким
@@ -112,7 +118,8 @@ class Organization(models.Model):
 class OfferSalepointManager(models.Manager):
     def get_query_set(self):
         return super(OfferSalepointManager, self).get_query_set()\
-            .annotate(offers_count=models.Count('offer'))
+            .annotate(offers_count=models.Count('offer'))\
+            .select_related('organ')
 
 class Salepoint(models.Model):
     POINT_TYPE = (
@@ -166,12 +173,18 @@ class Salepoint(models.Model):
         return Offer.objects.filter(salepoint=self, is_redundant=False).count()
     offers_count.short_description = u'предложений'
     
+class OfferManager(models.Manager):
+    def get_query_set(self):
+        return super(OfferManager, self).get_query_set()\
+            .select_related('salepoint', 'product').filter(is_redundant=False)
+            
 class Offer(models.Model):
     product = models.ForeignKey(Product, verbose_name=u"Продукт")
     salepoint = models.ForeignKey(Salepoint, verbose_name=u"Точка продаж")
     price = models.FloatField(u'Цена')
     created = models.DateTimeField(verbose_name=u"время создания")
     is_redundant = models.BooleanField(u'Не нужно', help_text=u'Это предложение нужно?', default=False)
+    objects = OfferManager()
 
     class Meta:
         verbose_name = u"предложение"
@@ -184,6 +197,11 @@ class Offer(models.Model):
         self.created = datetime.now()
         super(Offer, self).save(*args, **kwargs)
 
+class TaskManager(models.Manager):
+    def get_query_set(self):
+        return super(TaskManager, self).get_query_set()\
+            .select_related('user')
+            
 class Task(models.Model):
     user   = models.ForeignKey(User, null=True, blank=False, verbose_name=u"сборщик предложений")
     salepoint = models.ManyToManyField(Salepoint, null=True, blank=False, verbose_name=u"Точки продаж")
@@ -192,7 +210,7 @@ class Task(models.Model):
     date_to_execute = models.DateTimeField(null=True, blank=False, verbose_name=u"дата выполнения")
     accomplished = models.BooleanField(u'выполнено ли', default=False)
     comment = models.TextField(null=True, blank=True, verbose_name=u'комментарии сборщика по заданию, причина не выполения')
-
+    objects = TaskManager()
 
     class Meta:
         verbose_name = u"задание"

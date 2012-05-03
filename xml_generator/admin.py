@@ -115,15 +115,17 @@ moderate_salepoint.short_description = u"Привязать новые точк�
 '''
 class ProductAdmin(admin.ModelAdmin):
     list_display = ('title', 'title_extra', 'manufacturer', 'white_brand',
-              'is_new', 'is_redundant')
-    list_filter = ('is_new', 'user', 'is_redundant',)
+              'is_new', )
+    list_filter = ('is_new', 'user')
     actions = [moderate_product,]
     
 admin.site.register(Product, ProductAdmin)
 
 class OfferAdmin(admin.ModelAdmin):
-    list_display = ('product', 'salepoint', 'price', 'created', 'is_redundant')
-    list_filter = ('product__is_new','salepoint__user', 'is_redundant', 'salepoint')
+    list_display = ('product', 'salepoint', 'price', 'created')
+    list_filter = ('product__is_new','salepoint__user')
+    search_fields = ['salepoint__name', 'salepoint__address', 'organ__name']
+    list_select_related = True
 
 admin.site.register(Offer, OfferAdmin)
 
@@ -138,9 +140,10 @@ class SalepointForm(forms.ModelForm):
 
 class SalepointAdmin(admin.ModelAdmin):
     form = SalepointForm
-    list_display = ('name', 'address', 'organ', 'last_modified_time', 'user', 'is_new', 'is_redundant', 'offers_count')
-    list_filter = ('user', 'is_new', 'is_redundant','organ', )
+    list_display = ('id', 'name', 'address', 'organ', 'last_modified_time', 'user', 'is_new', 'is_redundant', 'offers_count')
+    list_filter = ('user', 'is_new', 'is_redundant',)
     search_fields = ['name', 'address', 'organ__name']
+    list_select_related = True
     #actions = [moderate_salepoint, ]
 
     
