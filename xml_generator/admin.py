@@ -125,6 +125,14 @@ class ProductAdmin(admin.ModelAdmin):
         ]
     
 admin.site.register(Product, ProductAdmin)
+class SelectRelatedModelAdmin(admin.ModelAdmin):
+    def formfield_for_foreignkey(self, db_field, request, **kwargs):
+        if 'queryset' in kwargs:
+            kwargs['queryset'] = kwargs['queryset'].select_related()
+        else:
+            db = kwargs.pop('using', None)
+            kwargs['queryset'] = db_field.rel.to._default_manager.using(db).complex_filter(db_field.rel.limit_choices_to).select_related()
+        return super(SelectRelatedModelAdmin, self).formfield_for_foreignkey(db_field, request, **kwargs)
 
 class OfferAdmin(admin.ModelAdmin):
     list_display = ('product', 'salepoint', 'price', 'created')
