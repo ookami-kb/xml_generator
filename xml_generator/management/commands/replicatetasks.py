@@ -49,14 +49,14 @@ class Command(BaseCommand):
 
                 repl_date += timedelta(days=task.period)
             '''
-            _dt = datetime.now().replace(tzinfo=utc)
+            #_dt = datetime.now().replace(tzinfo=utc)
             #print 'today: ' + str(_dt.day)
             _dt = datetime.now().replace(tzinfo=utc) - repl_date
            # print 'diff: ' + str(_dt.days)
             #print 'period: ' + str(task.period)
             if _dt.days % task.period == 0:
                 try:
-                    existed_task = Task.objects.get(user=task.user, date_to_execute__day= datetime.now().replace(tzinfo=utc))
+                    existed_task = Task.objects.get(user=task.user, date_to_execute__day= datetime.now().replace(tzinfo=utc).day)
                     print 'existed ' + existed_task.pk.__str__()
                 except:
                     new_task = Task(period = task.period, date_to_execute= datetime.now().replace(tzinfo=utc), user=task.user)
