@@ -229,7 +229,7 @@ class OfferResource(ModelResource):
 
 class ProductResource(ModelResource):
     class Meta:
-        queryset = Product.objects.all().order_by('pk')
+        queryset = Product.objects.all().order_by('sort_weight').order_by('pk')
         excludes = ['id', 'is_new', 'is_redundant',]
         resource_name = 'product'
         authorization = DjangoAuthorization()

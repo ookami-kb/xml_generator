@@ -6,7 +6,8 @@ from datetime import datetime, timedelta
 from copy import deepcopy
 from django.db.models import Q
 from optparse import make_option
-
+#import pytz
+from django.utils.timezone import utc
 
 class Command(BaseCommand):
     args = ''
@@ -19,34 +20,50 @@ class Command(BaseCommand):
         )
 
     def handle(self, *args, **options):
-        try:
-            limit = options.get('limit')
-            print limit
-            username= options.get('username')
-            print username
+        #try:
+        limit = options.get('limit')
+        username= options.get('username')
 
-            tasks = Task.objects.exclude(Q(period=0) | Q(period__isnull=True))
-            if username != 'all':
-                tasks = tasks.filter(user__username=username)
-            for task in tasks:
-                _date = task.date_to_execute
-                repl_date = deepcopy(_date)
-                while (repl_date - datetime.utcnow()).days < limit:
-                    repl_date += timedelta(days=task.period)
-                    if repl_date.replace(tzinfo=None) > datetime.utcnow():
-                        try:
-                            existed_task = Task.objects.get(user=task.user, date_to_execute__day=repl_date.day)
-                            existed_task.delete()
-                            print 'deleted'
-                        except:
-                            pass
 
-                        new_task = Task(period = 0, date_to_execute=repl_date, user=task.user)
+        tasks = Task.objects.exclude(Q(period=0) | Q(period__isnull=True))
+        if username != 'all':
+            tasks = tasks.filter(user__username=username)
+        for task in tasks:
+            repl_date = deepcopy(task.date_to_execute)
+                #print '1 '+ repl_date.day.__str__()
+                #print '2: ' + datetime.utcnow().replace(tzinfo=pytz.utc).day.__str__()
+            '''
+            while repl_date < datetime.now()+ timedelta(days=limit):
+                    #print task.pk.__str__() + ' - ' + repl_date.day.__str__()
+                if repl_date.day == datetime.now().day:
+                    try:
+                        existed_task = Task.objects.get(user=task.user, date_to_execute__day=repl_date.day)
+                            #print 'existed '
+                    except:
+                        new_task = Task(period = task.period, date_to_execute=repl_date, user=task.user)
                         new_task.save()
-                        for sp in task.salepoint.all():
+                        for sp in new_task.salepoint.all():
                             new_task.salepoint.add(sp)
 
+                        print 'created:  ' + new_task.pk.__str__()
 
+                repl_date += timedelta(days=task.period)
+            '''
+            #_dt = datetime.now().replace(tzinfo=utc)
+            #print 'today: ' + str(_dt.day)
+            _dt = datetime.now().replace(tzinfo=utc) - repl_date
+           # print 'diff: ' + str(_dt.days)
+            #print 'period: ' + str(task.period)
+            if _dt.days % task.period == 0:
+                try:
+                    existed_task = Task.objects.get(user=task.user, date_to_execute__day= datetime.now().replace(tzinfo=utc).day)
+                    print 'existed ' + existed_task.pk.__str__()
+                except:
+                    new_task = Task(period = task.period, date_to_execute= datetime.now().replace(tzinfo=utc), user=task.user)
+                    new_task.save()
+                    for sp in new_task.salepoint.all():
+                        new_task.salepoint.add(sp)
+                    print 'created:  ' + new_task.pk.__str__()
 
-        except Exception as e:
-            raise CommandError('ho-ho, human, u will be assimilated: "%s" ' % str(e))
+        #except Exception as e:
+        #    raise CommandError('error : "%s" ' % str(e))
