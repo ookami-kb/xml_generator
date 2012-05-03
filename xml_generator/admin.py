@@ -115,7 +115,7 @@ moderate_salepoint.short_description = u"Привязать новые точк�
 '''
 class ProductAdmin(admin.ModelAdmin):
     list_display = ('title', 'title_extra', 'manufacturer', 'white_brand',
-              'is_new', 'is_redundant')
+              'is_new', 'is_redundant', 'sort_weight',)
     list_filter = ('is_new', 'user', 'is_redundant',)
     actions = [moderate_product,]
     
