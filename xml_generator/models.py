@@ -2,7 +2,7 @@
 from django.db import models
 from django.core.exceptions import ValidationError, ObjectDoesNotExist
 from django.contrib.auth.models import User
-
+from datetime import datetime
 
 class WhiteBrand(models.Model):
     name = models.CharField(verbose_name=u'Название', max_length=30)
@@ -63,7 +63,7 @@ class Country(models.Model):
 class Product(models.Model):
     title = models.CharField(verbose_name=u'Название', max_length=255)
     title_extra = models.CharField(u'Доп. название', max_length=255, blank=True, null=True)
-    source_code = models.IntegerField()
+    source_code = models.CharField(max_length=128)
     source_type = models.CharField(max_length=255)
     manufacturer = models.ForeignKey(Manufacturer, verbose_name=u'Производитель',blank=True, null=True)
     country = models.ForeignKey(Country, verbose_name=u'Страна',blank=True, null=True)
@@ -180,7 +180,10 @@ class Offer(models.Model):
 
     def __unicode__(self):
         return u'%s в магазине %s' % (self.product, self.salepoint)
-
+    
+    def save(self, *args, **kwargs):
+        self.created = datetime.now()
+        super(Offer, self).save(*args, **kwargs)
 
 class Task(models.Model):
     user   = models.ForeignKey(User, null=True, blank=False, verbose_name=u"сборщик предложений")

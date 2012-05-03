@@ -140,6 +140,7 @@ class SalepointAdmin(admin.ModelAdmin):
     form = SalepointForm
     list_display = ('name', 'address', 'organ', 'last_modified_time', 'user', 'is_new', 'is_redundant', 'offers_count')
     list_filter = ('user', 'is_new', 'is_redundant','organ', )
+    search_fields = ['name', 'address', 'organ__name']
     #actions = [moderate_salepoint, ]
 
     
