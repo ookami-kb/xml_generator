@@ -73,7 +73,7 @@ class Product(models.Model):
     product_moderated = models.ForeignKey('self',null=True,blank=True, help_text='Ссылается на эталонный проверенный модератором продуктом, если не пусто')
     type = models.CharField(u'тип продукта', max_length=255, blank=True, null=True)
     is_redundant = models.BooleanField(u'не нужный', help_text='Этот продукт не нужен?', default=False)
-    sort_weight = models.IntegerField(u'вес сортировки', help_text='Популярному более продукту вес меньший соотвествует', default=100)
+    sort_weight = models.IntegerField(u'вес сортировки', help_text='Популярному более продукту вес меньший соотвествует', null=True, blank=True, default=100)
     class Meta:
         verbose_name = u"продукт"
         verbose_name_plural = u'продукты'
