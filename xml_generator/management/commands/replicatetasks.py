@@ -29,14 +29,14 @@ class Command(BaseCommand):
                 tasks = tasks.filter(user__username=username)
             for task in tasks:
                 repl_date = deepcopy(task.date_to_execute)
-                print '1 '+ repl_date.day.__str__()
-                print '2: ' + datetime.utcnow().replace(tzinfo=pytz.utc).day.__str__()
+                #print '1 '+ repl_date.day.__str__()
+                #print '2: ' + datetime.utcnow().replace(tzinfo=pytz.utc).day.__str__()
                 while repl_date < datetime.utcnow().replace(tzinfo=pytz.utc) + timedelta(days=limit):
-                    print task.pk.__str__() + ' - ' + repl_date.day.__str__()
+                    #print task.pk.__str__() + ' - ' + repl_date.day.__str__()
                     if repl_date.day == datetime.utcnow().replace(tzinfo=pytz.utc).day:
                         try:
                             existed_task = Task.objects.get(user=task.user, date_to_execute__day=repl_date.day)
-                            print 'existed '
+                            #print 'existed '
                         except:
                             new_task = Task(period = task.period, date_to_execute=repl_date, user=task.user)
                             new_task.save()
