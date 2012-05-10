@@ -198,6 +198,11 @@ class Offer(models.Model):
         self.created = datetime.now()
         super(Offer, self).save(*args, **kwargs)
 
+
+
+
+
+
 class TaskManager(models.Manager):
     def get_query_set(self):
         return super(TaskManager, self).get_query_set()\
@@ -211,6 +216,7 @@ class Task(models.Model):
     date_to_execute = models.DateTimeField(null=True, blank=False, verbose_name=u"дата выполнения")
     accomplished = models.BooleanField(u'выполнено ли', default=False)
     comment = models.TextField(null=True, blank=True, verbose_name=u'комментарии сборщика по заданию, причина не выполения')
+    is_pattern = models.BooleanField(default=False, verbose_name=u'шаблонное задание')
     objects = TaskManager()
 
     class Meta:

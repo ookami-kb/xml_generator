@@ -176,8 +176,33 @@ class MyUserAdmin(UserAdmin):
 admin.site.unregister(User)
 admin.site.register(User, MyUserAdmin)
 
+_d = {0 : u'понед',
+      1 : u'втор',
+      2 : u'среда',
+      3 : u'четв',
+      4 : u'пятн',
+      5 : u'суб',
+      6 : u'воскр',}
+
+import datetime
 class TaskAdmin(admin.ModelAdmin):
     filter_horizontal = ('salepoint',)
+    def week_day_(self, obj):
+        #return obj.date_to_execute.strftime('%a')
+        return _d[obj.date_to_execute.weekday()]
+    def date_to_execute_(self, obj):
+        if not obj.is_pattern:
+            return obj.date_to_execute
+        else:
+            return '----'
+    week_day_.short_description = 'День недели'
+    date_to_execute_.short_description = 'Дата исполнения'
+    list_display = ('pk','user', 'week_day_', 'date_to_execute_', 'is_pattern')
+    list_filter = ('user', 'is_pattern')
+    date_hierarchy = 'date_to_execute'
+
+
+
     class Media:
         css = {
             "all": ("brrr.css",)

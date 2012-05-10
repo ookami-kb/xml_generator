@@ -40,6 +40,17 @@ class CustomIndexDashboard(Dashboard):
             ]
         ))
         '''
+        self.children.append(modules.LinkList(
+            _(u'Задания'),
+            #layout='inline',
+            draggable=False,
+            deletable=False,
+            collapsible=False,
+            children=[
+                [_(u'шаблонные'), '/admin/xml_generator/task/?is_pattern__exact=1'],
+                [_(u'не шаблонные'), '/admin/xml_generator/task/?is_pattern__exact=0'],
+            ]
+        ))
         # append an app list module for "Applications"
         self.children.append(modules.AppList(
             _(u'Данные'),
