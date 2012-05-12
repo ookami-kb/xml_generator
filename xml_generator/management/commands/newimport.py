@@ -60,7 +60,7 @@ class Command(BaseCommand):
                         for _sp in obj['salepoints']:
                             sp = Salepoint.objects.get(pk=_sp)
                             pr = Product.objects.get(source_code=int(obj['source_code']), source_type=obj['source_type'])
-                            off = Offer(product=pr, salepoint=sp, price=obj['price'], created=datetime.fromtimestamp('timestamp'))
+                            off = Offer(product=pr, salepoint=sp, price=obj['price'], created=datetime.fromtimestamp(obj['timestamp']))
                             off.save()
                     except Exception as e:
                         print str(e)
