@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*
-from django.db import models
+from django.contrib.gis.db import models
 from django.core.exceptions import ValidationError, ObjectDoesNotExist
 from django.contrib.auth.models import User
 from datetime import datetime
@@ -186,6 +186,7 @@ class Offer(models.Model):
     created = models.DateTimeField(verbose_name=u"время создания")
     is_redundant = models.BooleanField(u'Не нужно', help_text=u'Это предложение нужно?', default=False)
     objects = OfferManager()
+    all_objects = models.GeoManager()
 
     class Meta:
         verbose_name = u"предложение"

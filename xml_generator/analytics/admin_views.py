@@ -137,7 +137,7 @@ def users_stat(request):
         for t in Task.objects.filter(date_to_execute__gte=start, date_to_execute__lte=stop, is_pattern=False, user=u):
 
 
-            _off = Offer.objects.filter(created__gte=start, created__lte=stop, created__day=t.date_to_execute.day , \
+            _off = Offer.all_objects.filter(created__gte=start, created__lte=stop, created__day=t.date_to_execute.day , \
                                                   created__month=t.date_to_execute.month, created__year=t.date_to_execute.year,\
                                                     salepoint__in=t.salepoint.all())
             #print _off
