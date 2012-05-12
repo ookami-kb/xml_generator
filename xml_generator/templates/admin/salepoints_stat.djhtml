@@ -27,14 +27,18 @@
 		<div class="results">
 			<table>
 				<thead>
+				<th scope="col"><div class="text"><span>Сборщик</span></div></th>
 					<th scope="col"><div class="text"><span>Наименование</span></div></th>
 					<th scope="col"><div class="text"><span>Адрес</span></div></th>
+					<th scope="col"><div class="text"><span>Дата</span></div></th>
 					<th scope="col"><div class="text"><span>Загружено предложений</span></div></th>
 				</thead>
 				<tbody>
 				{% for of in offers %}
 					<tr class="row{% cycle 1 2 %}">
+					    <td>{{of.salepoint__user}}</td>
 						<td>{{of.salepoint__name}}</td>
+						<td>{{of.salepoint__address}}</td>
 						<td>{{of.created}}</td>
 						<td>{{of.offers_count}}</td>
 					</tr>

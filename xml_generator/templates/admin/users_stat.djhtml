@@ -33,9 +33,9 @@
 				<tbody>
 				{% for u in users %}
 					<tr class="row{% cycle 1 2 %}">
-						<td>{{u}}</td>
+						<td>{{u.user}}</td>
 						<td>{{u.offers_count}}</td>
-						<td><a href="/admin/salepoint/stat/?user={{u.id}}&start={{date_range.start.value|default:''}}&stop={{date_range.stop.value|default:''}}">{{u.salepoints_count}}</a></td>
+						<td><a href="/admin/salepoint/stat/?user={{u.user.id}}&start={{date_range.start.value|default:''}}&stop={{date_range.stop.value|default:''}}">{{u.sps_count}}</a></td>
 					</tr>
 				{% endfor %}
 				</tbody>
