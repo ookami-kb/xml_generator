@@ -32,7 +32,7 @@ def salepoints_stat(request):
         for uid in User.objects.exclude(username__in=['admin', 'fuel', 'test_fuel', 'test']):
             for t in Task.objects.filter(date_to_execute__gte=start, date_to_execute__lte=stop, is_pattern=False, user=uid):
                 for sp in t.salepoint.all():
-                    _o = Offer.objects.filter(created__gte=start, created__lte=stop, created__day=t.date_to_execute.day + 1,\
+                    _o = Offer.objects.filter(created__gte=start, created__lte=stop, created__day=t.date_to_execute.day ,\
                         created__month=t.date_to_execute.month, created__year=t.date_to_execute.year,\
                         salepoint=sp).select_related()
                     #for o in _o:
@@ -54,7 +54,7 @@ def salepoints_stat(request):
     else:
         for t in Task.objects.filter(date_to_execute__gte=start, date_to_execute__lte=stop, is_pattern=False, user=uid):
             for sp in t.salepoint.all():
-                _o = Offer.objects.filter(created__gte=start, created__lte=stop, created__day=t.date_to_execute.day + 1,\
+                _o = Offer.objects.filter(created__gte=start, created__lte=stop, created__day=t.date_to_execute.day ,\
                     created__month=t.date_to_execute.month, created__year=t.date_to_execute.year,\
                     salepoint=sp).select_related()
                 #for o in _o:
@@ -137,15 +137,15 @@ def users_stat(request):
         for t in Task.objects.filter(date_to_execute__gte=start, date_to_execute__lte=stop, is_pattern=False, user=u):
 
 
-            _off = Offer.objects.filter(created__gte=start, created__lte=stop, created__day=t.date_to_execute.day + 1, \
+            _off = Offer.objects.filter(created__gte=start, created__lte=stop, created__day=t.date_to_execute.day , \
                                                   created__month=t.date_to_execute.month, created__year=t.date_to_execute.year,\
                                                     salepoint__in=t.salepoint.all())
-            print _off
+            #print _off
             _offer_count += _off.count()
             #if t.salepoint in
             _sp_count += t.salepoint.count()
-            print t.user.username
-        print u.username + ' ' + str(u.pk) + ' ' + str(_offer_count) + ' ' + str(_sp_count) + '\n'
+            #print t.user.username
+        #print u.username + ' ' + str(u.pk) + ' ' + str(_offer_count) + ' ' + str(_sp_count) + '\n'
 
         _users.append({
             'user': u,

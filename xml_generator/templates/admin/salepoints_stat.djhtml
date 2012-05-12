@@ -28,7 +28,7 @@
 			<table>
 				<thead>
 				<th scope="col"><div class="text"><span>Сборщик</span></div></th>
-					<th scope="col"><div class="text"><span>Наименование</span></div></th>
+					<th scope="col"><div class="text"><span>Точка продаж</span></div></th>
 					<th scope="col"><div class="text"><span>Адрес</span></div></th>
 					<th scope="col"><div class="text"><span>Дата</span></div></th>
 					<th scope="col"><div class="text"><span>Загружено предложений</span></div></th>
