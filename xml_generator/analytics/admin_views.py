@@ -29,7 +29,7 @@ def salepoints_stat(request):
         uid = None
     _off = []
     if not uid:
-        for uid in User.objects.exclude(username__in=['admin', 'fuel', 'test_fuel', 'test']):
+        for uid in User.objects.exclude(username__in=['admin', 'fuel', 'test_fuel']):
             for t in Task.objects.filter(date_to_execute__gte=start, date_to_execute__lte=stop, is_pattern=False, user=uid):
                 for sp in t.salepoint.all():
                     _o = Offer.all_objects.filter(created__gte=start, created__lte=stop, created__day=t.date_to_execute.day ,\
@@ -112,7 +112,7 @@ def users_stat(request):
         start = datetime.date.fromtimestamp(0)
         stop = datetime.date.today() + datetime.timedelta(days=1)
         
-    users = User.objects.exclude(username__in=['admin', 'fuel', 'test_fuel', 'test'])
+    users = User.objects.exclude(username__in=['admin', 'fuel', 'test_fuel'])
 
 
     _users = []
