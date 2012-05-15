@@ -40,6 +40,7 @@ class Command(BaseCommand):
             acsv = csv.writer(afile, delimiter=',')
 
             k = 0
+            of_count = 0
             for org in organs:
                 if org.pk == 1:
                     continue
@@ -61,7 +62,7 @@ class Command(BaseCommand):
                 NOL = etree.Element('pricelists')
                 orgs = org.salepoint_set.filter(is_redundant=False, is_new=False)
                 k+= orgs.count()
-                print
+
                 for sp in orgs:
                     pricelist = etree.SubElement(NOL, 'pricelist')
                     pr_name = etree.SubElement(pricelist, 'name')
@@ -107,6 +108,7 @@ class Command(BaseCommand):
                     NPL = etree.Element('offers')
                     _offers = Offer.objects.filter(salepoint=sp, product__is_new=False, price__gt=0, product__is_redundant=False, is_redundant=False)
                     #print _offers.query
+                    of_count += _offers.count()
                     for _offer in _offers:
                         offer = etree.SubElement(NPL, 'offer')
                         price = etree.SubElement(offer, 'price')
@@ -180,7 +182,8 @@ class Command(BaseCommand):
             structureXml = open(user_path + 'new.xml', 'w')#pr_name.text +'.xml', "w")
             structureXml.write(etree.tostring(NNPL, pretty_print=True, encoding="cp1251", xml_declaration=True))
             structureXml.close()
-            print k
+            print 'salepoints count ' + str(k)
+            print 'offer count ' + str(of_count)
             ofile.close()
             afile.close()
             self.stdout.write('Successfully generated xml ')
