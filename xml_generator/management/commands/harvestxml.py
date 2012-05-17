@@ -114,7 +114,7 @@ class Command(BaseCommand):
                         price = etree.SubElement(offer, 'price')
                         price.text = unicode(_offer.price)
                         _date = etree.SubElement(offer, 'date')
-                        _date.text = unicode(_offer.created)
+                        _date.text = datetime.strftime(_offer.created, "%d.%m.%Y %H:%M:%S")
                         code = etree.SubElement(offer, 'code')
                         code.set('source', _offer.product.source_type)
                         code.text = unicode(_offer.product.source_code)
