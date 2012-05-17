@@ -113,7 +113,8 @@ class Command(BaseCommand):
                         offer = etree.SubElement(NPL, 'offer')
                         price = etree.SubElement(offer, 'price')
                         price.text = unicode(_offer.price)
-
+                        _date = etree.SubElement(offer, 'date')
+                        _date.text = unicode(_offer.created)
                         code = etree.SubElement(offer, 'code')
                         code.set('source', _offer.product.source_type)
                         code.text = unicode(_offer.product.source_code)
