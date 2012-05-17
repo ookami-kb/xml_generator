@@ -137,7 +137,7 @@ class SelectRelatedModelAdmin(admin.ModelAdmin):
 class OfferAdmin(admin.ModelAdmin):
     list_display = ('product', 'salepoint', 'price', 'created')
     #list_filter = ('product__is_new','salepoint__user')
-    search_fields = ['salepoint__name', 'salepoint__address', 'organ__name']
+    search_fields = ['product__title','product__title_extra','salepoint__name', 'salepoint__address']
     list_select_related = True
 
 admin.site.register(Offer, OfferAdmin)
