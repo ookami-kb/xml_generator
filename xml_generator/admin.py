@@ -139,6 +139,7 @@ class OfferAdmin(admin.ModelAdmin):
     #list_filter = ('product__is_new','salepoint__user')
     search_fields = ['product__title','product__title_extra','salepoint__name', 'salepoint__address']
     list_select_related = True
+    date_hierarchy = 'created'
 
 admin.site.register(Offer, OfferAdmin)
 
