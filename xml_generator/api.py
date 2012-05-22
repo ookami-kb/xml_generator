@@ -58,7 +58,7 @@ class SalepointResource(ModelResource):
             '''
         self.sp_list = []
         try:
-            task = Task.objects.get(user=request.user, date_to_execute__day=datetime.datetime.now().day, date_to_execute__month=datetime.datetime.now().month, date_to_execute__year=datetime.datetime.now().year)
+            task = Task.objects.get(user=request.user, is_pattern=False, date_to_execute__day=datetime.datetime.now().day, date_to_execute__month=datetime.datetime.now().month, date_to_execute__year=datetime.datetime.now().year)
             self.task_pk = task.pk
             for sp in task.salepoint.filter(is_new=False, is_redundant=False):
                 self.sp_list.append(sp.pk)
