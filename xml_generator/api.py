@@ -106,7 +106,7 @@ class SalepointResource(ModelResource):
     #def get_object_list(self, request, *args, **kwargs):
     #    return Salepoint.objects.filter(((Q(user=request.user) & Q(is_new=True)) & Q(is_redundant=False)) | (Q(user=request.user) & Q(is_new=False) & Q(is_redundant=False) ))
     def get_object_list(self, request, *args, **kwargs):
-        tasks = Task.objects.filter(user=request.user, date_to_execute__day=datetime.datetime.now().day)
+        tasks = Task.objects.filter(user=request.user, date_to_execute__day=datetime.datetime.now().day, is_pattern=False,  date_to_execute__month=datetime.datetime.now().month, date_to_execute__year=datetime.datetime.now().year)
         sp_list = []
         for task in tasks:
             for sp in task.salepoint.filter(is_new=False, is_redundant=False):
