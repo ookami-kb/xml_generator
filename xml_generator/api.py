@@ -122,8 +122,19 @@ class SalepointResource(ModelResource):
 
         objs = Salepoint.objects.filter(pk__in=sp_list)
 
+        _limit = _offset = ''
+        _has_li_of = False
+        if u'limit' in request.GET:
+            _limit = request.GET['limit']
+            _has_li_of = True
+        if u'offset' in request.GET:
+            _offset = request.GET['offset']
+            _has_li_of = True
 
-        _message = u' sent ' + unicode(objs.count()) + u' salepoints to '
+        if not _has_li_of:
+            _message =  u' sent salepoints  to '
+        else:
+            _message = u' sent salepoints with limit '+_limit + ' offset '+ _offset+ ' to '
         #logger.info(_message)
         sl = Simple_Logs(message=_message, user=request.user)
         sl.save()
@@ -182,12 +193,12 @@ class OfferResource(ModelResource):
             pass
         return bundle
 
-    def post_list(self, request, **kwargs):
+    def patch_list(self, request, **kwargs):
         _message =  u' sent offers to '
         #logger.info(_message)
         sl = Simple_Logs(message=_message, user=request.user, origin = u'phone', target= u'server')
         sl.save()
-        return super(OfferResource, self).post_list(request, **kwargs)
+        return super(OfferResource, self).patch_list(request, **kwargs)
 
     def dispatch(self, request_type, request, **kwargs):
         self.created = datetime.datetime.now()
@@ -277,15 +288,36 @@ class ProductResource(ModelResource):
         bundle.obj.country = Country.objects.get(name=u'Россия')
         return bundle
 
+    def get_list(self, request, **kwargs):
+
+        _limit = _offset = ''
+        _has_li_of = False
+        if u'limit' in request.GET:
+            _limit = request.GET['limit']
+            _has_li_of = True
+        if u'offset' in request.GET:
+            _offset = request.GET['offset']
+            _has_li_of = True
+        if not _has_li_of:
+            _message =  u' sent products  to '
+        else:
+            _message = u' sent products with limit '+_limit + ' offset '+ _offset+ ' to '
+        #logger.info(_message)
+        sl = Simple_Logs(message=_message, user=request.user)
+        sl.save()
+        print request.GET
+        return super(ProductResource, self).get_list(request, **kwargs)
+
     def get_object_list(self, request, *args, **kwargs):
         #Отмодерированные продукты выгружаются всем. Неотмодерированные - только создавшим их пользователям.
         _objs = Product.objects.filter(((Q(user=request.user) & Q(is_new=True)) & Q(is_redundant=False)) | (Q(is_new=False) & Q(product_moderated=None) & Q(is_redundant=False) ))
 
-
-        _message =  u' sent ' + unicode(_objs.count()) + u' non-fuel products to '
+        '''
+        _message =  u' sent products to '
         #logger.info(_message)
         sl = Simple_Logs(message=_message, user=request.user)
         sl.save()
+        '''
         return _objs
 
 class FuelProductResource(ModelResource):
@@ -315,6 +347,8 @@ class FuelProductResource(ModelResource):
 
         bundle.obj.country = Country.objects.get(name=u'Россия')
         return bundle
+
+
 
     def get_object_list(self, request, *args, **kwargs):
         #Отмодерированные продукты выгружаются всем. Неотмодерированные - только создавшим их пользователям.
