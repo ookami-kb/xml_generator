@@ -37,7 +37,7 @@ class Command(BaseCommand):
             print task.date_to_execute.weekday().__str__()
             if task.date_to_execute.weekday() == _dt.weekday():
                 try:
-                    existed_task = Task.objects.get(user=task.user, date_to_execute__day= datetime.now().replace(tzinfo=utc).day)
+                    existed_task = Task.objects.get(user=task.user, is_pattern=False, date_to_execute__day= datetime.now().replace(tzinfo=utc).day,  date_to_execute__year= datetime.now().replace(tzinfo=utc).year,  date_to_execute__month= datetime.now().replace(tzinfo=utc).month)
                     print 'existed ' + existed_task.pk.__str__()
 
                 except:

@@ -10,6 +10,9 @@ from django.db.models import Q
 import datetime
 import time
 
+import logging
+logger = logging.getLogger('xml_generator.api')
+
 class MyAuthentication(BasicAuthentication):
     def is_authenticated(self, request, **kwargs):
         _username = request.POST.get('username') or  request.GET.get('username')
@@ -98,6 +101,7 @@ class SalepointResource(ModelResource):
         return bundle
 
     def dehydrate(self, bundle):
+        #logger.debug('!!!!!!!!!!!!!')
         bundle.data['org'] = bundle.obj.organ.name
         if bundle.obj.longitude is not None  and bundle.obj.latitude is not None:
             bundle.data['coords'] = unicode(bundle.obj.latitude) + u',' + unicode(bundle.obj.longitude)
@@ -106,13 +110,24 @@ class SalepointResource(ModelResource):
     #def get_object_list(self, request, *args, **kwargs):
     #    return Salepoint.objects.filter(((Q(user=request.user) & Q(is_new=True)) & Q(is_redundant=False)) | (Q(user=request.user) & Q(is_new=False) & Q(is_redundant=False) ))
     def get_object_list(self, request, *args, **kwargs):
+        #logger.debug('!!!!!!!!!!!!!')
         tasks = Task.objects.filter(user=request.user, date_to_execute__day=datetime.datetime.now().day, is_pattern=False,  date_to_execute__month=datetime.datetime.now().month, date_to_execute__year=datetime.datetime.now().year)
         sp_list = []
         for task in tasks:
+            _message =  u' sent task #' + unicode(task.pk) + u' to '
+            sl = Simple_Logs(message=_message, user=request.user)
+            sl.save()
             for sp in task.salepoint.filter(is_new=False, is_redundant=False):
                 sp_list.append(sp.pk)
 
-        return Salepoint.objects.filter(pk__in=sp_list)
+        objs = Salepoint.objects.filter(pk__in=sp_list)
+
+
+        _message = u' sent ' + unicode(objs.count()) + u' salepoints to '
+        #logger.info(_message)
+        sl = Simple_Logs(message=_message, user=request.user)
+        sl.save()
+        return objs
 
     class Meta:
         queryset = Salepoint.objects.all().order_by('pk')
@@ -167,7 +182,12 @@ class OfferResource(ModelResource):
             pass
         return bundle
 
-
+    def post_list(self, request, **kwargs):
+        _message =  u' sent offers to '
+        #logger.info(_message)
+        sl = Simple_Logs(message=_message, user=request.user, origin = u'phone', target= u'server')
+        sl.save()
+        return super(OfferResource, self).post_list(request, **kwargs)
 
     def dispatch(self, request_type, request, **kwargs):
         self.created = datetime.datetime.now()
@@ -210,6 +230,8 @@ class OfferResource(ModelResource):
                           title=bundle.data['title']
                           )
             _pr.save()
+            #logger.info(u'server receive new product with pk: ' + unicode(_pr.pk)+ ' and title: ' + unicode(_pr.title))
+
             
         bundle.obj.product = _pr
         if not _pr.is_new:
@@ -257,8 +279,14 @@ class ProductResource(ModelResource):
 
     def get_object_list(self, request, *args, **kwargs):
         #Отмодерированные продукты выгружаются всем. Неотмодерированные - только создавшим их пользователям.
-        return Product.objects.filter(((Q(user=request.user) & Q(is_new=True)) & Q(is_redundant=False)) | (Q(is_new=False) & Q(product_moderated=None) & Q(is_redundant=False) ))
+        _objs = Product.objects.filter(((Q(user=request.user) & Q(is_new=True)) & Q(is_redundant=False)) | (Q(is_new=False) & Q(product_moderated=None) & Q(is_redundant=False) ))
 
+
+        _message =  u' sent ' + unicode(_objs.count()) + u' non-fuel products to '
+        #logger.info(_message)
+        sl = Simple_Logs(message=_message, user=request.user)
+        sl.save()
+        return _objs
 
 class FuelProductResource(ModelResource):
     class Meta:
@@ -290,5 +318,11 @@ class FuelProductResource(ModelResource):
 
     def get_object_list(self, request, *args, **kwargs):
         #Отмодерированные продукты выгружаются всем. Неотмодерированные - только создавшим их пользователям.
-        return Product.objects.filter((((Q(user=request.user) & Q(is_new=True)) & Q(is_redundant=False)) | (Q(is_new=False) & Q(product_moderated=None) & Q(is_redundant=False) ))&Q(type=u'fuel'))
+        _objs = Product.objects.filter((((Q(user=request.user) & Q(is_new=True)) & Q(is_redundant=False)) | (Q(is_new=False) & Q(product_moderated=None) & Q(is_redundant=False) ))&Q(type=u'fuel'))
+        _message =  u' sent ' + unicode(_objs.count()) + u' fuel products to '
+
+        #logger.info(_message)
+        sl = Simple_Logs(message=_message, user=request.user)
+        sl.save()
+        return _objs
 

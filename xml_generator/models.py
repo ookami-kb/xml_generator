@@ -226,3 +226,27 @@ class Task(models.Model):
         #ordering = ['salepoint__organ__name',]
     def __unicode__(self):
         return u'задание номер %s для %s' % (self.pk, self.user.username)
+
+
+class Simple_Logs(models.Model):
+    TARGET_TYPE = (
+        (u"phone", u"сборщик"),
+        (u"server", u"сервер"),
+        )
+    LOG_LEVEL = (
+        (u"debug", u"дебаг"),
+        (u"info", u"инфо"),
+        )
+    user = models.ForeignKey(User, verbose_name=u"сборщик предложений")
+    origin = models.CharField(max_length=17, choices=TARGET_TYPE, verbose_name=u"источник", default=u"server")
+    target = models.CharField(max_length=17, choices=TARGET_TYPE, verbose_name=u"кто цель", default=u"phone")
+    log_level = models.CharField(max_length=17, choices=LOG_LEVEL, verbose_name=u"уровень лога", default=u"info")
+    message = models.TextField(verbose_name=u'текст сообщения')
+    created = models.DateTimeField(verbose_name=u"дата лога", default=datetime.now())
+
+    class Meta:
+        verbose_name = u"лог"
+        verbose_name_plural = u'логи'
+        #ordering = ['salepoint__organ__name',]
+    def __unicode__(self):
+        return u'лог  %s' % (self.pk)
