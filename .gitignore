@@ -16,3 +16,4 @@ settings/data/*
 settings/
 
 settings.py
+/static/
