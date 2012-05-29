@@ -242,7 +242,7 @@ class Simple_Logs(models.Model):
     target = models.CharField(max_length=17, choices=TARGET_TYPE, verbose_name=u"кто цель", default=u"phone")
     log_level = models.CharField(max_length=17, choices=LOG_LEVEL, verbose_name=u"уровень лога", default=u"info")
     message = models.TextField(verbose_name=u'текст сообщения')
-    created = models.DateTimeField(verbose_name=u"дата лога", default=datetime.now())
+    created = models.DateTimeField(verbose_name=u"дата лога", default=datetime.now)
 
     class Meta:
         verbose_name = u"лог"
