@@ -192,14 +192,117 @@ class OfferResource(ModelResource):
         except:
             pass
         return bundle
-
+    '''
     def patch_list(self, request, **kwargs):
         _message =  u' sent offers to '
         #logger.info(_message)
         sl = Simple_Logs(message=_message, user=request.user, origin = u'phone', target= u'server')
         sl.save()
         return super(OfferResource, self).patch_list(request, **kwargs)
+    '''
+    def patch_list(self, request, **kwargs):
+        """
+        Updates a collection in-place.
 
+        The exact behavior of ``PATCH`` to a list resource is still the matter of
+        some debate in REST circles, and the ``PATCH`` RFC isn't standard. So the
+        behavior this method implements (described below) is something of a
+        stab in the dark. It's mostly cribbed from GData, with a smattering
+        of ActiveResource-isms and maybe even an original idea or two.
+
+        The ``PATCH`` format is one that's similar to the response returned from
+        a ``GET`` on a list resource::
+
+            {
+              "objects": [{object}, {object}, ...],
+              "deleted_objects": ["URI", "URI", "URI", ...],
+            }
+
+        For each object in ``objects``:
+
+            * If the dict does not have a ``resource_uri`` key then the item is
+              considered "new" and is handled like a ``POST`` to the resource list.
+
+            * If the dict has a ``resource_uri`` key and the ``resource_uri`` refers
+              to an existing resource then the item is a update; it's treated
+              like a ``PATCH`` to the corresponding resource detail.
+
+            * If the dict has a ``resource_uri`` but the resource *doesn't* exist,
+              then this is considered to be a create-via-``PUT``.
+
+        Each entry in ``deleted_objects`` referes to a resource URI of an existing
+        resource to be deleted; each is handled like a ``DELETE`` to the relevent
+        resource.
+
+        In any case:
+
+            * If there's a resource URI it *must* refer to a resource of this
+              type. It's an error to include a URI of a different resource.
+
+            * ``PATCH`` is all or nothing. If a single sub-operation fails, the
+              entire request will fail and all resources will be rolled back.
+
+          * For ``PATCH`` to work, you **must** have ``put`` in your
+            :ref:`detail-allowed-methods` setting.
+
+          * To delete objects via ``deleted_objects`` in a ``PATCH`` request you
+            **must** have ``delete`` in your :ref:`detail-allowed-methods`
+            setting.
+
+        """
+        request = convert_post_to_patch(request)
+        deserialized = self.deserialize(request, request.raw_post_data, format=request.META.get('CONTENT_TYPE', 'application/json'))
+
+        if "objects" not in deserialized:
+            raise BadRequest("Invalid data sent.")
+
+        if len(deserialized["objects"]) and 'put' not in self._meta.detail_allowed_methods:
+            raise ImmediateHttpResponse(response=http.HttpMethodNotAllowed())
+
+        _count = 0
+        for data in deserialized["objects"]:
+            _count+=1
+            # If there's a resource_uri then this is either an
+            # update-in-place or a create-via-PUT.
+            if "resource_uri" in data:
+                uri = data.pop('resource_uri')
+
+                try:
+                    obj = self.get_via_uri(uri, request=request)
+
+                    # The object does exist, so this is an update-in-place.
+                    bundle = self.build_bundle(obj=obj, request=request)
+                    bundle = self.full_dehydrate(bundle)
+                    bundle = self.alter_detail_data_to_serialize(request, bundle)
+                    self.update_in_place(request, bundle, data)
+                except (ObjectDoesNotExist, MultipleObjectsReturned):
+                    # The object referenced by resource_uri doesn't exist,
+                    # so this is a create-by-PUT equivalent.
+                    data = self.alter_deserialized_detail_data(request, data)
+                    bundle = self.build_bundle(data=dict_strip_unicode_keys(data))
+                    self.obj_create(bundle, request=request)
+            else:
+                # There's no resource URI, so this is a create call just
+                # like a POST to the list resource.
+                data = self.alter_deserialized_detail_data(request, data)
+                bundle = self.build_bundle(data=dict_strip_unicode_keys(data))
+                self.obj_create(bundle, request=request)
+
+        if len(deserialized.get('deleted_objects', [])) and 'delete' not in self._meta.detail_allowed_methods:
+            raise ImmediateHttpResponse(response=http.HttpMethodNotAllowed())
+
+        for uri in deserialized.get('deleted_objects', []):
+            obj = self.get_via_uri(uri, request=request)
+            self.obj_delete(request=request, _obj=obj)
+
+
+        _message =  u' sent offers to ' + str(_count)
+        #logger.info(_message)
+        sl = Simple_Logs(message=_message, user=request.user, origin = u'phone', target= u'server')
+        sl.save()
+
+
+        return http.HttpAccepted()
     def dispatch(self, request_type, request, **kwargs):
         self.created = datetime.datetime.now()
         return super(OfferResource, self).dispatch(request_type, request, **kwargs)
