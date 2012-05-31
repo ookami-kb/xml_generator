@@ -76,11 +76,11 @@ class Product(models.Model):
     is_new = models.BooleanField(u'Новый', help_text='Этот продукт был создан пользователем и еще не прошел модерацию')
     user = models.ForeignKey(User, null=True, blank=True, help_text='Тот, кто добавил этот продукт')
     product_moderated = models.ForeignKey('self',null=True,blank=True, help_text='Ссылается на эталонный проверенный модератором продуктом, если не пусто')
-    type = models.CharField(u'тип продукта', max_length=255, blank=True, null=True)
+    type = models.CharField(u'тип продукта', max_length=255, blank=True, null=True, help_text='food либо fuel')
     is_redundant = models.BooleanField(u'не нужный', help_text='Этот продукт не нужен?', default=False)
     sort_weight = models.IntegerField(u'вес сортировки', help_text='Популярному более продукту вес меньший соотвествует', null=True, blank=True, default=100)
     objects = ProductManager()
-    factor_specific_value = models.FloatField(u'значение', null=True, blank=True, default=None)
+    factor_specific_value = models.FloatField(u'значение', null=True, blank=True, default=None, help_text='вес/объем/количество для продуктов, пусто для топлива')
     class Meta:
         verbose_name = u"продукт"
         verbose_name_plural = u'продукты'
