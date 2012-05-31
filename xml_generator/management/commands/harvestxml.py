@@ -177,7 +177,7 @@ class Command(BaseCommand):
                     _modif.set('wb_id', str(product.white_brand.pk))
                     _modif.set('wb_key', product.white_brand.factor_specific_key)
                     #_modif.set('wb_unit',product.white_brand.factor_specific_unit)
-                    _modif.set('wb_value', str(product.white_brand.factor_specific_value))
+                    _modif.set('wb_value', str(product.factor_specific_value))
 
 
             structureXml = open(user_path + 'new.xml', 'w')#pr_name.text +'.xml', "w")

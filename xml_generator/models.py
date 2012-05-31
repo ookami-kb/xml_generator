@@ -80,6 +80,7 @@ class Product(models.Model):
     is_redundant = models.BooleanField(u'не нужный', help_text='Этот продукт не нужен?', default=False)
     sort_weight = models.IntegerField(u'вес сортировки', help_text='Популярному более продукту вес меньший соотвествует', null=True, blank=True, default=100)
     objects = ProductManager()
+    factor_specific_value = models.FloatField(u'значение', null=True, blank=False, default=None)
     class Meta:
         verbose_name = u"продукт"
         verbose_name_plural = u'продукты'

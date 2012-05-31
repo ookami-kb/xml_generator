@@ -114,15 +114,30 @@ def moderate_salepoint(modeladmin, request, queryset):
 moderate_salepoint.short_description = u"Привязать новые точки продаж от сборщиков к имеющейся точке продаж в базе данных или создать ее"
 '''
 
-
-
+'''
+class ProductForm(forms.ModelForm):
+    factor_key = forms.CharField()
+    factor_unit = forms.CharField()
+'''
+from django.contrib.admin.util import unquote
 class ProductAdmin(admin.ModelAdmin):
     list_display = ('title', 'title_extra', 'manufacturer', 'white_brand', 'is_new', 'sort_weight')
     list_filter = ('white_brand', 'is_new', 'user', )
     actions = [moderate_product,]
+    #form =ProductForm
     list_editable = [
         'sort_weight',
         ]
+
+    def change_view(self, request, object_id, form_url='', extra_context=None):
+        "The 'change' admin view for this model."
+
+        obj = self.get_object(request, unquote(object_id))
+        #print obj.white_brand.factor_specific_key
+        return super(ProductAdmin, self).change_view(request, object_id, form_url='', extra_context={
+            'factor_key' : obj.white_brand.factor_specific_key, 'factor_unit' : obj.white_brand.factor_specific_unit
+        })
+
     
 admin.site.register(Product, ProductAdmin)
 class SelectRelatedModelAdmin(admin.ModelAdmin):
