@@ -134,9 +134,14 @@ class ProductAdmin(admin.ModelAdmin):
 
         obj = self.get_object(request, unquote(object_id))
         #print obj.white_brand.factor_specific_key
-        return super(ProductAdmin, self).change_view(request, object_id, form_url='', extra_context={
-            'factor_key' : obj.white_brand.factor_specific_key, 'factor_unit' : obj.white_brand.factor_specific_unit
-        })
+        _extra_context = {}
+        if obj.white_brand:
+            _extra_context={
+                'factor_key' : obj.white_brand.factor_specific_key, 'factor_unit' : obj.white_brand.factor_specific_unit
+            }
+
+        return super(ProductAdmin, self).change_view(request, object_id, form_url='', extra_context=_extra_context)
+
 
     
 admin.site.register(Product, ProductAdmin)
