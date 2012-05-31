@@ -247,6 +247,7 @@ class Simple_Logs(models.Model):
     class Meta:
         verbose_name = u"лог"
         verbose_name_plural = u'логи'
+        ordering = ['-created']
         #ordering = ['salepoint__organ__name',]
     def __unicode__(self):
         return u'лог  %s' % (self.pk)

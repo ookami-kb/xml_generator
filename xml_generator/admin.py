@@ -165,7 +165,7 @@ admin.site.register(Salepoint, SalepointAdmin)
 
 
 class SimpleLogsAdmin(admin.ModelAdmin):
-    list_display = ('pk', 'log_level', 'created', 'origin', 'message','target', 'user', )
+    list_display = ('pk', 'log_level', 'created', 'origin', 'target', 'user', )
     list_filter = ('user', 'origin',)
     list_select_related = True
     #actions = [moderate_salepoint, ]
