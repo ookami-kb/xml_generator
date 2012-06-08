@@ -163,7 +163,7 @@ class Command(BaseCommand):
             prs = Product.objects.filter(is_new=False, is_redundant=False).exclude(manufacturer=None)
             for product in prs:
                 _modif = etree.SubElement(NNPL, 'modification')
-                _modif.set('id', str(product.pk))
+                _modif.set('id', str(product.source_code))
                 _modif.set('title', product.title)
                 if product.title_extra:
                     _modif.set('title_extra', product.title_extra)
