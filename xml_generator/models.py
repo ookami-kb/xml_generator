@@ -178,7 +178,7 @@ class Salepoint(models.Model):
 class OfferManager(models.Manager):
     def get_query_set(self):
         return super(OfferManager, self).get_query_set()\
-            .select_related('salepoint', 'product').filter(is_redundant=False).order_by('-created')
+            .select_related('salepoint', 'product').order_by('-created')
             
 class Offer(models.Model):
     product = models.ForeignKey(Product, verbose_name=u"Продукт")
