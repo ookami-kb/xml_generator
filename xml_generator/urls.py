@@ -27,6 +27,9 @@ urlpatterns = patterns('',
 
     (r'^admin/salepoint/stat/$', 'xml_generator.analytics.admin_views.salepoints_stat'),
     (r'^admin/user/stat/$', 'xml_generator.analytics.admin_views.users_stat'),
+    (r'^admin/product-analyt/(?P<product_pk>\d+)/$', 'xml_generator.analytics.views.product_anal'),
+    (r'^admin/product-analyt/(?P<product_pk>\d+)/list_salepoint/$', 'xml_generator.analytics.views.product_list_salepoint'),
+    (r'^admin/product-analyt/(?P<product_pk>\d+)/(?P<salepoint_pk>\d+)/$', 'xml_generator.analytics.views.product_chart'),
 
     url(r'^admin/', include(admin.site.urls)),
     url(r'^api/', include(v1_api.urls)),

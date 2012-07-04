@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <script type="text/javascript" src="/static/jquery.min.js"></script>
+        <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+        <title></title>
+    </head>
+    <body>
+        <p>Текущая точка продаж:
+            {{salepoint.name}},  {{salepoint.address}}
+        </p>
+        <p>Текущий продукт:
+            {{current_product.title}}
+        </p>
+        <div id="holder" style="width:600px;height:400px;border:1px dashed #CCC;"></div>
+        <form id="myForm">
+            <p>Выберите другую точку продаж и нажмите перейти</p>
+            <select id="list_of_all_salepoints" style="width:320px;"></select>
+            <a id="href_to_go" href="#">Перейти</a>
+        </form>
+
+    </body>
+    <script type="text/javascript">
+        google.load("visualization", "1", {packages:["corechart"]});
+
+
+        var pr_id = {{product_id}};
+        var sp_id = {{salepoint.pk}};
+        var options = $("#list_of_all_salepoints");
+        //result = [{a:'a', b:'/admin/prodyct-analyt/3/4/'}, {a:'a2', b:'/admin/prodyct-analyt/3/5/'},{a:'a3', b:'/admin/prodyct-analyt/3/6/'}];
+
+
+        var result;
+        $.getJSON('/admin/product-analyt/'+pr_id+'/list_salepoint/', {_ts:Date.now()},
+                function(data) {
+
+                        if (data.status == 'OK')
+                            result = data.list_salepoint;
+                        $.each(result, function() {
+                            options.append($("<option />").val(this.sp_pk).text(this.sp_info));
+                        });
+
+                });
+
+
+        var chart_data, chart_data_x, chart_data_y, chart_data_r;
+        chart_data_x = [];
+        chart_data_y = [];
+        chart_data_r = [];
+        $.getJSON('/admin/product-analyt/'+pr_id+'/'+sp_id+'/', {_ts:Date.now()},
+                function(data) {
+
+                    if (data.status == 'OK')
+                        chart_data = data.offers;
+                    //chart_data_r.push(['Year', 'Sales']);
+                    $.each(chart_data, function() {
+                        var _d = Date.parse(this.created);
+                        chart_data_x.push(new Date(this.year, this.month-1, this.day));
+
+
+                        chart_data_y.push(this.price);
+                        chart_data_r.push([new Date(this.year, this.month-1, this.day), this.price])
+                    });
+
+                    //var _data = google.visualization.arrayToDataTable(chart_data_r);
+                    var _data = new google.visualization.DataTable();
+                    _data.addColumn('date', 'дата');
+                    _data.addColumn('number', 'цена');
+                    _data.addRows(chart_data_r);
+                    var options = {
+                        title: 'Цена в течение промежутка времени',
+                        width: 600, height: 440,
+                        pointSize: 5
+                    };
+
+                    var chart = new google.visualization.LineChart(document.getElementById('holder'));
+                    chart.draw(_data, options);
+
+
+                });
+
+
+        $('#href_to_go').click(function(){
+            var _sp_pk = $('#list_of_all_salepoints').val();
+            window.location.replace('/admin/product-analyt/'+pr_id+'/?sp_pk='+_sp_pk);
+        });
+
+
+        window.onload = function() {
+            // Creates canvas 320 × 300 at 10, 50
+
+        }
+
+    </script>
+</html>

@@ -1,13 +1,17 @@
 # -*- coding: utf-8 -*
+import json
+import simplejson
 from django.template import RequestContext
 from django.shortcuts import render_to_response
-from xml_generator.models import Offer
+from xml_generator.models import *
 from django.db import connections
 from django.db.models import Count
 import datetime
 from dateutil.relativedelta import relativedelta
 from pyofc2  import * 
 from django.http import HttpResponse
+from django.template.response import TemplateResponse
+from django.core.serializers.json import DjangoJSONEncoder
 
 def generate_days():
     cur = datetime.date.today().replace(day=1)
@@ -56,4 +60,73 @@ def offers_data(request):
     chart.title = t    
     chart.add_element(s)
     return HttpResponse(chart.render())
-    
+
+
+def product_anal(request, product_pk):
+    sp_pk = request.GET.get('sp_pk', None)
+    if sp_pk:
+        sp = Salepoint.objects.get(pk=sp_pk)
+    else:
+        sp = Salepoint.objects.filter(offer__product__pk=product_pk).order_by('name')[0]
+    pr = Product.objects.get(pk=product_pk)
+    template = 'templates/product_analyt.html'
+    context ={'product_id': product_pk, 'salepoint' : sp, 'current_product': pr,}
+    return TemplateResponse(request, template, context)
+
+
+def product_list_salepoint(request, product_pk):
+
+    list_salepoint = Salepoint.objects.filter(offer__product__pk=product_pk).order_by('name')
+    _list = []
+    for sp in list_salepoint:
+        _list.append({
+            'sp_pk' : sp.pk,
+            'sp_info': sp.name + ' ' + sp.address,
+        })
+    try:
+        response = {
+            'status' : 'OK',
+            'list_salepoint' : _list,
+            }
+
+        content = simplejson.dumps(response)
+        return HttpResponse(content, mimetype='application/javascript')
+    except Exception as e:
+        print str(e)
+        response = {
+            'status' : 'Error',
+            'message' : str(e),
+            }
+        content = simplejson.dumps(response)
+        return HttpResponse(content, mimetype='application/javascript')
+
+
+def product_chart(request, product_pk, salepoint_pk):
+
+    offs = Offer.all_objects.filter(product__pk=product_pk, salepoint__pk=salepoint_pk).order_by('created')
+
+    _list = []
+    for _offer in offs:
+        _list.append({
+            'created' : json.dumps(_offer.created, cls=DjangoJSONEncoder),
+            'year' : _offer.created.year,
+            'month' : _offer.created.month,
+            'day' : _offer.created.day,
+            'price': _offer.price,
+            })
+    try:
+        response = {
+            'status' : 'OK',
+            'offers' : _list,
+            }
+
+        content = simplejson.dumps(response)
+        return HttpResponse(content, mimetype='application/javascript')
+    except Exception as e:
+        print str(e)
+        response = {
+            'status' : 'Error',
+            'message' : str(e),
+            }
+        content = simplejson.dumps(response)
+        return HttpResponse(content, mimetype='application/javascript')

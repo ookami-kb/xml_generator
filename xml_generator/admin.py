@@ -194,11 +194,7 @@ class SimpleLogsAdmin(admin.ModelAdmin):
 admin.site.register(Simple_Logs, SimpleLogsAdmin)
 
 
-class OrganizationAdmin(admin.ModelAdmin):
-    list_display = ('name', )
 
-
-admin.site.register(Organization, OrganizationAdmin)
 admin.site.register(Country)
 admin.site.register(Manufacturer)
 
@@ -239,5 +235,21 @@ class TaskAdmin(admin.ModelAdmin):
         css = {
             "all": ("brrr.css",)
         }
+
+
+class OrganizationAdmin(admin.ModelAdmin):
+
+    def last_update_date(self, obj):
+        _last = Offer.all_objects.filter(salepoint__organ__pk=obj.pk).order_by('-created')
+        #_last = Offer.objects.filter(salepoint__organ__pk=obj.pk)
+        if _last:
+            return _last[0].created.strftime('%d.%m.%Y %H:%M')
+        return 'отсутствуют предложения'
+
+    last_update_date.short_description = 'дата последнего обновления цен'
+
+    list_display = ('name', 'last_update_date')
+
+admin.site.register(Organization, OrganizationAdmin)
 
 admin.site.register(Task, TaskAdmin)
