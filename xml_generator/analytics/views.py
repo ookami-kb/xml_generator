@@ -9,9 +9,10 @@ from django.db.models import Count
 import datetime
 from dateutil.relativedelta import relativedelta
 from pyofc2  import * 
-from django.http import HttpResponse
+from django.http import HttpResponse, Http404
 from django.template.response import TemplateResponse
 from django.core.serializers.json import DjangoJSONEncoder
+from django.http import Http404
 
 def generate_days():
     cur = datetime.date.today().replace(day=1)
@@ -65,10 +66,19 @@ def offers_data(request):
 def product_anal(request, product_pk):
     sp_pk = request.GET.get('sp_pk', None)
     if sp_pk:
-        sp = Salepoint.objects.get(pk=sp_pk)
+        try:
+            sp = Salepoint.objects.get(pk=sp_pk)
+        except Salepoint.DoesNotExist, Salepoint.MultipleObjectsReturned:
+            raise Http404
     else:
-        sp = Salepoint.objects.filter(offer__product__pk=product_pk).order_by('name')[0]
-    pr = Product.objects.get(pk=product_pk)
+        try:
+            sp = Salepoint.objects.filter(offer__product__pk=product_pk).order_by('name')[0]
+        except IndexError:
+            raise Http404
+    try:
+        pr = Product.objects.get(pk=product_pk)
+    except Product.DoesNotExist, Product.MultipleObjectsReturned:
+        raise Http404
     template = 'templates/product_analyt.html'
     context ={'product_id': product_pk, 'salepoint' : sp, 'current_product': pr,}
     return TemplateResponse(request, template, context)
@@ -76,12 +86,12 @@ def product_anal(request, product_pk):
 
 def product_list_salepoint(request, product_pk):
 
-    list_salepoint = Salepoint.objects.filter(offer__product__pk=product_pk).order_by('name')
+    list_salepoint = Salepoint.objects.filter(offer__product__pk=product_pk).order_by('name').distinct()
     _list = []
     for sp in list_salepoint:
         _list.append({
             'sp_pk' : sp.pk,
-            'sp_info': sp.name + ' ' + sp.address,
+            'sp_info': sp.name + ', ' + sp.address,
         })
     try:
         response = {

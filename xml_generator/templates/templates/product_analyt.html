@@ -1,26 +1,23 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+{% extends "admin/base_site.html" %}
+{% block content %}
         <script type="text/javascript" src="/static/jquery.min.js"></script>
         <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-        <title></title>
-    </head>
-    <body>
+
+
         <p>Текущая точка продаж:
             {{salepoint.name}},  {{salepoint.address}}
         </p>
         <p>Текущий продукт:
-            {{current_product.title}}
+            {{current_product.title}},
+            {{current_product.title_extra}}, <a href="/admin/xml_generator/product/{{product_id}}/">страница продукта</a>
         </p>
-        <div id="holder" style="width:600px;height:400px;border:1px dashed #CCC;"></div>
+        <div id="holder" style="width:1000px;height:520px;border:1px dashed #CCC;"></div>
         <form id="myForm">
             <p>Выберите другую точку продаж и нажмите перейти</p>
             <select id="list_of_all_salepoints" style="width:320px;"></select>
             <a id="href_to_go" href="#">Перейти</a>
         </form>
 
-    </body>
     <script type="text/javascript">
         google.load("visualization", "1", {packages:["corechart"]});
 
@@ -70,7 +67,7 @@
                     _data.addRows(chart_data_r);
                     var options = {
                         title: 'Цена в течение промежутка времени',
-                        width: 600, height: 440,
+                        width: 1000, height: 520,
                         pointSize: 5
                     };
 
@@ -93,4 +90,4 @@
         }
 
     </script>
-</html>
+{% endblock %}

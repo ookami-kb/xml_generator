@@ -121,7 +121,14 @@ class ProductForm(forms.ModelForm):
 '''
 from django.contrib.admin.util import unquote
 class ProductAdmin(admin.ModelAdmin):
-    list_display = ('title', 'title_extra', 'manufacturer', 'white_brand', 'is_new', 'sort_weight')
+    def analytics(self, obj):
+        _url = '/admin/product-analyt/' + str(obj.pk) + '/'
+        return '<a href="'+_url+'" >график динамики цен</a>'
+
+    analytics.allow_tags = True
+    analytics.short_description = 'аналитика'
+
+    list_display = ('title', 'title_extra', 'manufacturer', 'white_brand', 'is_new', 'sort_weight', 'analytics')
     list_filter = ('white_brand', 'is_new', 'user', )
     actions = [moderate_product,]
     #form =ProductForm
@@ -174,7 +181,15 @@ class SalepointForm(forms.ModelForm):
 
 class SalepointAdmin(admin.ModelAdmin):
     form = SalepointForm
-    list_display = ('id', 'name', 'address', 'organ', 'last_modified_time', 'user', 'is_new', 'is_redundant', 'offers_count')
+    def last_update_date(self, obj):
+        _last = Offer.all_objects.filter(salepoint__pk=obj.pk).order_by('-created')
+    #_last = Offer.objects.filter(salepoint__organ__pk=obj.pk)
+        if _last:
+            return _last[0].created.strftime('%d.%m.%Y %H:%M')
+        return 'отсутствуют предложения'
+
+    last_update_date.short_description = 'последнее обновление цен'
+    list_display = ('id', 'name', 'address', 'organ', 'user', 'is_new', 'is_redundant', 'offers_count', 'last_update_date')
     list_filter = ('user', 'is_new', 'is_redundant',)
     search_fields = ['name', 'address', 'organ__name']
     list_select_related = True
