@@ -2,7 +2,7 @@ __author__ = 'eugene'
 # -*- coding: utf-8 -*-
 
 from django.utils import simplejson
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect
 import os, shutil
 from lxml import etree
 from django.views.decorators.csrf import csrf_exempt
@@ -13,6 +13,9 @@ from django.conf import settings
 global_path = settings.GLOBAL_PATH
 import csv
 from xml_generator.models import *
+
+def home(request):
+    return HttpResponseRedirect('/admin/')
 
 @csrf_exempt
 def generate_xml(request):

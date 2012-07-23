@@ -19,7 +19,7 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     # Examples:
-    # url(r'^$', 'xml_generator.views.home', name='home'),
+    url(r'^$', 'xml_generator.views.home', name='home'),
     # url(r'^xml_generator/', include('xml_generator.foo.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:
